@@ -24,28 +24,28 @@ const Navbar = () => {
   ];
 
   return (
-    <nav className={`fixed w-full z-50 transition-all duration-300 ${isScrolled ? 'bg-white shadow-md py-3' : 'bg-transparent py-5'}`}>
-      <div className="max-w-7xl mx-auto px-6 sm:px-12 lg:px-20">
-        <div className="flex justify-between items-center">
-          <Link to="/" className="flex items-center gap-2 group">
-            <div className="bg-teal-500 text-white p-2 rounded-lg group-hover:bg-teal-600 transition-colors">
-              <Droplets className="w-6 h-6" />
+    <nav className={`fixed w-full z-50 transition-all duration-300 ${isScrolled ? 'bg-brand-blue shadow-modal' : 'bg-brand-blue'}`}>
+      <div className="max-w-[1440px] mx-auto px-[16px] md:px-[32px]">
+        <div className="flex justify-between items-center h-[64px]">
+          <Link to="/" className="flex items-center gap-2">
+            <div className="text-white">
+              <Droplets className="w-8 h-8" />
             </div>
-            <span className={`text-xl font-bold tracking-tight ${isScrolled ? 'text-navy-700' : 'text-white'}`}>
+            <span className="text-[20px] font-bold text-white tracking-normal font-poppins">
               Sinar Mahira Bali
             </span>
           </Link>
 
           {/* Desktop Menu */}
-          <div className="hidden md:flex items-center gap-8">
+          <div className="hidden md:flex items-center gap-[32px]">
             {navLinks.map((link) => (
               <Link 
                 key={link.name} 
                 to={link.path}
-                className={`text-sm font-semibold transition-colors ${
+                className={`text-[14px] font-normal transition-colors font-jakarta ${
                   location.pathname === link.path 
-                    ? 'text-teal-500' 
-                    : isScrolled ? 'text-gray-600 hover:text-teal-600' : 'text-gray-200 hover:text-white'
+                    ? 'text-white border-b-[2px] border-brand-coral pb-1' 
+                    : 'text-white hover:bg-white/10 px-2 py-1 rounded'
                 }`}
               >
                 {link.name}
@@ -53,7 +53,7 @@ const Navbar = () => {
             ))}
             <Link 
               to="/contact" 
-              className="bg-teal-600 hover:bg-teal-700 text-white px-6 py-2 rounded-full font-bold text-sm transition-all transform hover:-translate-y-0.5 shadow-lg"
+              className="bg-brand-coral hover:bg-brand-coral-hover text-white px-[20px] h-[32px] flex items-center rounded-[16px] font-jakarta font-normal text-[16px] transition-colors shadow-floating border border-transparent"
             >
               Hubungi Kami
             </Link>
@@ -61,24 +61,24 @@ const Navbar = () => {
 
           {/* Mobile Menu Button */}
           <button 
-            className="md:hidden"
+            className="md:hidden text-white"
             onClick={() => setIsOpen(!isOpen)}
           >
-            {isOpen ? <X className={`w-6 h-6 ${isScrolled ? 'text-gray-900' : 'text-white'}`} /> : <Menu className={`w-6 h-6 ${isScrolled ? 'text-gray-900' : 'text-white'}`} />}
+            {isOpen ? <X className="w-8 h-8" /> : <Menu className="w-8 h-8" />}
           </button>
         </div>
       </div>
 
       {/* Mobile Menu */}
       {isOpen && (
-        <div className="md:hidden absolute top-full left-0 w-full bg-white shadow-xl py-4 flex flex-col items-center gap-4">
+        <div className="md:hidden absolute top-full left-0 w-[80%] min-h-screen bg-white shadow-modal py-[16px] flex flex-col items-start px-[16px] gap-[8px]">
           {navLinks.map((link) => (
             <Link 
               key={link.name} 
               to={link.path}
               onClick={() => setIsOpen(false)}
-              className={`text-base font-semibold w-full text-center py-2 ${
-                location.pathname === link.path ? 'text-teal-600 bg-teal-50' : 'text-gray-700 hover:text-teal-600 hover:bg-gray-50'
+              className={`text-[16px] font-jakarta font-normal w-full py-[12px] px-[20px] rounded-[8px] ${
+                location.pathname === link.path ? 'bg-surface-light text-text-primary' : 'text-text-secondary hover:bg-surface-light hover:text-text-primary'
               }`}
             >
               {link.name}
@@ -87,7 +87,7 @@ const Navbar = () => {
           <Link 
             to="/contact" 
             onClick={() => setIsOpen(false)}
-            className="bg-teal-600 text-white px-8 py-3 rounded-full font-bold mt-2"
+            className="bg-brand-coral text-white w-full text-center h-[44px] flex items-center justify-center rounded-[16px] font-jakarta font-normal text-[16px] mt-[16px] shadow-floating"
           >
             Hubungi Kami
           </Link>

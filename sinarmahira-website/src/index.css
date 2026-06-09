@@ -1,18 +1,35 @@
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600&family=Poppins:wght@400;600;700&display=swap');
 @import "tailwindcss";
 
 @theme {
-  --color-navy-500: #1a365d;
-  --color-navy-600: #153e75;
-  --color-navy-700: #1e3a8a;
-  --color-teal-500: #14b8a6;
-  --color-teal-600: #0d9488;
-  --color-green-500: #22c55e;
-  --color-green-600: #16a34a;
-  --color-lightgray: #f3f4f6;
+  --color-brand-coral: #F07057;
+  --color-brand-coral-hover: #E85F4F;
+  --color-brand-blue: #0050A3;
+  --color-brand-blue-light: rgba(0, 80, 163, 0.6);
+  --color-brand-teal: #AADDDD;
+  --color-brand-yellow: #FCB900;
+  --color-brand-red: #CF2E2E;
+  --color-brand-green: #7BDCB5;
+  --color-text-primary: #000000;
+  --color-text-secondary: #686868;
+  --color-text-muted: #A7A7A7;
+  --color-surface-light: #F5F5F5;
+  --color-border-subtle: rgba(167, 167, 167, 0.4);
+  
+  --font-poppins: 'Poppins', sans-serif;
+  --font-jakarta: 'Plus Jakarta Sans', sans-serif;
+
+  --shadow-raised: 0px 2px 16px 0px rgba(0, 0, 0, 0.08);
+  --shadow-floating: 0px 4px 40px 0px rgba(0, 80, 163, 0.11);
+  --shadow-modal: 0px 5px 40px 0px rgba(0, 0, 0, 0.16);
+  --shadow-focus: 0px 0px 0px 3px rgba(0, 80, 163, 0.1);
 }
 
 @layer base {
   body {
-    @apply antialiased text-gray-800 bg-white;
+    @apply antialiased text-text-secondary bg-white font-jakarta text-[16px] leading-[32px];
+  }
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-poppins text-text-primary font-bold;
   }
 }
