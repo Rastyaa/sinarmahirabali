@@ -3,15 +3,15 @@ import { Link } from 'react-router-dom';
 
 const About = () => {
   return (
-    <div className="flex flex-col w-full bg-surface-light font-jakarta min-h-screen">
+    <div className="flex flex-col w-full bg-transparent font-jakarta min-h-screen">
       {/* Header Section */}
-      <section className="w-full bg-brand-blue pt-[160px] pb-[80px] px-[16px] md:px-[32px]">
-        <div className="max-w-[1200px] mx-auto text-center text-white">
-          <h1 className="text-[40px] md:text-[56px] font-poppins font-bold mb-[24px] leading-[1.2]">
+      <section className="w-full bg-transparent pt-[160px] pb-[80px] px-[16px] md:px-[32px] border-b border-white/10">
+        <div className="max-w-[1200px] mx-auto text-center">
+          <h1 className="text-[40px] md:text-[56px] font-poppins font-bold mb-[24px] leading-[1.2] text-text-primary tracking-[-0.02em]">
             Tentang Perusahaan
           </h1>
-          <p className="text-[18px] md:text-[20px] font-jakarta max-w-[800px] mx-auto text-white/80 leading-[32px]">
-            Mengenal lebih dekat PT. Sinar Mahira Bali, komitmen kami, dan visi misi dalam menciptakan lingkungan yang lebih bersih dan sehat.
+          <p className="text-[18px] md:text-[20px] font-jakarta max-w-[800px] mx-auto text-text-secondary leading-[32px]">
+            Mengenal lebih dekat PT Sinar Mahira Bali (Biosmb), komitmen kami, dan visi misi dalam menciptakan lingkungan yang lebih bersih dan sehat.
           </p>
         </div>
       </section>
@@ -46,7 +46,7 @@ const About = () => {
               
               <div className="space-y-[24px] text-[16px] leading-[32px] text-text-secondary font-jakarta">
                 <p>
-                  <strong className="text-text-primary font-bold">PT. Sinar Mahira Bali</strong> didirikan dengan tujuan menjadi mitra utama bagi perumahan, komersial, dan sektor industri di Indonesia, khususnya Bali, dalam mengelola dan mengolah air limbah secara bertanggung jawab.
+                  <strong className="text-text-primary font-bold">PT Sinar Mahira Bali (Biosmb)</strong> didirikan dengan tujuan menjadi mitra utama bagi perumahan, komersial, dan sektor industri di Indonesia, khususnya Bali, dalam mengelola dan mengolah air limbah secara bertanggung jawab.
                 </p>
                 <p>
                   Berbekal pengalaman dan komitmen teguh terhadap kualitas material fiberglass premium, kami memproduksi IPAL, STP, Bio Septic Tank, dan Water Treatment Plant yang tahan lama, bebas bocor, dan mudah dirawat.
@@ -102,12 +102,12 @@ const About = () => {
       </section>
 
       {/* CTA Section */}
-      <section className="py-[120px] bg-brand-blue text-white text-center">
+      <section className="py-[120px] bg-transparent text-center border-t border-white/10">
         <div className="max-w-[800px] mx-auto px-[16px] md:px-[32px]">
-            <h2 className="text-[36px] md:text-[48px] font-bold mb-[24px] leading-[1.2] font-poppins">
+            <h2 className="text-[36px] md:text-[48px] font-bold text-text-primary mb-[24px] leading-[1.2] font-poppins tracking-[-0.02em]">
               Mulai Proyek Sanitasi Anda Bersama Kami
             </h2>
-            <p className="text-[18px] text-white/80 mb-[40px] font-jakarta">
+            <p className="text-[18px] text-text-secondary mb-[40px] font-jakarta leading-[32px]">
               Jangan kompromi dengan kualitas sanitasi. Dapatkan solusi terbaik dan garansi layanan penuh dari ahlinya.
             </p>
             <Link to="/contact" className="inline-flex justify-center items-center bg-brand-coral text-white h-[56px] px-[40px] rounded-[16px] font-jakarta text-[18px] font-bold shadow-floating hover:bg-brand-coral-hover transition-colors border border-transparent">

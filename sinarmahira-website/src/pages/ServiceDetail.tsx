@@ -20,16 +20,16 @@ const ServiceDetail = () => {
   };
 
   return (
-    <div className="flex flex-col w-full bg-surface-light font-jakarta min-h-screen pb-[120px]">
+    <div className="flex flex-col w-full bg-transparent font-jakarta min-h-screen pb-[120px]">
       
       {/* Breadcrumb Header */}
-      <div className="bg-brand-blue pt-[120px] pb-[40px] px-[16px] md:px-[32px]">
-        <div className="max-w-[1200px] mx-auto flex items-center text-white/80 text-[14px]">
-          <Link to="/" className="hover:text-white transition-colors">Beranda</Link>
-          <ChevronRight className="w-[16px] h-[16px] mx-[8px]" />
-          <Link to="/services" className="hover:text-white transition-colors">Layanan</Link>
-          <ChevronRight className="w-[16px] h-[16px] mx-[8px]" />
-          <span className="text-white font-bold">{service.title}</span>
+      <div className="bg-transparent pt-[120px] pb-[40px] px-[16px] md:px-[32px] border-b border-white/10">
+        <div className="max-w-[1200px] mx-auto flex items-center text-text-secondary text-[14px]">
+          <Link to="/" className="hover:text-brand-blue transition-colors">Beranda</Link>
+          <ChevronRight className="w-[16px] h-[16px] mx-[8px] text-text-muted" />
+          <Link to="/services" className="hover:text-brand-blue transition-colors">Layanan</Link>
+          <ChevronRight className="w-[16px] h-[16px] mx-[8px] text-text-muted" />
+          <span className="text-text-primary font-bold">{service.title}</span>
         </div>
       </div>
 

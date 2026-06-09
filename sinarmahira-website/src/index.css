@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600&family=Poppins:wght@400;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&family=Outfit:wght@400;500;600;700;800&display=swap');
 @import "tailwindcss";
 
 @theme {
@@ -6,30 +6,53 @@
   --color-brand-coral-hover: #E85F4F;
   --color-brand-blue: #0050A3;
   --color-brand-blue-light: rgba(0, 80, 163, 0.6);
-  --color-brand-teal: #AADDDD;
+  --color-brand-teal: #38BDF8;        /* Bright premium cyan/teal */
   --color-brand-yellow: #FCB900;
   --color-brand-red: #CF2E2E;
-  --color-brand-green: #7BDCB5;
-  --color-text-primary: #000000;
-  --color-text-secondary: #686868;
-  --color-text-muted: #A7A7A7;
-  --color-surface-light: #F5F5F5;
-  --color-border-subtle: rgba(167, 167, 167, 0.4);
+  --color-brand-green: #34D399;       /* Fresh emerald green */
   
-  --font-poppins: 'Poppins', sans-serif;
+  /* Upgraded Premium Typography Colors - Dark Holographic Theme */
+  --color-text-primary: #FFFFFF;      /* Pure white for headings */
+  --color-text-secondary: #CBD5E1;    /* Slate-300 for body text */
+  --color-text-muted: #94A3B8;        /* Slate-400 for secondary info */
+  --color-surface-light: rgba(255, 255, 255, 0.05);     /* Subtle glass background */
+  --color-border-subtle: rgba(255, 255, 255, 0.1);     /* Subtle glass border */
+  
+  --font-poppins: 'Outfit', sans-serif; /* Map Outfit font to poppins key for automatic integration */
   --font-jakarta: 'Plus Jakarta Sans', sans-serif;
 
-  --shadow-raised: 0px 2px 16px 0px rgba(0, 0, 0, 0.08);
-  --shadow-floating: 0px 4px 40px 0px rgba(0, 80, 163, 0.11);
-  --shadow-modal: 0px 5px 40px 0px rgba(0, 0, 0, 0.16);
-  --shadow-focus: 0px 0px 0px 3px rgba(0, 80, 163, 0.1);
+  /* Enhanced elevations with subtle cool branding tints */
+  --shadow-raised: 0px 4px 20px 0px rgba(15, 30, 54, 0.05);
+  --shadow-floating: 0px 8px 30px 0px rgba(0, 80, 163, 0.08);
+  --shadow-modal: 0px 10px 50px 0px rgba(15, 30, 54, 0.12);
+  --shadow-focus: 0px 0px 0px 4px rgba(0, 80, 163, 0.15);
 }
 
 @layer base {
   body {
-    @apply antialiased text-text-secondary bg-white font-jakarta text-[16px] leading-[32px];
+    @apply antialiased text-text-secondary bg-transparent font-jakarta text-[16px] leading-[1.8];
   }
   h1, h2, h3, h4, h5, h6 {
-    @apply font-poppins text-text-primary font-bold;
+    /* Slightly negative letter-spacing for premium headings */
+    @apply font-poppins text-text-primary font-bold tracking-[-0.02em];
+  }
+  /* Global micro-transitions for premium feeling */
+  a, button, input, select, textarea {
+    @apply transition-all duration-300 ease-out;
+  }
+  /* Subtle lift micro-animations on all major interactive buttons */
+  a[class*="bg-brand-coral"], button[class*="bg-brand-coral"],
+  a[class*="bg-white"], button[class*="bg-white"] {
+    @apply hover:-translate-y-0.5 active:scale-[0.98] active:translate-y-0;
+  }
+}
+
+@layer utilities {
+  /* Global Glassmorphism hack: turns all bg-white cards into dark glass automatically */
+  .bg-white {
+    background-color: rgba(255, 255, 255, 0.03) !important;
+    backdrop-filter: blur(16px) !important;
+    -webkit-backdrop-filter: blur(16px) !important;
+    border: 1px solid rgba(255, 255, 255, 0.1) !important;
   }
 }

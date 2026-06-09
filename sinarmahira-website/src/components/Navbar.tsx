@@ -24,15 +24,15 @@ const Navbar = () => {
   ];
 
   return (
-    <nav className={`fixed w-full z-50 transition-all duration-300 ${isScrolled ? 'bg-brand-blue shadow-modal' : 'bg-brand-blue'}`}>
+    <nav className={`fixed w-full z-50 transition-all duration-300 ${isScrolled ? 'bg-[#0B101E]/70 backdrop-blur-md shadow-modal border-b border-white/10' : 'bg-transparent'}`}>
       <div className="max-w-[1440px] mx-auto px-[16px] md:px-[32px]">
         <div className="flex justify-between items-center h-[64px]">
           <Link to="/" className="flex items-center gap-2">
-            <div className="text-white">
+            <div className="text-brand-blue">
               <Droplets className="w-8 h-8" />
             </div>
-            <span className="text-[20px] font-bold text-white tracking-normal font-poppins">
-              Sinar Mahira Bali
+            <span className="text-[20px] font-bold text-text-primary tracking-normal font-poppins">
+              Sinar Mahira
             </span>
           </Link>
 
@@ -44,8 +44,8 @@ const Navbar = () => {
                 to={link.path}
                 className={`text-[14px] font-normal transition-colors font-jakarta ${
                   location.pathname === link.path 
-                    ? 'text-white border-b-[2px] border-brand-coral pb-1' 
-                    : 'text-white hover:bg-white/10 px-2 py-1 rounded'
+                    ? 'text-brand-blue font-semibold border-b-[2px] border-brand-coral pb-1' 
+                    : 'text-text-secondary hover:text-brand-blue hover:bg-slate-100/50 px-2 py-1 rounded'
                 }`}
               >
                 {link.name}
@@ -61,7 +61,7 @@ const Navbar = () => {
 
           {/* Mobile Menu Button */}
           <button 
-            className="md:hidden text-white"
+            className="md:hidden text-text-primary"
             onClick={() => setIsOpen(!isOpen)}
           >
             {isOpen ? <X className="w-8 h-8" /> : <Menu className="w-8 h-8" />}

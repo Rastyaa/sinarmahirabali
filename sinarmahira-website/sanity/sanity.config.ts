@@ -4,7 +4,7 @@ import { schemaTypes } from './schemas';
 
 export default defineConfig({
   name: 'default',
-  title: 'Sinar Mahira CMS',
+  title: 'biosmb CMS',
   projectId: 'your_project_id', // TODO: replace with actual project ID
   dataset: 'production',
   plugins: [deskTool()],

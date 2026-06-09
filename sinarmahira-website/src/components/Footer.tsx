@@ -36,7 +36,7 @@ const Footer = () => {
                 <Droplets className="w-8 h-8" />
               </div>
               <span className="text-[20px] font-bold text-text-primary font-poppins">
-                Sinar Mahira Bali
+                Sinar Mahira
               </span>
             </Link>
             <p className="text-[16px] leading-[32px] font-jakarta mb-[20px]">
@@ -101,7 +101,7 @@ const Footer = () => {
       {/* Copyright */}
       <div className="border-t border-border-subtle bg-white">
         <div className="max-w-[1440px] mx-auto px-[16px] md:px-[32px] py-[24px] text-[12px] font-jakarta text-center flex flex-col md:flex-row justify-between items-center text-text-secondary">
-          <p>&copy; {new Date().getFullYear()} PT. Sinar Mahira Bali. Hak Cipta Dilindungi.</p>
+          <p>&copy; {new Date().getFullYear()} PT Sinar Mahira Bali (Biosmb). Hak Cipta Dilindungi.</p>
           <div className="mt-4 md:mt-0 space-x-[16px]">
             <Link to="#" className="text-brand-blue hover:text-brand-coral transition-colors">Kebijakan Privasi</Link>
             <Link to="#" className="text-brand-blue hover:text-brand-coral transition-colors">Syarat & Ketentuan</Link>

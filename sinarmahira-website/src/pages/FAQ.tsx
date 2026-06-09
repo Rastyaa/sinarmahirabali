@@ -37,14 +37,14 @@ const FAQ = () => {
   };
 
   return (
-    <div className="flex flex-col w-full bg-surface-light font-jakarta min-h-screen pb-[120px]">
+    <div className="flex flex-col w-full bg-transparent font-jakarta min-h-screen pb-[120px]">
       {/* Header Section */}
-      <section className="w-full bg-brand-blue pt-[160px] pb-[80px] px-[16px] md:px-[32px]">
-        <div className="max-w-[1200px] mx-auto text-center text-white">
-          <h1 className="text-[40px] md:text-[56px] font-poppins font-bold mb-[24px] leading-[1.2]">
+      <section className="w-full bg-transparent pt-[160px] pb-[80px] px-[16px] md:px-[32px] border-b border-white/10">
+        <div className="max-w-[1200px] mx-auto text-center">
+          <h1 className="text-[40px] md:text-[56px] font-poppins font-bold mb-[24px] leading-[1.2] text-text-primary tracking-[-0.02em]">
             Tanya Jawab (FAQ)
           </h1>
-          <p className="text-[18px] md:text-[20px] font-jakarta max-w-[800px] mx-auto text-white/80 leading-[32px]">
+          <p className="text-[18px] md:text-[20px] font-jakarta max-w-[800px] mx-auto text-text-secondary leading-[32px]">
             Temukan jawaban atas pertanyaan yang paling sering diajukan seputar layanan, instalasi, dan produk pengolahan air limbah kami.
           </p>
         </div>
