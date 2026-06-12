@@ -20,6 +20,7 @@ const Navbar = () => {
     { name: 'Tentang Kami', path: '/about' },
     { name: 'Layanan', path: '/services' },
     { name: 'Proyek', path: '/projects' },
+    { name: 'Client Kami', path: '/clients' },
     { name: 'FAQ', path: '/faq' },
   ];
 

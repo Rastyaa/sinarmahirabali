@@ -1,37 +1,59 @@
 import { MapPin, Calendar, ArrowRight } from 'lucide-react';
+import img353 from '../assets/IMG_0353.JPG.jpeg';
+import img354 from '../assets/IMG_0354.JPG.jpeg';
+import img355 from '../assets/IMG_0355.JPG.jpeg';
+import img356 from '../assets/IMG_0356.JPG.jpeg';
+import img357 from '../assets/IMG_0357.JPG.jpeg';
+import img358 from '../assets/IMG_0358.JPG.jpeg';
 
 const projects = [
   {
     title: 'Instalasi STP Hotel Bintang 5',
     location: 'Nusa Dua, Bali',
     serviceType: 'STP (Sewage Treatment Plant)',
-    description: 'Pembangunan dan instalasi sistem pengolahan limbah cair kapasitas 150 m3/hari untuk memenuhi standar baku mutu hotel premium.',
+    description: 'Pembangunan dan instalasi sistem Sewage Treatment Plant (STP) kapasitas besar multi-chamber untuk menyaring dan mengolah limbah cair domestik kawasan hotel premium.',
     year: '2025',
-    imageUrl: 'https://images.unsplash.com/photo-1566073771259-6a8506099945?auto=format&fit=crop&q=80&w=1200'
+    imageUrl: img357
   },
   {
-    title: 'Pengadaan IPAL Rumah Sakit Umum',
-    location: 'Denpasar, Bali',
-    serviceType: 'IPAL Medis',
-    description: 'Solusi IPAL terintegrasi untuk menangani limbah infeksius dan domestik rumah sakit dengan sistem klorinasi otomatis.',
+    title: 'Pengadaan IPAL Restoran & Komersial',
+    location: 'Seminyak, Bali',
+    serviceType: 'Grease Trap & IPAL',
+    description: 'Instalasi unit penyaring lemak (Grease Trap) dan pengolahan limbah cair terintegrasi untuk mendukung kebersihan dapur komersial restoran.',
     year: '2025',
-    imageUrl: 'https://images.unsplash.com/photo-1519494026892-80bbd2d6fd0d?auto=format&fit=crop&q=80&w=1200'
+    imageUrl: img354
   },
   {
     title: 'Pemasangan Bio Septic Tank Perumahan',
     location: 'Canggu, Bali',
     serviceType: 'Bio Septic Tank',
-    description: 'Instalasi 50 unit Bio Septic Tank berbahan fiberglass tahan bocor untuk kawasan perumahan elit guna menjaga kualitas air tanah.',
+    description: 'Pemasangan unit Bio Septic Tank horizontal fiberglass ramah lingkungan tahan bocor untuk menjaga kualitas sanitasi lingkungan perumahan.',
     year: '2024',
-    imageUrl: 'https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?auto=format&fit=crop&q=80&w=1200'
+    imageUrl: img353
   },
   {
-    title: 'Sistem Water Treatment Pabrik F&B',
-    location: 'Gianyar, Bali',
-    serviceType: 'Water Treatment Plant',
-    description: 'Perancangan sistem reverse osmosis (RO) dan filtrasi multi-tahap untuk kebutuhan air bersih produksi pabrik makanan dan minuman.',
+    title: 'Sistem Pengolahan Limbah Medis (IPAL)',
+    location: 'Denpasar, Bali',
+    serviceType: 'IPAL Medis',
+    description: 'Pemasangan tangki bio-filtrasi bulat khusus dengan instalasi pipa klorinasi otomatis untuk memproses air limbah medis rumah sakit.',
+    year: '2025',
+    imageUrl: img355
+  },
+  {
+    title: 'Pembangunan STP Kawasan Villa',
+    location: 'Ubud, Bali',
+    serviceType: 'STP (Sewage Treatment Plant)',
+    description: 'Konstruksi bak beton penampung dengan tangki STP fiberglass kapasitas menengah untuk pengolahan limbah terpusat di kawasan villa.',
     year: '2024',
-    imageUrl: 'https://images.unsplash.com/photo-1587293852726-70cdb56c2866?auto=format&fit=crop&q=80&w=1200'
+    imageUrl: img356
+  },
+  {
+    title: 'Instalasi Bio Septic Tank Vertikal & Pompa',
+    location: 'Sanur, Bali',
+    serviceType: 'Bio Septic Tank Vertikal',
+    description: 'Pemasangan tangki Bio Septic Tank model vertikal kapasitas 1500 liter (merk BIOSMB) lengkap dengan pompa submersible otomatis.',
+    year: '2025',
+    imageUrl: img358
   }
 ];
 

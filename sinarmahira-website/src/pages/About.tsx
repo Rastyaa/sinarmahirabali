@@ -1,62 +1,70 @@
-import { CheckCircle2, Target, Eye, Award } from 'lucide-react';
+import { CheckCircle2, Target, Eye } from 'lucide-react';
 import { Link } from 'react-router-dom';
 
 const About = () => {
   return (
     <div className="flex flex-col w-full bg-transparent font-jakarta min-h-screen">
       {/* Header Section */}
-      <section className="w-full bg-transparent pt-[160px] pb-[80px] px-[16px] md:px-[32px] border-b border-white/10">
+      <section className="w-full bg-transparent pt-[160px] pb-[40px] px-[16px] md:px-[32px]">
         <div className="max-w-[1200px] mx-auto text-center">
           <h1 className="text-[40px] md:text-[56px] font-poppins font-bold mb-[24px] leading-[1.2] text-text-primary tracking-[-0.02em]">
-            Tentang Perusahaan
+            Tentang Kami
           </h1>
-          <p className="text-[18px] md:text-[20px] font-jakarta max-w-[800px] mx-auto text-text-secondary leading-[32px]">
-            Mengenal lebih dekat PT Sinar Mahira Bali (Biosmb), komitmen kami, dan visi misi dalam menciptakan lingkungan yang lebih bersih dan sehat.
-          </p>
         </div>
       </section>
 
       {/* Main Profile Section */}
-      <section className="py-[80px] md:py-[120px] bg-white relative">
-        <div className="max-w-[1200px] mx-auto px-[16px] md:px-[32px]">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-[48px] md:gap-[64px] items-center">
-            
-            <div className="order-2 lg:order-1 relative">
-              <div className="absolute inset-0 bg-brand-coral/10 translate-x-[-16px] translate-y-[16px] rounded-[24px]"></div>
-              <img 
-                src="https://images.unsplash.com/photo-1542621334-a254cf47733d?auto=format&fit=crop&q=80&w=1000" 
-                alt="Environmental Sanitation" 
-                className="relative w-full h-[400px] md:h-[600px] object-cover rounded-[24px] shadow-raised"
-              />
-              {/* Floating Badge */}
-               <div className="absolute top-[32px] right-[-24px] bg-white p-[24px] rounded-[16px] shadow-floating hidden md:flex flex-col items-center gap-[8px] border border-border-subtle">
-                  <Award className="w-[32px] h-[32px] text-brand-coral" />
-                  <span className="font-poppins font-bold text-text-primary text-[18px]">Standar Nasional</span>
-              </div>
-            </div>
-            
-            <div className="order-1 lg:order-2">
-              <div className="inline-flex items-center gap-[12px] mb-[16px]">
-                <div className="w-[32px] h-[2px] bg-brand-coral"></div>
-                <span className="text-[14px] font-bold text-brand-coral uppercase tracking-wide font-poppins">Profil Kami</span>
-              </div>
-              <h2 className="text-[36px] md:text-[48px] font-bold text-text-primary mb-[32px] leading-[1.2] font-poppins">
-                Pionir Sanitasi & <br/> Pengolahan Air Bali.
-              </h2>
+      <section className="pb-[80px] md:pb-[120px] relative">
+        <div className="max-w-[1000px] mx-auto px-[16px] md:px-[32px]">
+          <div className="text-center space-y-[24px] text-[16px] md:text-[18px] leading-[32px] text-text-secondary font-jakarta mb-[60px]">
+            <p className="max-w-[900px] mx-auto">
+              <strong className="text-text-primary font-bold">Sinar Mahira (biosmb)</strong> telah menjadi mitra terpercaya dalam pengelolaan air limbah sejak tahun <strong className="text-text-primary">2010</strong>. Dengan pengalaman melayani berbagai perusahaan dan komunitas, kami menghadirkan solusi yang efektif, efisien, dan sesuai standar lingkungan untuk mendukung kebutuhan sanitasi dan operasional yang lebih optimal.
+            </p>
+            <p className="max-w-[900px] mx-auto">
+              Berfokus pada inovasi dan keberlanjutan, <strong className="text-text-primary font-bold">SINAR MAHIRA (biosmb)</strong> terus mengembangkan sistem pengolahan air limbah yang ramah lingkungan dan berkualitas. Kami berkomitmen membantu menciptakan lingkungan yang lebih bersih, sehat, dan berkelanjutan bagi berbagai sektor industri maupun kebutuhan masyarakat.
+            </p>
+          </div>
+
+          {/* Premium Emerald Green Stats Banner */}
+          <div className="relative rounded-[24px] overflow-hidden bg-[#0A2F1D]/80 backdrop-blur-md border border-emerald-500/20 shadow-raised p-[32px] md:p-[48px]">
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-[32px] lg:gap-0 items-center justify-center divide-y sm:divide-y-0 lg:divide-x divide-emerald-500/10">
               
-              <div className="space-y-[24px] text-[16px] leading-[32px] text-text-secondary font-jakarta">
-                <p>
-                  <strong className="text-text-primary font-bold">PT Sinar Mahira Bali (Biosmb)</strong> didirikan dengan tujuan menjadi mitra utama bagi perumahan, komersial, dan sektor industri di Indonesia, khususnya Bali, dalam mengelola dan mengolah air limbah secara bertanggung jawab.
-                </p>
-                <p>
-                  Berbekal pengalaman dan komitmen teguh terhadap kualitas material fiberglass premium, kami memproduksi IPAL, STP, Bio Septic Tank, dan Water Treatment Plant yang tahan lama, bebas bocor, dan mudah dirawat.
-                </p>
-                <div className="bg-surface-light p-[24px] rounded-[16px] border-l-[4px] border-brand-coral mt-[32px]">
-                   <p className="text-text-primary font-medium italic">
-                     "Kami meyakini bahwa sanitasi yang baik bukan hanya tentang memenuhi standar regulasi, namun merupakan fondasi dari kesehatan masyarakat dan masa depan lingkungan yang lestari."
-                   </p>
+              <div className="text-center lg:px-4">
+                <div className="text-[40px] md:text-[48px] font-poppins font-extrabold text-white mb-[8px] tracking-tight">
+                  100+
+                </div>
+                <div className="text-[14px] md:text-[15px] font-jakarta text-emerald-100/80 font-medium">
+                  Client di Indonesia
                 </div>
               </div>
+
+              <div className="text-center pt-[24px] sm:pt-0 lg:px-4">
+                <div className="text-[40px] md:text-[48px] font-poppins font-extrabold text-white mb-[8px] tracking-tight">
+                  4
+                </div>
+                <div className="text-[14px] md:text-[15px] font-jakarta text-emerald-100/80 font-medium">
+                  Kerjasama Perusahaan
+                </div>
+              </div>
+
+              <div className="text-center pt-[24px] sm:pt-0 lg:px-4">
+                <div className="text-[40px] md:text-[48px] font-poppins font-extrabold text-white mb-[8px] tracking-tight">
+                  7
+                </div>
+                <div className="text-[14px] md:text-[15px] font-jakarta text-emerald-100/80 font-medium">
+                  Karyawan
+                </div>
+              </div>
+
+              <div className="text-center pt-[24px] sm:pt-0 lg:px-4">
+                <div className="text-[40px] md:text-[48px] font-poppins font-extrabold text-white mb-[8px] tracking-tight">
+                  6
+                </div>
+                <div className="text-[14px] md:text-[15px] font-jakarta text-emerald-100/80 font-medium">
+                  Team Support Instalasi
+                </div>
+              </div>
+
             </div>
           </div>
         </div>

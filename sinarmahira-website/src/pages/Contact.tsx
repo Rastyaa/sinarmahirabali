@@ -51,8 +51,8 @@ const Contact = () => {
                 <div>
                   <h3 className="text-[18px] font-bold text-text-primary font-poppins mb-[8px]">Telepon & WhatsApp</h3>
                   <p className="text-[16px] text-text-secondary leading-[24px] font-jakarta">
-                    +62 812 3456 7890 (Marketing)<br/>
-                    +62 811 9876 5432 (Support)
+                    +62 889-8728-8952 (Marketing)<br/>
+                    +62 889-8728-8952 (Support)
                   </p>
                 </div>
               </div>
