@@ -1,10 +1,9 @@
 import { MapPin, Calendar, ArrowRight } from 'lucide-react';
-import img353 from '../assets/IMG_0353.JPG.jpeg';
-import img354 from '../assets/IMG_0354.JPG.jpeg';
-import img355 from '../assets/IMG_0355.JPG.jpeg';
-import img356 from '../assets/IMG_0356.JPG.jpeg';
-import img357 from '../assets/IMG_0357.JPG.jpeg';
-import img358 from '../assets/IMG_0358.JPG.jpeg';
+import imgStp from '../assets/stp_plant.png';
+import imgGreaseTrap from '../assets/grease_trap.png';
+import imgBioSeptic from '../assets/bio_septic.png';
+import imgIpalMedis from '../assets/ipal_medis.png';
+import imgWtp from '../assets/wtp_system.png';
 
 const projects = [
   {
@@ -13,7 +12,7 @@ const projects = [
     serviceType: 'STP (Sewage Treatment Plant)',
     description: 'Pembangunan dan instalasi sistem Sewage Treatment Plant (STP) kapasitas besar multi-chamber untuk menyaring dan mengolah limbah cair domestik kawasan hotel premium.',
     year: '2025',
-    imageUrl: img357
+    imageUrl: imgStp
   },
   {
     title: 'Pengadaan IPAL Restoran & Komersial',
@@ -21,7 +20,7 @@ const projects = [
     serviceType: 'Grease Trap & IPAL',
     description: 'Instalasi unit penyaring lemak (Grease Trap) dan pengolahan limbah cair terintegrasi untuk mendukung kebersihan dapur komersial restoran.',
     year: '2025',
-    imageUrl: img354
+    imageUrl: imgGreaseTrap
   },
   {
     title: 'Pemasangan Bio Septic Tank Perumahan',
@@ -29,7 +28,7 @@ const projects = [
     serviceType: 'Bio Septic Tank',
     description: 'Pemasangan unit Bio Septic Tank horizontal fiberglass ramah lingkungan tahan bocor untuk menjaga kualitas sanitasi lingkungan perumahan.',
     year: '2024',
-    imageUrl: img353
+    imageUrl: imgBioSeptic
   },
   {
     title: 'Sistem Pengolahan Limbah Medis (IPAL)',
@@ -37,7 +36,7 @@ const projects = [
     serviceType: 'IPAL Medis',
     description: 'Pemasangan tangki bio-filtrasi bulat khusus dengan instalasi pipa klorinasi otomatis untuk memproses air limbah medis rumah sakit.',
     year: '2025',
-    imageUrl: img355
+    imageUrl: imgIpalMedis
   },
   {
     title: 'Pembangunan STP Kawasan Villa',
@@ -45,7 +44,7 @@ const projects = [
     serviceType: 'STP (Sewage Treatment Plant)',
     description: 'Konstruksi bak beton penampung dengan tangki STP fiberglass kapasitas menengah untuk pengolahan limbah terpusat di kawasan villa.',
     year: '2024',
-    imageUrl: img356
+    imageUrl: imgWtp
   },
   {
     title: 'Instalasi Bio Septic Tank Vertikal & Pompa',
@@ -53,7 +52,7 @@ const projects = [
     serviceType: 'Bio Septic Tank Vertikal',
     description: 'Pemasangan tangki Bio Septic Tank model vertikal kapasitas 1500 liter (merk BIOSMB) lengkap dengan pompa submersible otomatis.',
     year: '2025',
-    imageUrl: img358
+    imageUrl: imgBioSeptic
   }
 ];
 

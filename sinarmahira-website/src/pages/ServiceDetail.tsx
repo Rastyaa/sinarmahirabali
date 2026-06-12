@@ -1,5 +1,6 @@
 import { useParams, Link } from 'react-router-dom';
 import { ArrowLeft, CheckCircle2, ChevronRight, Phone } from 'lucide-react';
+import imgTreatment from '../assets/wtp_system.png';
 
 const ServiceDetail = () => {
   const { slug } = useParams();
@@ -16,7 +17,7 @@ const ServiceDetail = () => {
       'Material fiberglass anti-korosi dan tahan lama'
     ],
     suitableFor: ['Rumah Sakit', 'Hotel', 'Kawasan Industri', 'Puskesmas'],
-    imageUrl: 'https://images.unsplash.com/photo-1581093458791-9f3c3900df4b?auto=format&fit=crop&q=80&w=1200'
+    imageUrl: imgTreatment
   };
 
   return (

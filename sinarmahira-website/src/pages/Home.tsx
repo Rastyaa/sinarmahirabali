@@ -1,5 +1,7 @@
 import { ArrowRight, Droplets, Leaf, ShieldCheck, Factory, Home as HomeIcon, Building2, CheckCircle2 } from 'lucide-react';
 import { Link } from 'react-router-dom';
+import imgSanitation from '../assets/modern_sanitation.png';
+import imgTreatment from '../assets/wtp_system.png';
 
 const services = [
   {
@@ -70,7 +72,7 @@ const Home = () => {
               <div className="absolute inset-0 bg-brand-blue/5 translate-x-[16px] translate-y-[16px] rounded-[24px]"></div>
               <div className="relative rounded-[24px] overflow-hidden shadow-floating border border-white/10 bg-white">
                 <img 
-                  src="https://images.unsplash.com/photo-1590069261209-f8e9b8642343?auto=format&fit=crop&q=80&w=1200" 
+                  src={imgSanitation} 
                   alt="Modern Sanitation Infrastructure" 
                   className="w-full h-[320px] md:h-[420px] object-cover object-center hover:scale-105 transition-transform duration-500"
                 />
@@ -94,7 +96,7 @@ const Home = () => {
             <div className="relative order-2 lg:order-1">
               <div className="absolute inset-0 bg-brand-coral/10 translate-x-[16px] translate-y-[16px] rounded-[24px]"></div>
               <img 
-                src="https://images.unsplash.com/photo-1581093458791-9f3c3900df4b?auto=format&fit=crop&q=80&w=1000" 
+                src={imgTreatment} 
                 alt="Industrial Water Treatment" 
                 className="relative w-full h-[350px] md:h-[500px] object-cover rounded-[24px] shadow-raised"
               />
