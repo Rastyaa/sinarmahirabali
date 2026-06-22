@@ -25,42 +25,42 @@ const About = () => {
             </p>
           </div>
 
-          {/* Premium Emerald Green Stats Banner */}
-          <div className="relative rounded-[24px] overflow-hidden bg-[#0A2F1D]/80 backdrop-blur-md border border-emerald-500/20 shadow-raised p-[32px] md:p-[48px]">
-            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-[32px] lg:gap-0 items-center justify-center divide-y sm:divide-y-0 lg:divide-x divide-emerald-500/10">
+          {/* Premium Stats Banner */}
+          <div className="relative rounded-[24px] overflow-hidden bg-gradient-to-br from-brand-blue/20 via-[#0A2F1D]/60 to-brand-teal/10 backdrop-blur-md border border-white/10 shadow-raised p-[32px] md:p-[48px]">
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-[32px] lg:gap-0 items-center justify-center divide-y sm:divide-y-0 lg:divide-x divide-white/10">
               
               <div className="text-center lg:px-4">
-                <div className="text-[40px] md:text-[48px] font-poppins font-extrabold text-white mb-[8px] tracking-tight">
+                <div className="text-[40px] md:text-[48px] font-poppins font-extrabold text-text-primary mb-[8px] tracking-tight">
                   100+
                 </div>
-                <div className="text-[14px] md:text-[15px] font-jakarta text-emerald-100/80 font-medium">
+                <div className="text-[14px] md:text-[15px] font-jakarta text-text-secondary font-medium">
                   Client di Indonesia
                 </div>
               </div>
 
               <div className="text-center pt-[24px] sm:pt-0 lg:px-4">
-                <div className="text-[40px] md:text-[48px] font-poppins font-extrabold text-white mb-[8px] tracking-tight">
+                <div className="text-[40px] md:text-[48px] font-poppins font-extrabold text-text-primary mb-[8px] tracking-tight">
                   4
                 </div>
-                <div className="text-[14px] md:text-[15px] font-jakarta text-emerald-100/80 font-medium">
+                <div className="text-[14px] md:text-[15px] font-jakarta text-text-secondary font-medium">
                   Kerjasama Perusahaan
                 </div>
               </div>
 
               <div className="text-center pt-[24px] sm:pt-0 lg:px-4">
-                <div className="text-[40px] md:text-[48px] font-poppins font-extrabold text-white mb-[8px] tracking-tight">
+                <div className="text-[40px] md:text-[48px] font-poppins font-extrabold text-text-primary mb-[8px] tracking-tight">
                   7
                 </div>
-                <div className="text-[14px] md:text-[15px] font-jakarta text-emerald-100/80 font-medium">
+                <div className="text-[14px] md:text-[15px] font-jakarta text-text-secondary font-medium">
                   Karyawan
                 </div>
               </div>
 
               <div className="text-center pt-[24px] sm:pt-0 lg:px-4">
-                <div className="text-[40px] md:text-[48px] font-poppins font-extrabold text-white mb-[8px] tracking-tight">
+                <div className="text-[40px] md:text-[48px] font-poppins font-extrabold text-text-primary mb-[8px] tracking-tight">
                   6
                 </div>
-                <div className="text-[14px] md:text-[15px] font-jakarta text-emerald-100/80 font-medium">
+                <div className="text-[14px] md:text-[15px] font-jakarta text-text-secondary font-medium">
                   Team Support Instalasi
                 </div>
               </div>
@@ -71,11 +71,11 @@ const About = () => {
       </section>
 
       {/* Vision Mission Section */}
-      <section className="py-[80px] md:py-[120px] bg-surface-light">
+      <section className="py-[80px] md:py-[120px] bg-glass-subtle border-y border-white/5">
         <div className="max-w-[1200px] mx-auto px-[16px] md:px-[32px]">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-[32px]">
             {/* Visi */}
-            <div className="bg-white rounded-[24px] p-[40px] md:p-[56px] shadow-raised border border-border-subtle hover:border-brand-blue/30 transition-colors">
+            <div className="bg-glass rounded-[24px] p-[40px] md:p-[56px] shadow-raised border border-white/8 hover:border-brand-blue/20 transition-colors">
               <div className="w-[64px] h-[64px] rounded-[16px] bg-brand-blue/10 flex items-center justify-center mb-[32px]">
                 <Eye className="w-[32px] h-[32px] text-brand-blue" />
               </div>
@@ -86,7 +86,7 @@ const About = () => {
             </div>
 
             {/* Misi */}
-            <div className="bg-white rounded-[24px] p-[40px] md:p-[56px] shadow-raised border border-border-subtle hover:border-brand-coral/30 transition-colors">
+            <div className="bg-glass rounded-[24px] p-[40px] md:p-[56px] shadow-raised border border-white/8 hover:border-brand-coral/20 transition-colors">
               <div className="w-[64px] h-[64px] rounded-[16px] bg-brand-coral/10 flex items-center justify-center mb-[32px]">
                 <Target className="w-[32px] h-[32px] text-brand-coral" />
               </div>
@@ -110,7 +110,7 @@ const About = () => {
       </section>
 
       {/* CTA Section */}
-      <section className="py-[120px] bg-transparent text-center border-t border-white/10">
+      <section className="py-[120px] bg-transparent text-center border-t border-white/5">
         <div className="max-w-[800px] mx-auto px-[16px] md:px-[32px]">
             <h2 className="text-[36px] md:text-[48px] font-bold text-text-primary mb-[24px] leading-[1.2] font-poppins tracking-[-0.02em]">
               Mulai Proyek Sanitasi Anda Bersama Kami

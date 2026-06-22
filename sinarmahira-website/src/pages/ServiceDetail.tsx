@@ -5,7 +5,6 @@ import imgTreatment from '../assets/wtp_system.png';
 const ServiceDetail = () => {
   const { slug } = useParams();
 
-  // Mock data for template purposes
   const service = {
     title: slug === 'ipal' ? 'IPAL (Instalasi Pengolahan Air Limbah)' : 'Detail Layanan',
     description: 'Sistem pengolahan air limbah domestik dan medis yang dirancang khusus untuk memenuhi standar baku mutu lingkungan.',
@@ -24,7 +23,7 @@ const ServiceDetail = () => {
     <div className="flex flex-col w-full bg-transparent font-jakarta min-h-screen pb-[120px]">
       
       {/* Breadcrumb Header */}
-      <div className="bg-transparent pt-[120px] pb-[40px] px-[16px] md:px-[32px] border-b border-white/10">
+      <div className="bg-transparent pt-[120px] pb-[40px] px-[16px] md:px-[32px] border-b border-white/5">
         <div className="max-w-[1200px] mx-auto flex items-center text-text-secondary text-[14px]">
           <Link to="/" className="hover:text-brand-blue transition-colors">Beranda</Link>
           <ChevronRight className="w-[16px] h-[16px] mx-[8px] text-text-muted" />
@@ -41,7 +40,7 @@ const ServiceDetail = () => {
           Kembali ke Layanan
         </Link>
 
-        <div className="bg-white rounded-[24px] shadow-raised overflow-hidden">
+        <div className="bg-glass rounded-[24px] shadow-raised overflow-hidden border border-white/8">
           {/* Cover Image */}
           <div className="w-full h-[300px] md:h-[500px] relative">
             <img src={service.imageUrl} alt={service.title} className="w-full h-full object-cover" />
@@ -71,7 +70,7 @@ const ServiceDetail = () => {
                 <h2 className="text-[24px] font-bold text-text-primary font-poppins mb-[16px]">Manfaat & Keunggulan</h2>
                 <ul className="space-y-[16px]">
                   {service.benefits.map((benefit, i) => (
-                    <li key={i} className="flex items-start gap-[12px] p-[16px] bg-surface-light rounded-[12px] border border-border-subtle">
+                    <li key={i} className="flex items-start gap-[12px] p-[16px] bg-white/5 rounded-[12px] border border-white/8">
                       <CheckCircle2 className="w-[24px] h-[24px] text-brand-coral shrink-0" />
                       <span className="text-[16px] text-text-primary font-medium">{benefit}</span>
                     </li>

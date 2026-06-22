@@ -44,7 +44,7 @@ const Services = () => {
   return (
     <div className="flex flex-col w-full bg-transparent font-jakarta min-h-screen">
       {/* Header Section */}
-      <section className="w-full bg-transparent pt-[160px] pb-[80px] px-[16px] md:px-[32px] border-b border-white/10">
+      <section className="w-full bg-transparent pt-[160px] pb-[80px] px-[16px] md:px-[32px] border-b border-white/5">
         <div className="max-w-[1200px] mx-auto text-center">
           <h1 className="text-[40px] md:text-[56px] font-poppins font-bold mb-[24px] leading-[1.2] text-text-primary tracking-[-0.02em]">
             Layanan Kami
@@ -56,17 +56,17 @@ const Services = () => {
       </section>
 
       {/* Services Grid Section */}
-      <section className="py-[80px] md:py-[120px] bg-white">
+      <section className="py-[80px] md:py-[120px]">
         <div className="max-w-[1200px] mx-auto px-[16px] md:px-[32px]">
           
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-[32px]">
             {servicesList.map((service, index) => (
               <div 
                 key={index} 
-                className="group bg-white rounded-[24px] border-l-[4px] border-l-brand-coral shadow-raised p-[32px] md:p-[48px] hover:shadow-floating transition-shadow flex flex-col h-full"
+                className="group bg-glass rounded-[24px] border-l-[4px] border-l-brand-coral shadow-raised p-[32px] md:p-[48px] hover:shadow-floating hover:border-l-brand-blue transition-all duration-300 flex flex-col h-full"
               >
                 <div className="flex flex-col md:flex-row gap-[24px] items-start flex-grow">
-                  <div className="w-[64px] h-[64px] rounded-[16px] bg-brand-coral/10 flex items-center justify-center shrink-0">
+                  <div className="w-[64px] h-[64px] rounded-[16px] bg-brand-coral/10 flex items-center justify-center shrink-0 group-hover:bg-brand-blue/10 transition-colors">
                     {service.icon}
                   </div>
                   <div className="flex flex-col flex-grow">
@@ -93,7 +93,7 @@ const Services = () => {
       </section>
 
       {/* CTA Section */}
-      <section className="py-[100px] bg-surface-light border-t border-border-subtle">
+      <section className="py-[100px] bg-glass-subtle border-t border-white/5">
         <div className="max-w-[1200px] mx-auto px-[16px] md:px-[32px]">
           <div className="bg-transparent border border-white/10 rounded-[24px] shadow-floating p-[48px] md:p-[80px] text-center text-text-primary relative overflow-hidden">
             <div className="absolute top-0 left-0 w-full h-[8px] bg-brand-coral"></div>

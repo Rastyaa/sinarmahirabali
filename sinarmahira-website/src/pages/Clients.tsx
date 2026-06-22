@@ -7,7 +7,6 @@ interface Client {
 }
 
 const clientsData: Client[] = [
-  // Column 1
   { name: 'VILLA COCO', location: 'JL. DOUBLE SIX' },
   { name: 'VILLA JINENG', location: 'JL. PANTAI BRAWA' },
   { name: 'DELTA SPA', location: 'JL. DEWI SRI' },
@@ -52,8 +51,6 @@ const clientsData: Client[] = [
   { name: 'NEOREGEN ANTI AGING', location: 'JL. NAKULA, BADUNG BALI' },
   { name: 'LPD WATURENGONG', location: 'JL. WATURENGONG DENPASAR' },
   { name: 'PT. CEE (BANK BPD)', location: 'BATURITI, TABANAN' },
-
-  // Column 2
   { name: 'SUNDARI SPA', location: 'PECATU GRAHA' },
   { name: 'NEW WORLD', location: 'PECATU GRAHA' },
   { name: 'GLASS HOUSE', location: 'NUSA DUA' },
@@ -68,7 +65,6 @@ const clientsData: Client[] = [
   { name: 'SMAN 2', location: 'KUTA SELATAN' },
   { name: 'MATHIS LODGE', location: 'AMED KARANGASEM' },
   { name: 'SAMBANGAN HILLS', location: 'SINGARAJA BALI' },
-  { name: 'PURI PAYOGAN', location: 'UBUD GIANYAR' },
   { name: 'PURI PAYOGAN', location: 'UBUD GIANYAR' },
   { name: 'KESAMBI RESIDENCE', location: 'KESAMBI DENPASAR BALI' },
   { name: 'DAPUR PRIMA', location: 'GATSU DENPASAR' },
@@ -109,7 +105,6 @@ const Clients = () => {
       client.location.toLowerCase().includes(searchTerm.toLowerCase())
   );
 
-  // Split the filtered clients into two arrays for side-by-side display
   const midPoint = Math.ceil(filteredClients.length / 2);
   const leftColClients = filteredClients.slice(0, midPoint);
   const rightColClients = filteredClients.slice(midPoint);
@@ -117,7 +112,7 @@ const Clients = () => {
   return (
     <div className="flex flex-col w-full bg-transparent font-jakarta min-h-screen pb-[120px]">
       {/* Header Section */}
-      <section className="w-full bg-transparent pt-[160px] pb-[60px] px-[16px] md:px-[32px] border-b border-white/10">
+      <section className="w-full bg-transparent pt-[160px] pb-[60px] px-[16px] md:px-[32px] border-b border-white/5">
         <div className="max-w-[1200px] mx-auto text-center">
           <h1 className="text-[40px] md:text-[56px] font-poppins font-bold mb-[24px] leading-[1.2] text-text-primary tracking-[-0.02em]">
             Client Kami
@@ -137,7 +132,7 @@ const Clients = () => {
             placeholder="Cari nama client atau lokasi..."
             value={searchTerm}
             onChange={(e) => setSearchTerm(e.target.value)}
-            className="w-full h-[48px] pl-[48px] pr-[20px] rounded-[24px] bg-[#FFFFFF]/5 border border-white/10 text-text-primary font-jakarta placeholder-text-muted focus:outline-none focus:border-brand-blue focus:ring-1 focus:ring-brand-blue transition-all"
+            className="w-full h-[48px] pl-[48px] pr-[20px] rounded-[16px] bg-white/5 border border-white/10 text-text-primary font-jakarta placeholder-text-muted focus:outline-none focus:border-brand-blue focus:ring-1 focus:ring-brand-blue transition-all"
           />
         </div>
       </section>
@@ -145,17 +140,17 @@ const Clients = () => {
       {/* Table Section */}
       <section className="max-w-[1200px] mx-auto w-full px-[16px] md:px-[32px] mt-[40px]">
         {filteredClients.length === 0 ? (
-          <div className="text-center py-[60px] bg-white rounded-[24px] border border-border-subtle">
+          <div className="text-center py-[60px] bg-glass rounded-[24px] border border-white/8">
             <Building2 className="w-[48px] h-[48px] text-text-muted mx-auto mb-[16px]" />
             <p className="text-[18px] text-text-secondary">Tidak ada client yang cocok dengan pencarian Anda.</p>
           </div>
         ) : (
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-[24px] items-start">
-            {/* Left Table / Column */}
-            <div className="overflow-hidden rounded-[24px] border border-border-subtle bg-white">
+            {/* Left Table */}
+            <div className="overflow-hidden rounded-[24px] border border-white/8 bg-glass">
               <table className="w-full text-left border-collapse">
                 <thead>
-                  <tr className="border-b border-border-subtle bg-white/10">
+                  <tr className="border-b border-white/10">
                     <th className="p-[16px] text-[14px] font-bold text-text-primary font-poppins uppercase tracking-wider w-[50%]">Nama</th>
                     <th className="p-[16px] text-[14px] font-bold text-text-primary font-poppins uppercase tracking-wider w-[50%]">Lokasi</th>
                   </tr>
@@ -164,7 +159,7 @@ const Clients = () => {
                   {leftColClients.map((client, i) => (
                     <tr 
                       key={`left-${i}`}
-                      className="border-b border-border-subtle/50 last:border-b-0 hover:bg-white/5 transition-colors"
+                      className="border-b border-white/5 last:border-b-0 hover:bg-white/3 transition-colors"
                     >
                       <td className="p-[16px] text-[15px] font-semibold text-text-primary font-poppins">
                         {client.name}
@@ -181,12 +176,12 @@ const Clients = () => {
               </table>
             </div>
 
-            {/* Right Table / Column */}
+            {/* Right Table */}
             {rightColClients.length > 0 && (
-              <div className="overflow-hidden rounded-[24px] border border-border-subtle bg-white">
+              <div className="overflow-hidden rounded-[24px] border border-white/8 bg-glass">
                 <table className="w-full text-left border-collapse">
                   <thead>
-                    <tr className="border-b border-border-subtle bg-white/10">
+                    <tr className="border-b border-white/10">
                       <th className="p-[16px] text-[14px] font-bold text-text-primary font-poppins uppercase tracking-wider w-[50%]">Nama</th>
                       <th className="p-[16px] text-[14px] font-bold text-text-primary font-poppins uppercase tracking-wider w-[50%]">Lokasi</th>
                     </tr>
@@ -195,7 +190,7 @@ const Clients = () => {
                     {rightColClients.map((client, i) => (
                       <tr 
                         key={`right-${i}`}
-                        className="border-b border-border-subtle/50 last:border-b-0 hover:bg-white/5 transition-colors"
+                        className="border-b border-white/5 last:border-b-0 hover:bg-white/3 transition-colors"
                       >
                         <td className="p-[16px] text-[15px] font-semibold text-text-primary font-poppins">
                           {client.name}

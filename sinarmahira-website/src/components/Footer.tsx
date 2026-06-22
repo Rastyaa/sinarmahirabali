@@ -25,72 +25,73 @@ const LinkedinIcon = ({ className }: { className?: string }) => (
 
 const Footer = () => {
   return (
-    <footer className="bg-surface-light text-text-secondary border-t border-border-subtle mt-[120px]">
+    <footer className="bg-glass-subtle text-text-secondary border-t border-white/5 mt-[120px]">
       <div className="max-w-[1440px] mx-auto px-[16px] md:px-[32px] py-[56px]">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-[32px]">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-[40px]">
           
           {/* Company Info */}
           <div>
-            <Link to="/" className="flex items-center gap-2 mb-[16px]">
+            <Link to="/" className="flex items-center gap-[10px] mb-[20px]">
               <div className="text-brand-blue">
-                <Droplets className="w-8 h-8" />
+                <Droplets className="w-[28px] h-[28px]" />
               </div>
               <span className="text-[20px] font-bold text-text-primary font-poppins">
                 Sinar Mahira
               </span>
             </Link>
-            <p className="text-[16px] leading-[32px] font-jakarta mb-[20px]">
+            <p className="text-[15px] leading-[28px] font-jakarta mb-[24px] text-text-secondary">
               Perusahaan pengolahan air limbah, sanitasi lingkungan, dan solusi penyimpanan air berbasis fiberglass terpercaya di Bali.
             </p>
-            <div className="flex gap-[16px]">
-              <a href="#" className="text-text-muted hover:text-brand-blue transition-colors">
-                <FacebookIcon className="w-[22px] h-[22px]" />
+            <div className="flex gap-[12px]">
+              <a href="#" className="w-[40px] h-[40px] rounded-[10px] bg-white/5 border border-white/8 flex items-center justify-center text-text-muted hover:text-brand-blue hover:bg-brand-blue/10 hover:border-brand-blue/20 transition-all duration-200">
+                <FacebookIcon className="w-[18px] h-[18px]" />
               </a>
-              <a href="#" className="text-text-muted hover:text-brand-blue transition-colors">
-                <InstagramIcon className="w-[22px] h-[22px]" />
+              <a href="#" className="w-[40px] h-[40px] rounded-[10px] bg-white/5 border border-white/8 flex items-center justify-center text-text-muted hover:text-brand-coral hover:bg-brand-coral/10 hover:border-brand-coral/20 transition-all duration-200">
+                <InstagramIcon className="w-[18px] h-[18px]" />
               </a>
-              <a href="#" className="text-text-muted hover:text-brand-blue transition-colors">
-                <LinkedinIcon className="w-[22px] h-[22px]" />
+              <a href="#" className="w-[40px] h-[40px] rounded-[10px] bg-white/5 border border-white/8 flex items-center justify-center text-text-muted hover:text-brand-blue hover:bg-brand-blue/10 hover:border-brand-blue/20 transition-all duration-200">
+                <LinkedinIcon className="w-[18px] h-[18px]" />
               </a>
             </div>
           </div>
 
           {/* Quick Links */}
           <div>
-            <h4 className="text-[20px] text-text-primary font-bold font-poppins mb-[16px]">Tautan Cepat</h4>
-            <ul className="space-y-[12px] font-jakarta text-[16px]">
-              <li><Link to="/about" className="text-brand-blue hover:text-brand-coral transition-colors">Tentang Kami</Link></li>
-              <li><Link to="/services" className="text-brand-blue hover:text-brand-coral transition-colors">Layanan</Link></li>
-              <li><Link to="/projects" className="text-brand-blue hover:text-brand-coral transition-colors">Proyek Kami</Link></li>
-              <li><Link to="/faq" className="text-brand-blue hover:text-brand-coral transition-colors">FAQ</Link></li>
+            <h4 className="text-[18px] text-text-primary font-bold font-poppins mb-[20px]">Tautan Cepat</h4>
+            <ul className="space-y-[12px] font-jakarta text-[15px]">
+              <li><Link to="/about" className="text-text-secondary hover:text-brand-coral transition-colors">Tentang Kami</Link></li>
+              <li><Link to="/services" className="text-text-secondary hover:text-brand-coral transition-colors">Layanan</Link></li>
+              <li><Link to="/projects" className="text-text-secondary hover:text-brand-coral transition-colors">Proyek Kami</Link></li>
+              <li><Link to="/clients" className="text-text-secondary hover:text-brand-coral transition-colors">Client Kami</Link></li>
+              <li><Link to="/faq" className="text-text-secondary hover:text-brand-coral transition-colors">FAQ</Link></li>
             </ul>
           </div>
 
           {/* Services */}
           <div>
-            <h4 className="text-[20px] text-text-primary font-bold font-poppins mb-[16px]">Layanan Utama</h4>
-            <ul className="space-y-[12px] font-jakarta text-[16px]">
-              <li className="text-text-secondary">IPAL & STP</li>
-              <li className="text-text-secondary">Bio Septic Tank</li>
-              <li className="text-text-secondary">Water Treatment</li>
-              <li className="text-text-secondary">Grease Trap</li>
+            <h4 className="text-[18px] text-text-primary font-bold font-poppins mb-[20px]">Layanan Utama</h4>
+            <ul className="space-y-[12px] font-jakarta text-[15px]">
+              <li className="text-text-secondary hover:text-text-primary transition-colors cursor-default">IPAL & STP</li>
+              <li className="text-text-secondary hover:text-text-primary transition-colors cursor-default">Bio Septic Tank</li>
+              <li className="text-text-secondary hover:text-text-primary transition-colors cursor-default">Water Treatment</li>
+              <li className="text-text-secondary hover:text-text-primary transition-colors cursor-default">Grease Trap</li>
             </ul>
           </div>
 
           {/* Contact Info */}
           <div>
-            <h4 className="text-[20px] text-text-primary font-bold font-poppins mb-[16px]">Hubungi Kami</h4>
-            <ul className="space-y-[16px] font-jakarta text-[16px]">
+            <h4 className="text-[18px] text-text-primary font-bold font-poppins mb-[20px]">Hubungi Kami</h4>
+            <ul className="space-y-[16px] font-jakarta text-[15px]">
               <li className="flex items-start gap-[12px]">
-                <MapPin className="w-[22px] h-[22px] text-brand-coral shrink-0 mt-1" />
+                <MapPin className="w-[20px] h-[20px] text-brand-coral shrink-0 mt-[2px]" />
                 <span className="text-text-secondary">Denpasar, Bali, Indonesia</span>
               </li>
               <li className="flex items-center gap-[12px]">
-                <Phone className="w-[22px] h-[22px] text-brand-coral shrink-0" />
+                <Phone className="w-[20px] h-[20px] text-brand-coral shrink-0" />
                 <span className="text-text-secondary">+62 889-8728-8952</span>
               </li>
               <li className="flex items-center gap-[12px]">
-                <Mail className="w-[22px] h-[22px] text-brand-coral shrink-0" />
+                <Mail className="w-[20px] h-[20px] text-brand-coral shrink-0" />
                 <span className="text-text-secondary">info@sinarmahirabali.com</span>
               </li>
             </ul>
@@ -99,12 +100,12 @@ const Footer = () => {
       </div>
       
       {/* Copyright */}
-      <div className="border-t border-border-subtle bg-white">
-        <div className="max-w-[1440px] mx-auto px-[16px] md:px-[32px] py-[24px] text-[12px] font-jakarta text-center flex flex-col md:flex-row justify-between items-center text-text-secondary">
+      <div className="border-t border-white/5">
+        <div className="max-w-[1440px] mx-auto px-[16px] md:px-[32px] py-[24px] text-[13px] font-jakarta text-center flex flex-col md:flex-row justify-between items-center text-text-muted">
           <p>&copy; {new Date().getFullYear()} PT Sinar Mahira Bali (Biosmb). Hak Cipta Dilindungi.</p>
-          <div className="mt-4 md:mt-0 space-x-[16px]">
-            <Link to="#" className="text-brand-blue hover:text-brand-coral transition-colors">Kebijakan Privasi</Link>
-            <Link to="#" className="text-brand-blue hover:text-brand-coral transition-colors">Syarat & Ketentuan</Link>
+          <div className="mt-4 md:mt-0 space-x-[20px]">
+            <Link to="#" className="text-text-secondary hover:text-brand-coral transition-colors">Kebijakan Privasi</Link>
+            <Link to="#" className="text-text-secondary hover:text-brand-coral transition-colors">Syarat & Ketentuan</Link>
           </div>
         </div>
       </div>

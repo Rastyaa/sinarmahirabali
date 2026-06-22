@@ -14,35 +14,26 @@ const WaterDropsBackground = () => {
     let idCounter = 0;
     let isMounted = true;
     
-    // Function to spawn a new ripple
     const spawnRipple = () => {
       if (!isMounted) return;
       
       const newRipple: Ripple = {
         id: idCounter++,
-        left: `${Math.random() * 80 + 10}%`, // Keep it somewhat away from extreme edges
-        top: `${Math.random() * 80 + 10}%`,
-        size: Math.random() * 500 + 400, // Large ripples (400px to 900px)
+        left: `${Math.random() * 100}%`,
+        top: `${Math.random() * 100}%`,
+        size: Math.random() * 300 + 200, 
       };
       
       setRipples((prev) => [...prev, newRipple]);
 
-      // Remove the ripple after its animation completes (animation is 3.5s + max delay 1.5s = 5s total)
       setTimeout(() => {
         if (isMounted) {
           setRipples((prev) => prev.filter((r) => r.id !== newRipple.id));
         }
-      }, 5500);
+      }, 6000);
     };
 
-    // Spawn first few ripples sequentially
-    spawnRipple();
-    setTimeout(spawnRipple, 400);
-    setTimeout(spawnRipple, 800);
-
-    // Continuous spawner (one ripple every 0.8 seconds)
-    const interval = setInterval(spawnRipple, 800);
-
+    const interval = setInterval(spawnRipple, 1200);
     return () => {
       isMounted = false;
       clearInterval(interval);
@@ -63,29 +54,21 @@ const WaterDropsBackground = () => {
             transform: 'translate(-50%, -50%)',
           }}
         >
-          {/* Create 4 concentric rings per ripple */}
-          {[0, 1, 2, 3].map((ringIndex) => (
+          {[0, 1, 2].map((ringIndex) => (
             <div
               key={ringIndex}
-              className="absolute rounded-full border-[2px] border-brand-teal/60"
+              className="absolute rounded-full border-[1.5px] border-brand-teal/40"
               style={{
                 width: '100%',
                 height: '100%',
-                animation: `ripple 3.5s cubic-bezier(0.25, 0.46, 0.45, 0.94) forwards`,
-                animationDelay: `${ringIndex * 0.5}s`,
+                animation: `ripple 6s cubic-bezier(0, 0.2, 0.4, 1) forwards`,
+                animationDelay: `${ringIndex * 1.5}s`,
                 opacity: 0,
                 transform: 'scale(0)',
-                boxShadow: '0 0 20px rgba(56, 189, 248, 0.5), inset 0 0 20px rgba(56, 189, 248, 0.5)'
+                boxShadow: '0 0 15px rgba(56, 189, 248, 0.3)'
               }}
             />
           ))}
-          {/* Center point */}
-          <div 
-            className="absolute w-[8px] h-[8px] rounded-full bg-brand-teal shadow-[0_0_15px_rgba(56,189,248,1)]" 
-            style={{ 
-              animation: `rippleCenter 3.5s forwards`, 
-            }} 
-          />
         </div>
       ))}
     </div>

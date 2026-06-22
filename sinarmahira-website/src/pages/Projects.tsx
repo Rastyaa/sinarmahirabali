@@ -60,7 +60,7 @@ const Projects = () => {
   return (
     <div className="flex flex-col w-full bg-transparent font-jakarta min-h-screen pb-[120px]">
       {/* Header Section */}
-      <section className="w-full bg-transparent pt-[160px] pb-[80px] px-[16px] md:px-[32px] border-b border-white/10">
+      <section className="w-full bg-transparent pt-[160px] pb-[80px] px-[16px] md:px-[32px] border-b border-white/5">
         <div className="max-w-[1200px] mx-auto text-center">
           <h1 className="text-[40px] md:text-[56px] font-poppins font-bold mb-[24px] leading-[1.2] text-text-primary tracking-[-0.02em]">
             Proyek Kami
@@ -75,7 +75,7 @@ const Projects = () => {
       <section className="max-w-[1200px] mx-auto w-full px-[16px] md:px-[32px] mt-[80px]">
         <div className="grid grid-cols-1 md:grid-cols-2 gap-[48px]">
           {projects.map((project, i) => (
-            <div key={i} className="group bg-white rounded-[24px] overflow-hidden shadow-raised border border-border-subtle flex flex-col hover:shadow-floating transition-shadow">
+            <div key={i} className="group bg-glass rounded-[24px] overflow-hidden shadow-raised border border-white/8 flex flex-col hover:shadow-floating transition-all duration-300">
               
               <div className="relative h-[300px] overflow-hidden">
                 <img 
@@ -83,7 +83,7 @@ const Projects = () => {
                   alt={project.title} 
                   className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
                 />
-                <div className="absolute top-[24px] right-[24px] bg-white px-[16px] py-[8px] rounded-full text-[14px] font-bold text-brand-coral shadow-md">
+                <div className="absolute top-[24px] right-[24px] bg-glass backdrop-blur-md px-[16px] py-[8px] rounded-full text-[14px] font-bold text-brand-coral border border-white/20">
                   {project.serviceType}
                 </div>
               </div>
