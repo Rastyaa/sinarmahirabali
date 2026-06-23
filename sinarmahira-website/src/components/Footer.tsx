@@ -1,5 +1,5 @@
 import { Link } from 'react-router-dom';
-import { Droplets, MapPin, Phone, Mail } from 'lucide-react';
+import { Droplets, MapPin, Phone } from 'lucide-react';
 
 const FacebookIcon = ({ className }: { className?: string }) => (
   <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className={className}>
@@ -89,10 +89,6 @@ const Footer = () => {
               <li className="flex items-center gap-[12px]">
                 <Phone className="w-[20px] h-[20px] text-brand-coral shrink-0" />
                 <span className="text-text-secondary">+62 889-8728-8952</span>
-              </li>
-              <li className="flex items-center gap-[12px]">
-                <Mail className="w-[20px] h-[20px] text-brand-coral shrink-0" />
-                <span className="text-text-secondary">info@sinarmahirabali.com</span>
               </li>
             </ul>
           </div>

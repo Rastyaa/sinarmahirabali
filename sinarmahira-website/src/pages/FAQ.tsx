@@ -58,7 +58,7 @@ const FAQ = () => {
             {faqData.map((faq, index) => (
               <div 
                 key={index} 
-                className={`bg-glass rounded-[16px] border ${openIndex === index ? 'border-brand-coral/40' : 'border-white/8'} overflow-hidden transition-colors`}
+                className={`bg-glass rounded-[16px] border ${openIndex === index ? 'border-brand-coral/50 shadow-floating' : 'border-white/8 shadow-raised'} overflow-hidden transition-all duration-300 hover-glow`}
               >
                 <button 
                   onClick={() => toggleAccordion(index)}
@@ -74,7 +74,7 @@ const FAQ = () => {
                 <div 
                   className={`px-[24px] overflow-hidden transition-all duration-300 ease-in-out ${openIndex === index ? 'max-h-[500px] pb-[24px] opacity-100' : 'max-h-0 opacity-0'}`}
                 >
-                  <p className="text-[16px] text-text-secondary leading-[32px] font-jakarta border-t border-white/8 pt-[16px]">
+                  <p className="text-[16px] text-text-secondary leading-[32px] font-jakarta border-t border-white/5 pt-[16px]">
                     {faq.answer}
                   </p>
                 </div>
@@ -84,8 +84,8 @@ const FAQ = () => {
 
           {/* Contact Box */}
           <div className="space-y-[32px]">
-             <div className="bg-glass border-t-[4px] border-t-brand-blue rounded-[16px] p-[32px] shadow-raised text-center flex flex-col items-center border border-white/8">
-               <div className="w-[64px] h-[64px] rounded-full bg-brand-blue/10 flex items-center justify-center mb-[24px]">
+             <div className="bg-glass border-t-[4px] border-t-brand-blue rounded-[16px] p-[32px] shadow-modal text-center flex flex-col items-center border border-white/8 hover-glow transition-all duration-300">
+               <div className="w-[64px] h-[64px] rounded-full bg-brand-blue/10 flex items-center justify-center mb-[24px] shadow-[0_0_15px_rgba(56,189,248,0.15)]">
                  <HelpCircle className="w-[32px] h-[32px] text-brand-blue" />
                </div>
                <h3 className="text-[20px] font-bold text-text-primary font-poppins mb-[16px]">
@@ -96,7 +96,7 @@ const FAQ = () => {
                </p>
                <Link 
                  to="/contact" 
-                 className="flex items-center justify-center gap-[8px] w-full bg-glass border border-white/10 text-text-primary h-[48px] rounded-[12px] font-bold hover:bg-brand-blue hover:text-white hover:border-transparent transition-all duration-200"
+                 className="flex items-center justify-center gap-[8px] w-full bg-glass border border-white/10 text-text-primary h-[48px] rounded-[12px] font-bold hover:bg-brand-blue hover:text-white hover:border-transparent transition-all duration-300 shadow-floating"
                >
                  <MessageCircle className="w-[18px] h-[18px]" />
                  Hubungi Support

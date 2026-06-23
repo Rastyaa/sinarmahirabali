@@ -63,10 +63,10 @@ const Services = () => {
             {servicesList.map((service, index) => (
               <div 
                 key={index} 
-                className="group bg-glass rounded-[24px] border-l-[4px] border-l-brand-coral shadow-raised p-[32px] md:p-[48px] hover:shadow-floating hover:border-l-brand-blue transition-all duration-300 flex flex-col h-full"
+                className="group bg-glass rounded-[24px] border-l-[4px] border-l-brand-coral shadow-raised p-[32px] md:p-[48px] hover:shadow-floating hover:border-l-brand-blue transition-all duration-300 flex flex-col h-full hover-glow"
               >
                 <div className="flex flex-col md:flex-row gap-[24px] items-start flex-grow">
-                  <div className="w-[64px] h-[64px] rounded-[16px] bg-brand-coral/10 flex items-center justify-center shrink-0 group-hover:bg-brand-blue/10 transition-colors">
+                  <div className="w-[64px] h-[64px] rounded-[16px] bg-brand-coral/10 flex items-center justify-center shrink-0 group-hover:bg-brand-blue/10 group-hover:shadow-[0_0_20px_rgba(56,189,248,0.2)] transition-all duration-300">
                     {service.icon}
                   </div>
                   <div className="flex flex-col flex-grow">
@@ -95,7 +95,7 @@ const Services = () => {
       {/* CTA Section */}
       <section className="py-[100px] bg-glass-subtle border-t border-white/5">
         <div className="max-w-[1200px] mx-auto px-[16px] md:px-[32px]">
-          <div className="bg-transparent border border-white/10 rounded-[24px] shadow-floating p-[48px] md:p-[80px] text-center text-text-primary relative overflow-hidden">
+          <div className="bg-glass border border-white/10 rounded-[24px] shadow-modal p-[48px] md:p-[80px] text-center text-text-primary relative overflow-hidden hover-glow transition-all duration-500">
             <div className="absolute top-0 left-0 w-full h-[8px] bg-brand-coral"></div>
             <h2 className="text-[36px] md:text-[48px] font-bold text-text-primary mb-[24px] leading-[1.2] font-poppins tracking-[-0.02em]">
               Butuh Konsultasi untuk Proyek Anda?

@@ -26,41 +26,41 @@ const About = () => {
           </div>
 
           {/* Premium Stats Banner */}
-          <div className="relative rounded-[24px] overflow-hidden bg-gradient-to-br from-brand-blue/20 via-[#0A2F1D]/60 to-brand-teal/10 backdrop-blur-md border border-white/10 shadow-raised p-[32px] md:p-[48px]">
+          <div className="relative rounded-[24px] overflow-hidden bg-gradient-to-br from-brand-blue/10 via-[#0A2F1D]/30 to-brand-teal/5 backdrop-blur-md border border-white/10 shadow-modal p-[32px] md:p-[48px] hover-glow transition-all duration-500">
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-[32px] lg:gap-0 items-center justify-center divide-y sm:divide-y-0 lg:divide-x divide-white/10">
               
               <div className="text-center lg:px-4">
-                <div className="text-[40px] md:text-[48px] font-poppins font-extrabold text-text-primary mb-[8px] tracking-tight">
+                <div className="text-[40px] md:text-[48px] font-poppins font-extrabold text-brand-blue mb-[8px] tracking-tight drop-shadow-[0_0_15px_rgba(56,189,248,0.3)]">
                   100+
                 </div>
-                <div className="text-[14px] md:text-[15px] font-jakarta text-text-secondary font-medium">
+                <div className="text-[14px] md:text-[15px] font-jakarta text-text-secondary font-semibold uppercase tracking-wider">
                   Client di Indonesia
                 </div>
               </div>
 
               <div className="text-center pt-[24px] sm:pt-0 lg:px-4">
-                <div className="text-[40px] md:text-[48px] font-poppins font-extrabold text-text-primary mb-[8px] tracking-tight">
+                <div className="text-[40px] md:text-[48px] font-poppins font-extrabold text-brand-blue mb-[8px] tracking-tight drop-shadow-[0_0_15px_rgba(56,189,248,0.3)]">
                   4
                 </div>
-                <div className="text-[14px] md:text-[15px] font-jakarta text-text-secondary font-medium">
+                <div className="text-[14px] md:text-[15px] font-jakarta text-text-secondary font-semibold uppercase tracking-wider">
                   Kerjasama Perusahaan
                 </div>
               </div>
 
               <div className="text-center pt-[24px] sm:pt-0 lg:px-4">
-                <div className="text-[40px] md:text-[48px] font-poppins font-extrabold text-text-primary mb-[8px] tracking-tight">
+                <div className="text-[40px] md:text-[48px] font-poppins font-extrabold text-brand-blue mb-[8px] tracking-tight drop-shadow-[0_0_15px_rgba(56,189,248,0.3)]">
                   7
                 </div>
-                <div className="text-[14px] md:text-[15px] font-jakarta text-text-secondary font-medium">
+                <div className="text-[14px] md:text-[15px] font-jakarta text-text-secondary font-semibold uppercase tracking-wider">
                   Karyawan
                 </div>
               </div>
 
               <div className="text-center pt-[24px] sm:pt-0 lg:px-4">
-                <div className="text-[40px] md:text-[48px] font-poppins font-extrabold text-text-primary mb-[8px] tracking-tight">
+                <div className="text-[40px] md:text-[48px] font-poppins font-extrabold text-brand-blue mb-[8px] tracking-tight drop-shadow-[0_0_15px_rgba(56,189,248,0.3)]">
                   6
                 </div>
-                <div className="text-[14px] md:text-[15px] font-jakarta text-text-secondary font-medium">
+                <div className="text-[14px] md:text-[15px] font-jakarta text-text-secondary font-semibold uppercase tracking-wider">
                   Team Support Instalasi
                 </div>
               </div>
@@ -75,8 +75,8 @@ const About = () => {
         <div className="max-w-[1200px] mx-auto px-[16px] md:px-[32px]">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-[32px]">
             {/* Visi */}
-            <div className="bg-glass rounded-[24px] p-[40px] md:p-[56px] shadow-raised border border-white/8 hover:border-brand-blue/20 transition-colors">
-              <div className="w-[64px] h-[64px] rounded-[16px] bg-brand-blue/10 flex items-center justify-center mb-[32px]">
+            <div className="bg-glass rounded-[24px] p-[40px] md:p-[56px] shadow-raised border border-white/8 hover:border-brand-blue/20 transition-all duration-300 hover-glow">
+              <div className="w-[64px] h-[64px] rounded-[16px] bg-brand-blue/10 flex items-center justify-center mb-[32px] shadow-[0_0_15px_rgba(56,189,248,0.15)]">
                 <Eye className="w-[32px] h-[32px] text-brand-blue" />
               </div>
               <h3 className="text-[32px] font-bold text-text-primary mb-[24px] font-poppins">Visi Kami</h3>
@@ -86,8 +86,8 @@ const About = () => {
             </div>
 
             {/* Misi */}
-            <div className="bg-glass rounded-[24px] p-[40px] md:p-[56px] shadow-raised border border-white/8 hover:border-brand-coral/20 transition-colors">
-              <div className="w-[64px] h-[64px] rounded-[16px] bg-brand-coral/10 flex items-center justify-center mb-[32px]">
+            <div className="bg-glass rounded-[24px] p-[40px] md:p-[56px] shadow-raised border border-white/8 hover:border-brand-coral/20 transition-all duration-300 hover-glow">
+              <div className="w-[64px] h-[64px] rounded-[16px] bg-brand-coral/10 flex items-center justify-center mb-[32px] shadow-[0_0_15px_rgba(240,112,87,0.15)]">
                 <Target className="w-[32px] h-[32px] text-brand-coral" />
               </div>
               <h3 className="text-[32px] font-bold text-text-primary mb-[24px] font-poppins">Misi Kami</h3>

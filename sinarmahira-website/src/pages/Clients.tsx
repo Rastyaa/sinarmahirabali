@@ -132,7 +132,7 @@ const Clients = () => {
             placeholder="Cari nama client atau lokasi..."
             value={searchTerm}
             onChange={(e) => setSearchTerm(e.target.value)}
-            className="w-full h-[48px] pl-[48px] pr-[20px] rounded-[16px] bg-white/5 border border-white/10 text-text-primary font-jakarta placeholder-text-muted focus:outline-none focus:border-brand-blue focus:ring-1 focus:ring-brand-blue transition-all"
+            className="w-full h-[48px] pl-[48px] pr-[20px] rounded-[16px] bg-white/5 border border-white/10 text-text-primary font-jakarta placeholder-text-muted focus:outline-none focus:border-brand-blue focus:bg-white/10 focus:ring-1 focus:ring-brand-blue transition-all"
           />
         </div>
       </section>
@@ -140,17 +140,17 @@ const Clients = () => {
       {/* Table Section */}
       <section className="max-w-[1200px] mx-auto w-full px-[16px] md:px-[32px] mt-[40px]">
         {filteredClients.length === 0 ? (
-          <div className="text-center py-[60px] bg-glass rounded-[24px] border border-white/8">
+          <div className="text-center py-[60px] bg-glass rounded-[24px] border border-white/8 hover-glow transition-all duration-300">
             <Building2 className="w-[48px] h-[48px] text-text-muted mx-auto mb-[16px]" />
             <p className="text-[18px] text-text-secondary">Tidak ada client yang cocok dengan pencarian Anda.</p>
           </div>
         ) : (
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-[24px] items-start">
             {/* Left Table */}
-            <div className="overflow-hidden rounded-[24px] border border-white/8 bg-glass">
+            <div className="overflow-hidden rounded-[24px] border border-white/8 bg-glass hover-glow transition-all duration-300">
               <table className="w-full text-left border-collapse">
                 <thead>
-                  <tr className="border-b border-white/10">
+                  <tr className="border-b border-white/10 bg-white/5">
                     <th className="p-[16px] text-[14px] font-bold text-text-primary font-poppins uppercase tracking-wider w-[50%]">Nama</th>
                     <th className="p-[16px] text-[14px] font-bold text-text-primary font-poppins uppercase tracking-wider w-[50%]">Lokasi</th>
                   </tr>
@@ -159,9 +159,9 @@ const Clients = () => {
                   {leftColClients.map((client, i) => (
                     <tr 
                       key={`left-${i}`}
-                      className="border-b border-white/5 last:border-b-0 hover:bg-white/3 transition-colors"
+                      className="border-b border-white/5 last:border-b-0 hover:bg-white/5 transition-colors"
                     >
-                      <td className="p-[16px] text-[15px] font-semibold text-text-primary font-poppins">
+                      <td className="p-[16px] text-[15px] font-bold text-text-primary font-poppins">
                         {client.name}
                       </td>
                       <td className="p-[16px] text-[14px] text-text-secondary">
@@ -178,10 +178,10 @@ const Clients = () => {
 
             {/* Right Table */}
             {rightColClients.length > 0 && (
-              <div className="overflow-hidden rounded-[24px] border border-white/8 bg-glass">
+              <div className="overflow-hidden rounded-[24px] border border-white/8 bg-glass hover-glow transition-all duration-300">
                 <table className="w-full text-left border-collapse">
                   <thead>
-                    <tr className="border-b border-white/10">
+                    <tr className="border-b border-white/10 bg-white/5">
                       <th className="p-[16px] text-[14px] font-bold text-text-primary font-poppins uppercase tracking-wider w-[50%]">Nama</th>
                       <th className="p-[16px] text-[14px] font-bold text-text-primary font-poppins uppercase tracking-wider w-[50%]">Lokasi</th>
                     </tr>
@@ -190,9 +190,9 @@ const Clients = () => {
                     {rightColClients.map((client, i) => (
                       <tr 
                         key={`right-${i}`}
-                        className="border-b border-white/5 last:border-b-0 hover:bg-white/3 transition-colors"
+                        className="border-b border-white/5 last:border-b-0 hover:bg-white/5 transition-colors"
                       >
-                        <td className="p-[16px] text-[15px] font-semibold text-text-primary font-poppins">
+                        <td className="p-[16px] text-[15px] font-bold text-text-primary font-poppins">
                           {client.name}
                         </td>
                         <td className="p-[16px] text-[14px] text-text-secondary">

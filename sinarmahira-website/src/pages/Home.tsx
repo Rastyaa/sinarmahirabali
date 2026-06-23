@@ -31,25 +31,25 @@ const Home = () => {
     <div className="flex flex-col w-full bg-transparent font-jakarta">
       
       {/* Premium Hero Section */}
-      <section className="relative w-full min-h-[90vh] flex items-center pt-[120px] pb-[80px] bg-transparent overflow-hidden">
+      <section className="relative w-full min-h-[95vh] flex items-center pt-[140px] pb-[100px] bg-transparent overflow-hidden">
         {/* Subtle Decorative Background Blobs */}
-        <div className="absolute top-[-20%] right-[-10%] w-[600px] h-[600px] rounded-full bg-brand-blue/5 blur-[120px] pointer-events-none"></div>
-        <div className="absolute bottom-[-10%] left-[-10%] w-[400px] h-[400px] rounded-full bg-brand-teal/5 blur-[80px] pointer-events-none"></div>
+        <div className="absolute top-[-20%] right-[-10%] w-[600px] h-[600px] rounded-full bg-brand-blue/10 blur-[130px] pointer-events-none"></div>
+        <div className="absolute bottom-[-10%] left-[-10%] w-[400px] h-[400px] rounded-full bg-brand-teal/5 blur-[90px] pointer-events-none"></div>
 
         <div className="relative z-10 max-w-[1200px] mx-auto px-[16px] md:px-[32px] w-full">
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-[48px] items-center">
             
             {/* Left Column - Teks & Actions */}
             <div className="lg:col-span-7 flex flex-col items-start text-left">
-              <div className="inline-flex items-center gap-[8px] bg-brand-blue/10 border border-brand-blue/15 px-[16px] py-[6px] rounded-[8px] mb-[24px]">
+              <div className="inline-flex items-center gap-[8px] bg-brand-blue/10 border border-brand-blue/20 px-[16px] py-[6px] rounded-[10px] mb-[24px] shadow-[0_0_15px_rgba(56,189,248,0.1)]">
                 <div className="w-[8px] h-[8px] rounded-full bg-brand-coral animate-pulse"></div>
-                <span className="text-brand-blue text-[14px] font-bold tracking-wide uppercase font-poppins">Solusi Sanitasi Terpercaya</span>
+                <span className="text-brand-blue text-[13px] font-extrabold tracking-widest uppercase font-poppins">Solusi Sanitasi Terpercaya</span>
               </div>
               
-              <h1 className="text-[40px] md:text-[56px] leading-[1.1] md:leading-[1.2] font-poppins font-bold mb-[24px] text-text-primary tracking-[-0.03em]">
+              <h1 className="text-[44px] md:text-[60px] leading-[1.05] md:leading-[1.15] font-poppins font-bold mb-[24px] text-text-primary tracking-[-0.03em]">
                 Sistem Sanitasi & <br />
                 Pengolahan Air Limbah <br />
-                <span className="text-transparent bg-clip-text bg-gradient-to-r from-brand-blue to-brand-teal">Terbaik di Kelasnya.</span>
+                <span className="text-transparent bg-clip-text bg-gradient-to-r from-brand-blue via-[#2DD4BF] to-brand-coral">Terbaik di Kelasnya.</span>
               </h1>
               
               <p className="text-[16px] md:text-[18px] leading-[32px] font-jakarta mb-[40px] text-text-secondary max-w-[600px]">
@@ -57,11 +57,11 @@ const Home = () => {
               </p>
               
               <div className="flex flex-col sm:flex-row gap-[16px] w-full sm:w-auto">
-                <Link to="/contact" className="inline-flex justify-center items-center bg-brand-coral text-white h-[49px] px-[32px] rounded-[16px] font-jakarta text-[16px] font-bold shadow-floating hover:bg-brand-coral-hover transition-colors border border-transparent">
+                <Link to="/contact" className="inline-flex justify-center items-center bg-brand-coral text-white h-[52px] px-[36px] rounded-[16px] font-jakarta text-[16px] font-bold shadow-floating hover:bg-brand-coral-hover transition-all duration-300 border border-transparent hover:shadow-[0_0_25px_rgba(240,112,87,0.4)]">
                   Konsultasi Gratis
                   <ArrowRight className="ml-[8px] w-[18px] h-[18px]" />
                 </Link>
-                <Link to="/services" className="inline-flex justify-center items-center bg-glass text-brand-blue h-[49px] px-[32px] rounded-[16px] font-jakarta text-[16px] font-bold border border-brand-blue/20 hover:bg-brand-blue/10 transition-colors">
+                <Link to="/services" className="inline-flex justify-center items-center bg-glass text-text-primary h-[52px] px-[36px] rounded-[16px] font-jakarta text-[16px] font-bold border border-white/10 hover:bg-white/10 hover:border-brand-blue/30 transition-all duration-300">
                   Lihat Layanan
                 </Link>
               </div>
@@ -69,16 +69,16 @@ const Home = () => {
 
             {/* Right Column - Premium Featured Image Card */}
             <div className="lg:col-span-5 relative">
-              <div className="absolute inset-0 bg-brand-blue/5 translate-x-[16px] translate-y-[16px] rounded-[24px]"></div>
-              <div className="relative rounded-[24px] overflow-hidden shadow-floating border border-white/10 bg-glass">
+              <div className="absolute inset-0 bg-brand-blue/10 translate-x-[16px] translate-y-[16px] rounded-[24px] blur-[2px]"></div>
+              <div className="relative rounded-[24px] overflow-hidden shadow-modal border border-white/10 bg-glass hover-glow transition-all duration-500">
                 <img 
                   src={imgSanitation} 
                   alt="Modern Sanitation Infrastructure" 
-                  className="w-full h-[320px] md:h-[420px] object-cover object-center hover:scale-105 transition-transform duration-500"
+                  className="w-full h-[320px] md:h-[420px] object-cover object-center hover:scale-105 transition-transform duration-700"
                 />
                 {/* Floating Badge */}
-                <div className="absolute bottom-[24px] left-[24px] bg-glass backdrop-blur-md px-[20px] py-[12px] rounded-[16px] shadow-raised border border-white/20 flex items-center gap-[12px]">
-                  <div className="w-[12px] h-[12px] rounded-full bg-brand-green"></div>
+                <div className="absolute bottom-[24px] left-[24px] bg-glass/90 backdrop-blur-md px-[20px] py-[12px] rounded-[16px] shadow-floating border border-white/10 flex items-center gap-[12px]">
+                  <div className="w-[12px] h-[12px] rounded-full bg-brand-green shadow-[0_0_10px_rgba(52,211,153,0.6)]"></div>
                   <span className="text-[14px] font-bold text-text-primary font-poppins">Premium Quality Guaranteed</span>
                 </div>
               </div>
@@ -94,13 +94,13 @@ const Home = () => {
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-[48px] md:gap-[64px] items-center">
             
             <div className="relative order-2 lg:order-1">
-              <div className="absolute inset-0 bg-brand-coral/10 translate-x-[16px] translate-y-[16px] rounded-[24px]"></div>
+              <div className="absolute inset-0 bg-brand-coral/10 translate-x-[16px] translate-y-[16px] rounded-[24px] blur-[1px]"></div>
               <img 
                 src={imgTreatment} 
                 alt="Industrial Water Treatment" 
-                className="relative w-full h-[350px] md:h-[500px] object-cover rounded-[24px] shadow-raised"
+                className="relative w-full h-[350px] md:h-[500px] object-cover rounded-[24px] shadow-modal border border-white/10"
               />
-              <div className="absolute -bottom-[24px] -right-[24px] bg-glass p-[24px] rounded-[16px] shadow-floating hidden md:flex items-center gap-[16px] border border-white/10">
+              <div className="absolute -bottom-[24px] -right-[24px] bg-glass p-[24px] rounded-[16px] shadow-floating hidden md:flex items-center gap-[16px] border border-white/10 hover-glow transition-all duration-300">
                 <div className="bg-brand-coral/10 w-[48px] h-[48px] rounded-[12px] flex items-center justify-center">
                   <ShieldCheck className="w-[24px] h-[24px] text-brand-coral" />
                 </div>
@@ -135,15 +135,15 @@ const Home = () => {
                   'Perawatan Mudah', 'Ramah Lingkungan'
                 ].map((item, i) => (
                   <div key={i} className="flex items-center gap-[12px]">
-                    <div className="w-[24px] h-[24px] rounded-full bg-brand-teal/20 flex items-center justify-center shrink-0">
-                      <CheckCircle2 className="w-[14px] h-[14px] text-brand-blue" />
+                    <div className="w-[24px] h-[24px] rounded-full bg-brand-teal/10 flex items-center justify-center shrink-0 border border-brand-teal/20 shadow-[0_0_10px_rgba(45,212,191,0.1)]">
+                      <CheckCircle2 className="w-[14px] h-[14px] text-brand-teal" />
                     </div>
-                    <span className="font-jakarta text-[14px] font-bold text-text-primary">{item}</span>
+                    <span className="font-jakarta text-[14px] font-bold text-text-secondary">{item}</span>
                   </div>
                 ))}
               </div>
 
-              <Link to="/about" className="inline-flex justify-center items-center bg-glass text-brand-blue h-[49px] px-[32px] rounded-[16px] font-jakarta text-[16px] font-bold border border-brand-blue/20 hover:bg-brand-blue/10 transition-colors shadow-raised">
+              <Link to="/about" className="inline-flex justify-center items-center bg-glass text-text-primary h-[49px] px-[32px] rounded-[16px] font-jakarta text-[16px] font-bold border border-white/10 hover:bg-white/10 transition-colors shadow-floating hover-glow">
                 Profil Perusahaan
               </Link>
             </div>
@@ -174,10 +174,10 @@ const Home = () => {
             {services.map((service, index) => (
               <div 
                 key={index} 
-                className="group bg-glass rounded-[16px] border-l-[4px] border-l-brand-coral shadow-raised p-[32px] md:p-[40px] hover:shadow-floating hover:border-l-brand-blue transition-all duration-300"
+                className="group bg-glass rounded-[24px] border-l-[4px] border-l-brand-coral shadow-raised p-[32px] md:p-[40px] hover:shadow-floating hover:border-l-brand-blue transition-all duration-300 hover-glow"
               >
                 <div className="flex gap-[24px] items-start">
-                  <div className="w-[64px] h-[64px] rounded-[16px] bg-brand-coral/10 flex items-center justify-center shrink-0 group-hover:bg-brand-blue/10 transition-colors">
+                  <div className="w-[64px] h-[64px] rounded-[16px] bg-brand-coral/10 flex items-center justify-center shrink-0 group-hover:bg-brand-blue/10 group-hover:shadow-[0_0_20px_rgba(56,189,248,0.2)] transition-all duration-300">
                     {service.icon}
                   </div>
                   <div>
@@ -209,8 +209,8 @@ const Home = () => {
               { title: 'Fasilitas Komersial', icon: <Building2 className="w-[32px] h-[32px]" />, desc: 'IPAL & Grease Trap efisien untuk restoran, rumah sakit, hotel, dan pusat perbelanjaan.' },
               { title: 'Kawasan Industri', icon: <Factory className="w-[32px] h-[32px]" />, desc: 'Sewage Treatment Plant berkapasitas masif yang memenuhi baku mutu pembuangan limbah industri.' }
             ].map((segment, i) => (
-              <div key={i} className="bg-glass border border-white/8 rounded-[16px] p-[40px] shadow-raised hover:shadow-floating hover:-translate-y-1 transition-all duration-300">
-                <div className="w-[64px] h-[64px] rounded-[16px] bg-brand-coral/10 flex items-center justify-center mb-[24px] text-brand-coral">
+              <div key={i} className="bg-glass border border-white/8 rounded-[24px] p-[40px] shadow-raised hover:shadow-floating hover:-translate-y-1 transition-all duration-300 hover-glow">
+                <div className="w-[64px] h-[64px] rounded-[16px] bg-brand-coral/10 flex items-center justify-center mb-[24px] text-brand-coral group-hover:scale-110 transition-transform duration-300 shadow-[0_0_15px_rgba(240,112,87,0.1)]">
                   {segment.icon}
                 </div>
                 <h3 className="text-[24px] font-bold text-text-primary mb-[16px] leading-[1.2] font-poppins">{segment.title}</h3>
@@ -235,18 +235,16 @@ const Home = () => {
             </h2>
           </div>
           
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-[24px]">
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-[24px] max-w-[800px] mx-auto">
             {[
               "CV. AGAM HARMONI ALAM",
-              "CV. MAJU JAYA",
-              "CV. FILTERINDO PERKASA",
-              "CV. BALI WASTE WATER IPAL"
+              "CV. MAJU JAYA"
             ].map((partner, index) => (
-              <div key={index} className="group bg-glass rounded-[16px] p-[24px] md:p-[32px] shadow-raised hover:shadow-floating border border-white/8 flex flex-col items-center justify-center text-center transition-all duration-300 hover:-translate-y-2 relative overflow-hidden">
+              <div key={index} className="group bg-glass rounded-[24px] p-[24px] md:p-[32px] shadow-raised hover:shadow-floating border border-white/8 flex flex-col items-center justify-center text-center transition-all duration-300 hover:-translate-y-2 relative overflow-hidden hover-glow">
                 {/* Decorative background glow on hover */}
                 <div className="absolute inset-0 bg-gradient-to-b from-brand-blue/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none"></div>
                 
-                <div className="w-[56px] h-[56px] rounded-full bg-brand-blue/10 flex items-center justify-center mb-[16px] group-hover:scale-110 transition-transform duration-300 relative z-10">
+                <div className="w-[56px] h-[56px] rounded-full bg-brand-blue/10 flex items-center justify-center mb-[16px] group-hover:scale-110 transition-transform duration-300 relative z-10 shadow-[0_0_15px_rgba(56,189,248,0.15)]">
                   <Building2 className="w-[28px] h-[28px] text-brand-blue" />
                 </div>
                 
@@ -262,7 +260,7 @@ const Home = () => {
       {/* CTA Section */}
       <section className="py-[100px] bg-transparent">
         <div className="max-w-[1200px] mx-auto px-[16px] md:px-[32px]">
-          <div className="bg-glass rounded-[24px] shadow-floating p-[48px] md:p-[80px] text-center max-w-[900px] mx-auto relative overflow-hidden border border-white/10">
+          <div className="bg-glass rounded-[24px] shadow-modal p-[48px] md:p-[80px] text-center max-w-[900px] mx-auto relative overflow-hidden border border-white/10 hover-glow transition-all duration-500">
             <div className="absolute top-0 left-0 w-full h-[8px] bg-brand-coral"></div>
             <h2 className="text-[36px] md:text-[48px] font-bold text-text-primary mb-[24px] leading-[1.2] font-poppins">
               Siap Meningkatkan Standar <br className="hidden md:block" /> Sanitasi Proyek Anda?
@@ -271,10 +269,10 @@ const Home = () => {
               Diskusikan kebutuhan spesifik Anda dengan tim konsultan ahli kami. Dapatkan penawaran harga terbaik hari ini.
             </p>
             <div className="flex flex-col sm:flex-row justify-center items-center gap-[16px]">
-              <Link to="/contact" className="inline-flex justify-center items-center bg-brand-coral text-white h-[49px] w-[240px] rounded-[16px] font-jakarta text-[16px] font-bold shadow-floating hover:bg-brand-coral-hover transition-colors">
+              <Link to="/contact" className="inline-flex justify-center items-center bg-brand-coral text-white h-[52px] w-[240px] rounded-[16px] font-jakarta text-[16px] font-bold shadow-floating hover:bg-brand-coral-hover hover:shadow-[0_0_25px_rgba(240,112,87,0.4)] transition-all duration-300">
                 Hubungi Ahli Kami
               </Link>
-              <Link to="/contact" className="inline-flex justify-center items-center bg-transparent text-brand-blue h-[49px] w-[240px] rounded-[16px] font-jakarta text-[16px] font-bold border-[2px] border-brand-blue hover:bg-brand-blue/10 transition-colors">
+              <Link to="/contact" className="inline-flex justify-center items-center bg-transparent text-text-primary h-[52px] w-[240px] rounded-[16px] font-jakarta text-[16px] font-bold border-[2px] border-white/10 hover:bg-white/10 hover:border-brand-blue/30 transition-all duration-300">
                 Minta Penawaran
               </Link>
             </div>

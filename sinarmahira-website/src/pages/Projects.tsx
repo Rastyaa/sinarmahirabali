@@ -1,9 +1,10 @@
-import { MapPin, Calendar, ArrowRight } from 'lucide-react';
-import imgStp from '../assets/stp_plant.png';
-import imgGreaseTrap from '../assets/grease_trap.png';
-import imgBioSeptic from '../assets/bio_septic.png';
-import imgIpalMedis from '../assets/ipal_medis.png';
-import imgWtp from '../assets/wtp_system.png';
+import { MapPin, Calendar } from 'lucide-react';
+import imgStp from '../assets/IMG_0353.JPG.jpeg';
+import imgGreaseTrap from '../assets/IMG_0354.JPG.jpeg';
+import imgBioSeptic from '../assets/IMG_0355.JPG.jpeg';
+import imgIpalMedis from '../assets/IMG_0356.JPG.jpeg';
+import imgWtp from '../assets/IMG_0357.JPG.jpeg';
+import imgExtra from '../assets/IMG_0358.JPG.jpeg';
 
 const projects = [
   {
@@ -52,7 +53,7 @@ const projects = [
     serviceType: 'Bio Septic Tank Vertikal',
     description: 'Pemasangan tangki Bio Septic Tank model vertikal kapasitas 1500 liter (merk BIOSMB) lengkap dengan pompa submersible otomatis.',
     year: '2025',
-    imageUrl: imgBioSeptic
+    imageUrl: imgExtra
   }
 ];
 
@@ -75,27 +76,27 @@ const Projects = () => {
       <section className="max-w-[1200px] mx-auto w-full px-[16px] md:px-[32px] mt-[80px]">
         <div className="grid grid-cols-1 md:grid-cols-2 gap-[48px]">
           {projects.map((project, i) => (
-            <div key={i} className="group bg-glass rounded-[24px] overflow-hidden shadow-raised border border-white/8 flex flex-col hover:shadow-floating transition-all duration-300">
+            <div key={i} className="group bg-glass rounded-[24px] overflow-hidden shadow-modal border border-white/8 flex flex-col hover:shadow-floating transition-all duration-300 hover-glow">
               
               <div className="relative h-[300px] overflow-hidden">
                 <img 
                   src={project.imageUrl} 
                   alt={project.title} 
-                  className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                  className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
                 />
-                <div className="absolute top-[24px] right-[24px] bg-glass backdrop-blur-md px-[16px] py-[8px] rounded-full text-[14px] font-bold text-brand-coral border border-white/20">
+                <div className="absolute top-[24px] right-[24px] bg-glass/90 backdrop-blur-md px-[16px] py-[8px] rounded-full text-[13px] font-extrabold text-brand-coral border border-white/20 shadow-floating">
                   {project.serviceType}
                 </div>
               </div>
 
               <div className="p-[32px] flex flex-col flex-grow">
-                <div className="flex items-center justify-between text-text-muted text-[14px] mb-[16px] font-medium">
+                <div className="flex items-center justify-between text-text-muted text-[14px] mb-[16px] font-semibold">
                   <div className="flex items-center gap-[8px]">
-                    <MapPin className="w-[16px] h-[16px]" />
+                    <MapPin className="w-[16px] h-[16px] text-brand-coral" />
                     {project.location}
                   </div>
                   <div className="flex items-center gap-[8px]">
-                    <Calendar className="w-[16px] h-[16px]" />
+                    <Calendar className="w-[16px] h-[16px] text-brand-blue" />
                     Tahun {project.year}
                   </div>
                 </div>
@@ -104,14 +105,9 @@ const Projects = () => {
                   {project.title}
                 </h3>
                 
-                <p className="text-[16px] text-text-secondary leading-[32px] font-jakarta mb-[24px] flex-grow">
+                <p className="text-[16px] text-text-secondary leading-[32px] font-jakarta flex-grow">
                   {project.description}
                 </p>
-
-                <button className="flex items-center gap-[8px] text-brand-blue font-bold hover:text-brand-coral transition-colors mt-auto self-start">
-                  Lihat Detail Proyek
-                  <ArrowRight className="w-[16px] h-[16px]" />
-                </button>
               </div>
 
             </div>
