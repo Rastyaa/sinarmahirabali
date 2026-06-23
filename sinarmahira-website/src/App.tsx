@@ -1,8 +1,12 @@
 import AppRoutes from './routes/AppRoutes';
+import { Analytics } from '@vercel/analytics/react';
 
 function App() {
   return (
-    <AppRoutes />
+    <>
+      <AppRoutes />
+      <Analytics />
+    </>
   );
 }
 
