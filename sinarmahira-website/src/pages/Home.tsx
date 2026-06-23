@@ -152,37 +152,44 @@ const Home = () => {
       </section>
 
       {/* Services Section - Featured Cards */}
-      <section className="py-[80px] md:py-[120px] bg-transparent">
+      <section className="py-[60px] md:py-[120px] bg-transparent">
         <div className="max-w-[1200px] mx-auto px-[16px] md:px-[32px]">
-          <div className="flex flex-col md:flex-row justify-between items-end mb-[56px] gap-[24px]">
+          <div className="flex flex-col sm:flex-row justify-between items-start sm:items-end mb-[36px] md:mb-[56px] gap-[16px] sm:gap-[24px]">
             <div className="max-w-[600px]">
-              <div className="inline-flex items-center gap-[12px] mb-[16px]">
+              <div className="inline-flex items-center gap-[12px] mb-[12px] md:mb-[16px]">
                 <div className="w-[32px] h-[2px] bg-brand-coral"></div>
-                <span className="text-[14px] font-bold text-brand-coral uppercase tracking-wide font-poppins">Produk & Layanan</span>
+                <span className="text-[13px] md:text-[14px] font-bold text-brand-coral uppercase tracking-wide font-poppins">Produk & Layanan</span>
               </div>
-              <h2 className="text-[36px] md:text-[48px] font-bold text-text-primary leading-[1.2] font-poppins">
-                Sistem Sanitasi <br /> Komprehensif.
+              <h2 className="text-[30px] md:text-[48px] font-bold text-text-primary leading-[1.2] font-poppins">
+                Sistem Sanitasi <br className="hidden md:block" /> Komprehensif.
               </h2>
             </div>
-            <Link to="/services" className="inline-flex items-center gap-[8px] text-brand-blue font-jakarta text-[16px] font-bold hover:text-brand-coral transition-colors">
+            <Link to="/services" className="inline-flex items-center gap-[8px] text-brand-blue font-jakarta text-[15px] md:text-[16px] font-bold hover:text-brand-coral transition-colors">
               Lihat Semua
               <ArrowRight className="w-[20px] h-[20px]" />
             </Link>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-[24px]">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-[20px] md:gap-[24px]">
             {services.map((service, index) => (
               <div 
                 key={index} 
-                className="group bg-glass rounded-[24px] border-l-[4px] border-l-brand-coral shadow-raised p-[32px] md:p-[40px] hover:shadow-floating hover:border-l-brand-blue transition-all duration-300 hover-glow"
+                className="group bg-glass rounded-[24px] border-l-[4px] border-l-brand-coral shadow-raised p-[20px] sm:p-[32px] md:p-[40px] hover:shadow-floating hover:border-l-brand-blue transition-all duration-300 hover-glow"
               >
-                <div className="flex gap-[24px] items-start">
-                  <div className="w-[64px] h-[64px] rounded-[16px] bg-brand-coral/10 flex items-center justify-center shrink-0 group-hover:bg-brand-blue/10 group-hover:shadow-[0_0_20px_rgba(56,189,248,0.2)] transition-all duration-300">
-                    {service.icon}
+                <div className="flex flex-row gap-[16px] sm:gap-[24px] items-start">
+                  <div className="w-[48px] h-[48px] sm:w-[64px] sm:h-[64px] rounded-[12px] sm:rounded-[16px] bg-brand-coral/10 flex items-center justify-center shrink-0 group-hover:bg-brand-blue/10 group-hover:shadow-[0_0_20px_rgba(56,189,248,0.2)] transition-all duration-300">
+                    {/* Render the icon inside a responsive container */}
+                    <div className="scale-75 sm:scale-100 flex items-center justify-center">
+                      {service.icon}
+                    </div>
                   </div>
-                  <div>
-                    <h3 className="text-[24px] font-bold text-text-primary mb-[12px] leading-[1.2] font-poppins group-hover:text-brand-blue transition-colors">{service.title}</h3>
-                    <p className="text-[16px] text-text-secondary leading-[28px] font-jakarta">{service.description}</p>
+                  <div className="min-w-0 flex-1">
+                    <h3 className="text-[18px] sm:text-[24px] font-bold text-text-primary mb-[8px] sm:mb-[12px] leading-[1.3] font-poppins group-hover:text-brand-blue transition-colors truncate sm:whitespace-normal">
+                      {service.title}
+                    </h3>
+                    <p className="text-[14px] sm:text-[16px] text-text-secondary leading-[24px] sm:leading-[28px] font-jakarta">
+                      {service.description}
+                    </p>
                   </div>
                 </div>
               </div>
