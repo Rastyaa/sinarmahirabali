@@ -31,55 +31,55 @@ const Home = () => {
     <div className="flex flex-col w-full bg-transparent font-jakarta">
       
       {/* Premium Hero Section */}
-      <section className="relative w-full min-h-[95vh] flex items-center pt-[140px] pb-[100px] bg-transparent overflow-hidden">
+      <section className="relative w-full min-h-[80vh] lg:min-h-[95vh] flex items-center pt-[140px] pb-[100px] bg-transparent overflow-hidden">
         {/* Subtle Decorative Background Blobs */}
         <div className="absolute top-[-20%] right-[-10%] w-[600px] h-[600px] rounded-full bg-brand-blue/10 blur-[130px] pointer-events-none"></div>
         <div className="absolute bottom-[-10%] left-[-10%] w-[400px] h-[400px] rounded-full bg-brand-teal/5 blur-[90px] pointer-events-none"></div>
 
         <div className="relative z-10 max-w-[1200px] mx-auto px-[16px] md:px-[32px] w-full">
-          <div className="grid grid-cols-1 lg:grid-cols-12 gap-[48px] items-center">
+          <div className="grid grid-cols-1 lg:grid-cols-12 gap-[48px] lg:gap-[64px] items-center">
             
             {/* Left Column - Teks & Actions */}
             <div className="lg:col-span-7 flex flex-col items-start text-left">
-              <div className="inline-flex items-center gap-[8px] bg-brand-blue/10 border border-brand-blue/20 px-[16px] py-[6px] rounded-[10px] mb-[24px] shadow-[0_0_15px_rgba(56,189,248,0.1)]">
-                <div className="w-[8px] h-[8px] rounded-full bg-brand-coral animate-pulse"></div>
-                <span className="text-brand-blue text-[13px] font-extrabold tracking-widest uppercase font-poppins">Solusi Sanitasi Terpercaya</span>
+              <div className="inline-flex items-center gap-[8px] bg-brand-blue/10 border border-brand-blue/20 px-[14px] py-[6px] rounded-[10px] mb-[20px] md:mb-[24px] shadow-[0_0_15px_rgba(56,189,248,0.1)]">
+                <div className="w-[6px] h-[6px] md:w-[8px] md:h-[8px] rounded-full bg-brand-coral animate-pulse"></div>
+                <span className="text-brand-blue text-[11px] md:text-[13px] font-extrabold tracking-widest uppercase font-poppins">Solusi Sanitasi Terpercaya</span>
               </div>
               
-              <h1 className="text-[44px] md:text-[60px] leading-[1.05] md:leading-[1.15] font-poppins font-bold mb-[24px] text-text-primary tracking-[-0.03em]">
-                Sistem Sanitasi & <br />
-                Pengolahan Air Limbah <br />
+              <h1 className="text-[36px] sm:text-[44px] md:text-[60px] leading-[1.1] md:leading-[1.15] font-poppins font-bold mb-[20px] md:mb-[24px] text-text-primary tracking-[-0.03em] break-words hyphens-auto w-full">
+                Sistem Sanitasi & <br className="hidden sm:block" />
+                Pengolahan Air Limbah <br className="hidden sm:block" />
                 <span className="text-transparent bg-clip-text bg-gradient-to-r from-brand-blue via-[#2DD4BF] to-brand-coral">Terbaik di Kelasnya.</span>
               </h1>
               
-              <p className="text-[16px] md:text-[18px] leading-[32px] font-jakarta mb-[40px] text-text-secondary max-w-[600px]">
+              <p className="text-[15px] md:text-[18px] leading-[28px] md:leading-[32px] font-jakarta mb-[32px] md:mb-[40px] text-text-secondary max-w-[600px]">
                 PT Sinar Mahira Bali (Biosmb) menghadirkan solusi infrastruktur sanitasi berbahan fiberglass premium untuk residensial, komersial, dan industri.
               </p>
               
               <div className="flex flex-col sm:flex-row gap-[16px] w-full sm:w-auto">
-                <Link to="/contact" className="inline-flex justify-center items-center bg-brand-coral text-white h-[52px] px-[36px] rounded-[16px] font-jakarta text-[16px] font-bold shadow-floating hover:bg-brand-coral-hover transition-all duration-300 border border-transparent hover:shadow-[0_0_25px_rgba(240,112,87,0.4)]">
+                <Link to="/contact" className="inline-flex justify-center items-center bg-brand-coral text-white h-[52px] px-[36px] rounded-[16px] font-jakarta text-[15px] md:text-[16px] font-bold shadow-floating hover:bg-brand-coral-hover transition-all duration-300 border border-transparent hover:shadow-[0_0_25px_rgba(240,112,87,0.4)]">
                   Konsultasi Gratis
                   <ArrowRight className="ml-[8px] w-[18px] h-[18px]" />
                 </Link>
-                <Link to="/services" className="inline-flex justify-center items-center bg-glass text-text-primary h-[52px] px-[36px] rounded-[16px] font-jakarta text-[16px] font-bold border border-white/10 hover:bg-white/10 hover:border-brand-blue/30 transition-all duration-300">
+                <Link to="/services" className="inline-flex justify-center items-center bg-glass text-text-primary h-[52px] px-[36px] rounded-[16px] font-jakarta text-[15px] md:text-[16px] font-bold border border-white/10 hover:bg-white/10 hover:border-brand-blue/30 transition-all duration-300">
                   Lihat Layanan
                 </Link>
               </div>
             </div>
 
             {/* Right Column - Premium Featured Image Card */}
-            <div className="lg:col-span-5 relative">
-              <div className="absolute inset-0 bg-brand-blue/10 translate-x-[16px] translate-y-[16px] rounded-[24px] blur-[2px]"></div>
+            <div className="lg:col-span-5 relative mt-[24px] lg:mt-0 w-full">
+              <div className="absolute inset-0 bg-brand-blue/10 translate-x-[12px] translate-y-[12px] md:translate-x-[16px] md:translate-y-[16px] rounded-[24px] blur-[2px]"></div>
               <div className="relative rounded-[24px] overflow-hidden shadow-modal border border-white/10 bg-glass hover-glow transition-all duration-500">
                 <img 
                   src={imgSanitation} 
                   alt="Modern Sanitation Infrastructure" 
-                  className="w-full h-[320px] md:h-[420px] object-cover object-center hover:scale-105 transition-transform duration-700"
+                  className="w-full h-[280px] sm:h-[350px] lg:h-[420px] object-cover object-center hover:scale-105 transition-transform duration-700"
                 />
                 {/* Floating Badge */}
-                <div className="absolute bottom-[24px] left-[24px] bg-glass/90 backdrop-blur-md px-[20px] py-[12px] rounded-[16px] shadow-floating border border-white/10 flex items-center gap-[12px]">
-                  <div className="w-[12px] h-[12px] rounded-full bg-brand-green shadow-[0_0_10px_rgba(52,211,153,0.6)]"></div>
-                  <span className="text-[14px] font-bold text-text-primary font-poppins">Premium Quality Guaranteed</span>
+                <div className="absolute bottom-[16px] left-[16px] md:bottom-[24px] md:left-[24px] bg-glass/90 backdrop-blur-md px-[16px] py-[10px] md:px-[20px] md:py-[12px] rounded-[12px] md:rounded-[16px] shadow-floating border border-white/10 flex items-center gap-[8px] md:gap-[12px]">
+                  <div className="w-[10px] h-[10px] md:w-[12px] md:h-[12px] rounded-full bg-brand-green shadow-[0_0_10px_rgba(52,211,153,0.6)]"></div>
+                  <span className="text-[12px] md:text-[14px] font-bold text-text-primary font-poppins">Premium Quality</span>
                 </div>
               </div>
             </div>

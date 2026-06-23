@@ -178,7 +178,7 @@ const Contact = () => {
                           className="focus:outline-none"
                         >
                           <Star 
-                            className={`w-[28px] h-[28px] transition-colors ${
+                            className={`w-[24px] md:w-[28px] h-[24px] md:h-[28px] transition-colors ${
                               star <= rating ? 'text-brand-yellow fill-brand-yellow' : 'text-text-muted hover:text-brand-yellow'
                             }`} 
                           />
@@ -244,8 +244,8 @@ const Contact = () => {
       </section>
 
       {/* Map Section */}
-      <section className="w-full mt-[80px]">
-        <div className="w-full h-[400px] bg-glass-subtle border-y border-white/5 relative">
+      <section className="w-full mt-[60px] md:mt-[80px]">
+        <div className="w-full h-[300px] md:h-[400px] bg-glass-subtle border-y border-white/5 relative">
           <div className="absolute inset-0 flex items-center justify-center text-text-muted flex-col gap-2 z-20 pointer-events-none">
             <MapPin className="w-8 h-8" />
             <span className="font-poppins font-medium">Google Maps</span>

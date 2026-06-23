@@ -124,7 +124,7 @@ const Clients = () => {
       </section>
 
       {/* Search Bar Section */}
-      <section className="max-w-[1200px] mx-auto w-full px-[16px] md:px-[32px] mt-[40px]">
+      <section className="max-w-[1200px] mx-auto w-full px-[16px] md:px-[32px] mt-[32px] md:mt-[40px]">
         <div className="relative max-w-[500px] mx-auto">
           <Search className="absolute left-[16px] top-[14px] w-[20px] h-[20px] text-text-muted" />
           <input
@@ -138,11 +138,11 @@ const Clients = () => {
       </section>
 
       {/* Table Section */}
-      <section className="max-w-[1200px] mx-auto w-full px-[16px] md:px-[32px] mt-[40px]">
+      <section className="max-w-[1200px] mx-auto w-full px-[16px] md:px-[32px] mt-[32px] md:mt-[40px]">
         {filteredClients.length === 0 ? (
           <div className="text-center py-[60px] bg-glass rounded-[24px] border border-white/8 hover-glow transition-all duration-300">
             <Building2 className="w-[48px] h-[48px] text-text-muted mx-auto mb-[16px]" />
-            <p className="text-[18px] text-text-secondary">Tidak ada client yang cocok dengan pencarian Anda.</p>
+            <p className="text-[16px] md:text-[18px] text-text-secondary">Tidak ada client yang cocok dengan pencarian Anda.</p>
           </div>
         ) : (
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-[24px] items-start">
@@ -151,8 +151,8 @@ const Clients = () => {
               <table className="w-full text-left border-collapse">
                 <thead>
                   <tr className="border-b border-white/10 bg-white/5">
-                    <th className="p-[16px] text-[14px] font-bold text-text-primary font-poppins uppercase tracking-wider w-[50%]">Nama</th>
-                    <th className="p-[16px] text-[14px] font-bold text-text-primary font-poppins uppercase tracking-wider w-[50%]">Lokasi</th>
+                    <th className="p-[12px] md:p-[16px] text-[13px] md:text-[14px] font-bold text-text-primary font-poppins uppercase tracking-wider w-[50%]">Nama</th>
+                    <th className="p-[12px] md:p-[16px] text-[13px] md:text-[14px] font-bold text-text-primary font-poppins uppercase tracking-wider w-[50%]">Lokasi</th>
                   </tr>
                 </thead>
                 <tbody>
@@ -161,10 +161,10 @@ const Clients = () => {
                       key={`left-${i}`}
                       className="border-b border-white/5 last:border-b-0 hover:bg-white/5 transition-colors"
                     >
-                      <td className="p-[16px] text-[15px] font-bold text-text-primary font-poppins">
+                      <td className="p-[12px] md:p-[16px] text-[14px] md:text-[15px] font-bold text-text-primary font-poppins">
                         {client.name}
                       </td>
-                      <td className="p-[16px] text-[14px] text-text-secondary">
+                      <td className="p-[12px] md:p-[16px] text-[13px] md:text-[14px] text-text-secondary">
                         <div className="flex items-center gap-[6px]">
                           <MapPin className="w-[14px] h-[14px] text-brand-coral shrink-0" />
                           <span>{client.location}</span>
@@ -182,8 +182,8 @@ const Clients = () => {
                 <table className="w-full text-left border-collapse">
                   <thead>
                     <tr className="border-b border-white/10 bg-white/5">
-                      <th className="p-[16px] text-[14px] font-bold text-text-primary font-poppins uppercase tracking-wider w-[50%]">Nama</th>
-                      <th className="p-[16px] text-[14px] font-bold text-text-primary font-poppins uppercase tracking-wider w-[50%]">Lokasi</th>
+                      <th className="p-[12px] md:p-[16px] text-[13px] md:text-[14px] font-bold text-text-primary font-poppins uppercase tracking-wider w-[50%]">Nama</th>
+                      <th className="p-[12px] md:p-[16px] text-[13px] md:text-[14px] font-bold text-text-primary font-poppins uppercase tracking-wider w-[50%]">Lokasi</th>
                     </tr>
                   </thead>
                   <tbody>
@@ -192,10 +192,10 @@ const Clients = () => {
                         key={`right-${i}`}
                         className="border-b border-white/5 last:border-b-0 hover:bg-white/5 transition-colors"
                       >
-                        <td className="p-[16px] text-[15px] font-bold text-text-primary font-poppins">
+                        <td className="p-[12px] md:p-[16px] text-[14px] md:text-[15px] font-bold text-text-primary font-poppins">
                           {client.name}
                         </td>
-                        <td className="p-[16px] text-[14px] text-text-secondary">
+                        <td className="p-[12px] md:p-[16px] text-[13px] md:text-[14px] text-text-secondary">
                           <div className="flex items-center gap-[6px]">
                             <MapPin className="w-[14px] h-[14px] text-brand-coral shrink-0" />
                             <span>{client.location}</span>

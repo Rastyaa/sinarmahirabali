@@ -28,12 +28,12 @@ const Navbar = () => {
     <>
       <nav className={`fixed w-full z-50 transition-all duration-300 ${isScrolled ? 'bg-[#0f172a]/75 backdrop-blur-md shadow-floating border-b border-white/5' : 'bg-transparent'}`}>
         <div className="max-w-[1440px] mx-auto px-[16px] md:px-[32px]">
-          <div className="flex justify-between items-center h-[72px]">
+          <div className="flex justify-between items-center h-[64px] md:h-[72px]">
             <Link to="/" className="flex items-center gap-[10px] group">
               <div className="text-brand-blue group-hover:scale-110 transition-transform duration-300">
-                <Droplets className="w-[32px] h-[32px]" />
+                <Droplets className="w-[28px] h-[28px] md:w-[32px] md:h-[32px]" />
               </div>
-              <span className="text-[20px] font-bold text-text-primary tracking-tight font-poppins">
+              <span className="text-[18px] md:text-[20px] font-bold text-text-primary tracking-tight font-poppins">
                 Sinar Mahira
               </span>
             </Link>
@@ -64,8 +64,9 @@ const Navbar = () => {
 
             {/* Mobile Menu Button */}
             <button 
-              className="md:hidden text-text-primary p-[8px] rounded-[8px] hover:bg-white/5 transition-colors"
+              className="md:hidden text-text-primary p-[10px] rounded-[10px] hover:bg-white/5 transition-colors flex items-center justify-center min-w-[44px] min-h-[44px]"
               onClick={() => setIsOpen(!isOpen)}
+              aria-label="Toggle Menu"
             >
               {isOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
             </button>
