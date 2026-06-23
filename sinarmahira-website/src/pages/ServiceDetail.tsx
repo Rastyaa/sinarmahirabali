@@ -1,5 +1,6 @@
 import { useParams, Link } from 'react-router-dom';
 import { ArrowLeft, CheckCircle2, ChevronRight, Phone } from 'lucide-react';
+import { useTranslation } from 'react-i18next';
 import imgStp from '../assets/IMG_0353.JPG.jpeg';
 import imgGreaseTrap from '../assets/IMG_0354.JPG.jpeg';
 import imgBioSeptic from '../assets/IMG_0355.JPG.jpeg';
@@ -9,6 +10,7 @@ import imgExtra from '../assets/IMG_0358.JPG.jpeg';
 
 const ServiceDetail = () => {
   const { slug } = useParams();
+  const { t } = useTranslation();
 
   const getServiceData = (slug: string | undefined) => {
     switch (slug) {
@@ -102,9 +104,9 @@ const ServiceDetail = () => {
       {/* Breadcrumb Header */}
       <div className="bg-transparent pt-[120px] pb-[40px] px-[16px] md:px-[32px] border-b border-white/5">
         <div className="max-w-[1200px] mx-auto flex items-center text-text-secondary text-[14px]">
-          <Link to="/" className="hover:text-brand-blue transition-colors">Beranda</Link>
+          <Link to="/" className="hover:text-brand-blue transition-colors">{t('nav.home')}</Link>
           <ChevronRight className="w-[16px] h-[16px] mx-[8px] text-text-muted" />
-          <Link to="/services" className="hover:text-brand-blue transition-colors">Layanan</Link>
+          <Link to="/services" className="hover:text-brand-blue transition-colors">{t('nav.services')}</Link>
           <ChevronRight className="w-[16px] h-[16px] mx-[8px] text-text-muted" />
           <span className="text-text-primary font-bold">{service.title}</span>
         </div>

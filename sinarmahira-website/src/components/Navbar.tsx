@@ -1,11 +1,18 @@
 import { useState, useEffect } from 'react';
 import { Link, useLocation } from 'react-router-dom';
-import { Menu, X, Droplets } from 'lucide-react';
+import { Menu, X, Droplets, Globe } from 'lucide-react';
+import { useTranslation } from 'react-i18next';
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
   const location = useLocation();
+  const { t, i18n } = useTranslation();
+
+  const toggleLanguage = () => {
+    const newLang = i18n.language.startsWith('id') ? 'en' : 'id';
+    i18n.changeLanguage(newLang);
+  };
 
   useEffect(() => {
     const handleScroll = () => {
@@ -16,12 +23,12 @@ const Navbar = () => {
   }, []);
 
   const navLinks = [
-    { name: 'Beranda', path: '/' },
-    { name: 'Tentang Kami', path: '/about' },
-    { name: 'Layanan', path: '/services' },
-    { name: 'Proyek', path: '/projects' },
-    { name: 'Client Kami', path: '/clients' },
-    { name: 'FAQ', path: '/faq' },
+    { name: t('nav.home', 'Beranda'), path: '/' },
+    { name: t('nav.about', 'Tentang Kami'), path: '/about' },
+    { name: t('nav.services', 'Layanan'), path: '/services' },
+    { name: t('nav.projects', 'Proyek'), path: '/projects' },
+    { name: t('nav.clients', 'Client'), path: '/clients' },
+    { name: t('nav.faq', 'FAQ'), path: '/faq' },
   ];
 
   return (
@@ -54,11 +61,20 @@ const Navbar = () => {
                 </Link>
               ))}
               <div className="w-[1px] h-[20px] bg-white/10 mx-[8px]"></div>
+              
+              <button
+                onClick={toggleLanguage}
+                className="flex items-center gap-[6px] text-text-secondary hover:text-text-primary px-[12px] py-[8px] rounded-[10px] hover:bg-white/5 transition-all font-jakarta text-[13px] font-bold uppercase tracking-wider"
+              >
+                <Globe className="w-[16px] h-[16px]" />
+                {i18n.language.startsWith('en') ? 'EN' : 'ID'}
+              </button>
+
               <Link 
                 to="/contact" 
-                className="bg-brand-coral hover:bg-brand-coral-hover text-white px-[20px] h-[40px] flex items-center rounded-[12px] font-jakarta font-bold text-[14px] transition-all duration-300 shadow-floating border border-transparent"
+                className="bg-brand-coral hover:bg-brand-coral-hover text-white px-[20px] h-[40px] flex items-center rounded-[12px] font-jakarta font-bold text-[14px] transition-all duration-300 shadow-floating border border-transparent ml-[4px]"
               >
-                Hubungi Kami
+                {t('nav.contact', 'Hubungi Kami')}
               </Link>
             </div>
 
@@ -117,12 +133,24 @@ const Navbar = () => {
             </Link>
           ))}
           <div className="h-[1px] bg-white/5 my-[8px]"></div>
+
+          <button
+            onClick={() => {
+              toggleLanguage();
+              setIsOpen(false);
+            }}
+            className="flex items-center justify-center gap-[8px] text-text-primary bg-white/5 w-full py-[12px] px-[16px] rounded-[12px] transition-all duration-300 hover:bg-white/10 font-jakarta font-bold uppercase tracking-wider mb-[8px]"
+          >
+            <Globe className="w-[18px] h-[18px]" />
+            {i18n.language.startsWith('en') ? 'Switch to Indonesia (ID)' : 'Switch to English (EN)'}
+          </button>
+
           <Link 
             to="/contact" 
             onClick={() => setIsOpen(false)}
             className="bg-brand-coral text-white w-full text-center h-[48px] flex items-center justify-center rounded-[12px] font-jakarta font-bold text-[16px] shadow-floating hover:bg-brand-coral-hover transition-colors"
           >
-            Hubungi Kami
+            {t('nav.contact', 'Hubungi Kami')}
           </Link>
         </div>
       </div>

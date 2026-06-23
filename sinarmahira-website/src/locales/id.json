@@ -1,0 +1,188 @@
+{
+  "nav": {
+    "home": "Beranda",
+    "about": "Tentang Kami",
+    "services": "Layanan",
+    "projects": "Proyek",
+    "clients": "Client",
+    "faq": "FAQ",
+    "contact": "Hubungi Kami"
+  },
+  "home": {
+    "badge": "Solusi Sanitasi Terpercaya",
+    "title1": "Sistem Sanitasi &",
+    "title2": "Pengolahan Air Limbah",
+    "title3": "Terbaik di Kelasnya.",
+    "subtitle": "PT Sinar Mahira Bali (Biosmb) menghadirkan solusi infrastruktur sanitasi berbahan fiberglass premium untuk residensial, komersial, dan industri.",
+    "cta1": "Konsultasi Gratis",
+    "cta2": "Lihat Layanan",
+    "badge_quality": "Premium Quality",
+    "about_label": "Tentang Perusahaan",
+    "about_title": "Komitmen Pada",
+    "about_title2": "Kualitas Lingkungan.",
+    "about_p1": "adalah mitra terpercaya Anda di bidang pengolahan air limbah dan solusi penyimpanan air berbahan fiberglass di Bali.",
+    "about_p2": "Kami menghadirkan instalasi IPAL, STP, Bio Septic Tank, dan Water Treatment Plant dengan standar rekayasa tertinggi, menjamin efisiensi jangka panjang dan kepatuhan terhadap regulasi lingkungan.",
+    "features": ["Teknologi Mutakhir", "Tahan Lama & Anti Bocor", "Perawatan Mudah", "Ramah Lingkungan"],
+    "about_cta": "Profil Perusahaan",
+    "guarantee": "Garansi",
+    "guarantee_sub": "Kualitas Premium",
+    "services_label": "Produk & Layanan",
+    "services_title": "Sistem Sanitasi",
+    "services_title2": "Komprehensif.",
+    "services_all": "Lihat Semua",
+    "svc_ipal": "IPAL & STP",
+    "svc_ipal_desc": "Sistem Instalasi Pengolahan Air Limbah modern dengan efisiensi tinggi.",
+    "svc_bio": "Bio Septic Tank",
+    "svc_bio_desc": "Sanitasi ramah lingkungan berbahan fiberglass anti-bocor.",
+    "svc_wtp": "Water Treatment",
+    "svc_wtp_desc": "Teknologi penjernihan air mutakhir untuk kebutuhan komersial.",
+    "svc_gt": "Grease Trap",
+    "svc_gt_desc": "Perangkap lemak untuk mencegah penyumbatan pipa saluran pembuangan.",
+    "sectors_title": "Mendukung Berbagai Sektor",
+    "sectors_subtitle": "Kapasitas produksi dan desain rekayasa kami memungkinkan kami untuk melayani dari hunian pribadi hingga kompleks industri berskala besar.",
+    "sector_home": "Rumah Tangga",
+    "sector_home_desc": "Sistem Bio Septic Tank modern yang membebaskan Anda dari masalah kuras WC rutin.",
+    "sector_commercial": "Fasilitas Komersial",
+    "sector_commercial_desc": "IPAL & Grease Trap efisien untuk restoran, rumah sakit, hotel, dan pusat perbelanjaan.",
+    "sector_industrial": "Kawasan Industri",
+    "sector_industrial_desc": "Sewage Treatment Plant berkapasitas masif yang memenuhi baku mutu pembuangan limbah industri.",
+    "partners_label": "Jaringan Kami",
+    "partners_title": "Mitra Kerjasama Perusahaan",
+    "cta_title": "Siap Meningkatkan Standar",
+    "cta_title2": "Sanitasi Proyek Anda?",
+    "cta_subtitle": "Diskusikan kebutuhan spesifik Anda dengan tim konsultan ahli kami. Dapatkan penawaran harga terbaik hari ini.",
+    "cta_btn1": "Hubungi Ahli Kami",
+    "cta_btn2": "Minta Penawaran"
+  },
+  "about": {
+    "title": "Tentang Kami",
+    "p1": "telah menjadi mitra terpercaya dalam pengelolaan air limbah sejak tahun",
+    "p1b": ". Dengan pengalaman melayani berbagai perusahaan dan komunitas, kami menghadirkan solusi yang efektif, efisien, dan sesuai standar lingkungan untuk mendukung kebutuhan sanitasi dan operasional yang lebih optimal.",
+    "p2": "terus mengembangkan sistem pengolahan air limbah yang ramah lingkungan dan berkualitas. Kami berkomitmen membantu menciptakan lingkungan yang lebih bersih, sehat, dan berkelanjutan bagi berbagai sektor industri maupun kebutuhan masyarakat.",
+    "p2_prefix": "Berfokus pada inovasi dan keberlanjutan,",
+    "stats_clients": "Client di Indonesia",
+    "stats_partners": "Kerjasama Perusahaan",
+    "stats_employees": "Karyawan",
+    "stats_support": "Team Support Instalasi",
+    "vision_title": "Visi Kami",
+    "vision_text": "Menjadi perusahaan penyedia solusi pengolahan air limbah dan sanitasi terdepan di Indonesia yang memprioritaskan kelestarian lingkungan dan kepuasan pelanggan melalui produk inovatif dan berkualitas tinggi.",
+    "mission_title": "Misi Kami",
+    "missions": [
+      "Menyediakan produk IPAL, STP, dan Septic Tank berbahan fiberglass bermutu premium.",
+      "Memberikan layanan konsultasi, perencanaan, dan pemasangan yang profesional.",
+      "Berinovasi dalam teknologi pengolahan air untuk efisiensi jangka panjang.",
+      "Berkontribusi aktif dalam menjaga kebersihan lingkungan dan air tanah."
+    ],
+    "cta_title": "Mulai Proyek Sanitasi Anda Bersama Kami",
+    "cta_subtitle": "Jangan kompromi dengan kualitas sanitasi. Dapatkan solusi terbaik dan garansi layanan penuh dari ahlinya.",
+    "cta_btn": "Konsultasi Sekarang"
+  },
+  "services": {
+    "title": "Layanan Kami",
+    "subtitle": "Solusi komprehensif pengolahan air limbah dan sanitasi untuk kebutuhan rumah tangga, komersial, hingga skala industri besar.",
+    "learn_more": "Pelajari Lebih Lanjut",
+    "cta_title": "Butuh Konsultasi untuk Proyek Anda?",
+    "cta_subtitle": "Tim tenaga ahli kami siap melakukan survey dan memberikan penawaran solusi terbaik sesuai standar kebutuhan lingkungan Anda.",
+    "cta_btn": "Hubungi Konsultan Kami"
+  },
+  "projects": {
+    "title": "Proyek Kami",
+    "subtitle": "Bukti nyata dedikasi kami dalam memberikan solusi pengolahan air limbah terbaik untuk berbagai sektor di seluruh Bali.",
+    "year": "Tahun",
+    "list": [
+      {
+        "title": "Instalasi STP Hotel Bintang 5",
+        "description": "Pembangunan dan instalasi sistem Sewage Treatment Plant (STP) kapasitas besar multi-chamber untuk menyaring dan mengolah limbah cair domestik kawasan hotel premium."
+      },
+      {
+        "title": "Pengadaan IPAL Restoran & Komersial",
+        "description": "Instalasi unit penyaring lemak (Grease Trap) dan pengolahan limbah cair terintegrasi untuk mendukung kebersihan dapur komersial restoran."
+      },
+      {
+        "title": "Pemasangan Bio Septic Tank Perumahan",
+        "description": "Pemasangan unit Bio Septic Tank horizontal fiberglass ramah lingkungan tahan bocor untuk menjaga kualitas sanitasi lingkungan perumahan."
+      },
+      {
+        "title": "Sistem Pengolahan Limbah Medis (IPAL)",
+        "description": "Pemasangan tangki bio-filtrasi bulat khusus dengan instalasi pipa klorinasi otomatis untuk memproses air limbah medis rumah sakit."
+      },
+      {
+        "title": "Pembangunan STP Kawasan Villa",
+        "description": "Konstruksi bak beton penampung dengan tangki STP fiberglass kapasitas menengah untuk pengolahan limbah terpusat di kawasan villa."
+      },
+      {
+        "title": "Instalasi Bio Septic Tank Vertikal & Pompa",
+        "description": "Pemasangan tangki Bio Septic Tank model vertikal kapasitas 1500 liter (merk BIOSMB) lengkap dengan pompa submersible otomatis."
+      }
+    ]
+  },
+  "clients": {
+    "title": "Client Kami",
+    "subtitle": "PT Sinar Mahira Bali (biosmb) Telah Dipercaya 100+ Bisnis di Indonesia",
+    "search": "Cari nama client atau lokasi...",
+    "empty": "Tidak ada client yang cocok dengan pencarian Anda.",
+    "th_name": "Nama",
+    "th_location": "Lokasi"
+  },
+  "contact": {
+    "title": "Hubungi & Ulasan",
+    "subtitle": "Konsultasikan proyek Anda atau berikan ulasan mengenai pengalaman Anda menggunakan layanan dari PT Sinar Mahira Bali.",
+    "info_title": "Informasi Kontak",
+    "info_subtitle": "Silakan hubungi kami melalui salah satu kontak di bawah ini, atau kunjungi kantor kami langsung untuk berkonsultasi mengenai kebutuhan pengolahan air limbah Anda.",
+    "office": "Kantor Pusat",
+    "phone_title": "Telepon & WhatsApp",
+    "hours_title": "Jam Operasional",
+    "hours_weekday": "Senin - Jumat: 08:00 - 17:00 WITA",
+    "hours_saturday": "Sabtu: 08:00 - 13:00 WITA",
+    "review_title": "Berikan Ulasan Anda",
+    "review_name": "Nama Lengkap",
+    "review_name_ph": "Masukkan nama Anda",
+    "review_service": "Layanan Yang Digunakan",
+    "review_rating": "Rating",
+    "review_comment": "Ulasan/Komentar Anda",
+    "review_comment_ph": "Tuliskan pengalaman Anda menggunakan layanan kami...",
+    "review_submit": "Kirim Ulasan",
+    "review_recent": "Ulasan Pelanggan Terbaru"
+  },
+  "faq": {
+    "title": "Tanya Jawab (FAQ)",
+    "subtitle": "Temukan jawaban atas pertanyaan yang paling sering diajukan seputar layanan, instalasi, dan produk pengolahan air limbah kami.",
+    "help_title": "Masih Punya Pertanyaan?",
+    "help_text": "Jika Anda tidak menemukan jawaban yang dicari, jangan ragu untuk menghubungi tim support kami langsung.",
+    "help_btn": "Hubungi Support",
+    "list": [
+      {
+        "question": "Berapa lama proses pemasangan Bio Septic Tank?",
+        "answer": "Proses pemasangan Bio Septic Tank kami sangat cepat dan praktis. Biasanya hanya memakan waktu 1 hingga 2 hari kerja tergantung kondisi tanah dan lokasi pemasangan."
+      },
+      {
+        "question": "Apakah produk tangki fiberglass memiliki garansi?",
+        "answer": "Tentu. Semua produk tangki fiberglass kami (IPAL, STP, Bio Septic Tank) dilengkapi dengan garansi kebocoran hingga 10 tahun, memastikan investasi sanitasi Anda aman jangka panjang."
+      },
+      {
+        "question": "Apakah air hasil olahan IPAL aman dibuang ke selokan?",
+        "answer": "Sangat aman. Sistem IPAL dan STP kami menggunakan teknologi bio-filter anaerobik & aerobik yang mengurai limbah sehingga air hasil olahannya tidak berbau dan telah memenuhi standar baku mutu lingkungan hidup dari pemerintah."
+      },
+      {
+        "question": "Apakah Bio Septic Tank perlu disedot/kuras berkala?",
+        "answer": "Tidak perlu. Sistem biologis di dalam tangki bekerja mengurai feses menjadi cairan secara otomatis. Anda tidak perlu lagi repot memanggil jasa sedot WC seperti pada septic tank beton konvensional."
+      },
+      {
+        "question": "Bisakah Sinar Mahira melayani pembuatan STP custom untuk Hotel?",
+        "answer": "Bisa. Kami memiliki tim engineer yang berpengalaman mendesain dan membangun sistem Sewage Treatment Plant (STP) dengan kapasitas custom sesuai kebutuhan operasional dan ketersediaan lahan hotel atau resort Anda."
+      }
+    ]
+  },
+  "footer": {
+    "description": "Perusahaan pengolahan air limbah, sanitasi lingkungan, dan solusi penyimpanan air berbasis fiberglass terpercaya di Bali.",
+    "quick_links": "Tautan Cepat",
+    "main_services": "Layanan Utama",
+    "contact_us": "Hubungi Kami",
+    "copyright": "Hak Cipta Dilindungi.",
+    "privacy": "Kebijakan Privasi",
+    "terms": "Syarat & Ketentuan"
+  },
+  "wa": {
+    "pill_text": "Ada pertanyaan? Konsultasi gratis di WhatsApp!"
+  }
+}

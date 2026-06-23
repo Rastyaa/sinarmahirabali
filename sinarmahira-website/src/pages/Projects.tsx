@@ -1,4 +1,5 @@
 import { MapPin, Calendar } from 'lucide-react';
+import { useTranslation } from 'react-i18next';
 import imgStp from '../assets/IMG_0353.JPG.jpeg';
 import imgGreaseTrap from '../assets/IMG_0354.JPG.jpeg';
 import imgBioSeptic from '../assets/IMG_0355.JPG.jpeg';
@@ -6,68 +7,70 @@ import imgIpalMedis from '../assets/IMG_0356.JPG.jpeg';
 import imgWtp from '../assets/IMG_0357.JPG.jpeg';
 import imgExtra from '../assets/IMG_0358.JPG.jpeg';
 
-const projects = [
-  {
-    title: 'Instalasi STP Hotel Bintang 5',
-    location: 'Nusa Dua, Bali',
-    serviceType: 'STP (Sewage Treatment Plant)',
-    description: 'Pembangunan dan instalasi sistem Sewage Treatment Plant (STP) kapasitas besar multi-chamber untuk menyaring dan mengolah limbah cair domestik kawasan hotel premium.',
-    year: '2025',
-    imageUrl: imgStp
-  },
-  {
-    title: 'Pengadaan IPAL Restoran & Komersial',
-    location: 'Seminyak, Bali',
-    serviceType: 'Grease Trap & IPAL',
-    description: 'Instalasi unit penyaring lemak (Grease Trap) dan pengolahan limbah cair terintegrasi untuk mendukung kebersihan dapur komersial restoran.',
-    year: '2025',
-    imageUrl: imgGreaseTrap
-  },
-  {
-    title: 'Pemasangan Bio Septic Tank Perumahan',
-    location: 'Canggu, Bali',
-    serviceType: 'Bio Septic Tank',
-    description: 'Pemasangan unit Bio Septic Tank horizontal fiberglass ramah lingkungan tahan bocor untuk menjaga kualitas sanitasi lingkungan perumahan.',
-    year: '2024',
-    imageUrl: imgBioSeptic
-  },
-  {
-    title: 'Sistem Pengolahan Limbah Medis (IPAL)',
-    location: 'Denpasar, Bali',
-    serviceType: 'IPAL Medis',
-    description: 'Pemasangan tangki bio-filtrasi bulat khusus dengan instalasi pipa klorinasi otomatis untuk memproses air limbah medis rumah sakit.',
-    year: '2025',
-    imageUrl: imgIpalMedis
-  },
-  {
-    title: 'Pembangunan STP Kawasan Villa',
-    location: 'Ubud, Bali',
-    serviceType: 'STP (Sewage Treatment Plant)',
-    description: 'Konstruksi bak beton penampung dengan tangki STP fiberglass kapasitas menengah untuk pengolahan limbah terpusat di kawasan villa.',
-    year: '2024',
-    imageUrl: imgWtp
-  },
-  {
-    title: 'Instalasi Bio Septic Tank Vertikal & Pompa',
-    location: 'Sanur, Bali',
-    serviceType: 'Bio Septic Tank Vertikal',
-    description: 'Pemasangan tangki Bio Septic Tank model vertikal kapasitas 1500 liter (merk BIOSMB) lengkap dengan pompa submersible otomatis.',
-    year: '2025',
-    imageUrl: imgExtra
-  }
-];
-
 const Projects = () => {
+  const { t } = useTranslation();
+
+  const projects = [
+    {
+      title: 'Instalasi STP Hotel Bintang 5',
+      location: 'Nusa Dua, Bali',
+      serviceType: 'STP (Sewage Treatment Plant)',
+      description: 'Pembangunan dan instalasi sistem Sewage Treatment Plant (STP) kapasitas besar multi-chamber untuk menyaring dan mengolah limbah cair domestik kawasan hotel premium.',
+      year: '2025',
+      imageUrl: imgStp
+    },
+    {
+      title: 'Pengadaan IPAL Restoran & Komersial',
+      location: 'Seminyak, Bali',
+      serviceType: 'Grease Trap & IPAL',
+      description: 'Instalasi unit penyaring lemak (Grease Trap) dan pengolahan limbah cair terintegrasi untuk mendukung kebersihan dapur komersial restoran.',
+      year: '2025',
+      imageUrl: imgGreaseTrap
+    },
+    {
+      title: 'Pemasangan Bio Septic Tank Perumahan',
+      location: 'Canggu, Bali',
+      serviceType: 'Bio Septic Tank',
+      description: 'Pemasangan unit Bio Septic Tank horizontal fiberglass ramah lingkungan tahan bocor untuk menjaga kualitas sanitasi lingkungan perumahan.',
+      year: '2024',
+      imageUrl: imgBioSeptic
+    },
+    {
+      title: 'Sistem Pengolahan Limbah Medis (IPAL)',
+      location: 'Denpasar, Bali',
+      serviceType: 'IPAL Medis',
+      description: 'Pemasangan tangki bio-filtrasi bulat khusus dengan instalasi pipa klorinasi otomatis untuk memproses air limbah medis rumah sakit.',
+      year: '2025',
+      imageUrl: imgIpalMedis
+    },
+    {
+      title: 'Pembangunan STP Kawasan Villa',
+      location: 'Ubud, Bali',
+      serviceType: 'STP (Sewage Treatment Plant)',
+      description: 'Konstruksi bak beton penampung dengan tangki STP fiberglass kapasitas menengah untuk pengolahan limbah terpusat di kawasan villa.',
+      year: '2024',
+      imageUrl: imgWtp
+    },
+    {
+      title: 'Instalasi Bio Septic Tank Vertikal & Pompa',
+      location: 'Sanur, Bali',
+      serviceType: 'Bio Septic Tank Vertikal',
+      description: 'Pemasangan tangki Bio Septic Tank model vertikal kapasitas 1500 liter (merk BIOSMB) lengkap dengan pompa submersible otomatis.',
+      year: '2025',
+      imageUrl: imgExtra
+    }
+  ];
+
   return (
     <div className="flex flex-col w-full bg-transparent font-jakarta min-h-screen pb-[120px]">
       {/* Header Section */}
       <section className="w-full bg-transparent pt-[160px] pb-[80px] px-[16px] md:px-[32px] border-b border-white/5">
         <div className="max-w-[1200px] mx-auto text-center">
           <h1 className="text-[40px] md:text-[56px] font-poppins font-bold mb-[24px] leading-[1.2] text-text-primary tracking-[-0.02em]">
-            Proyek Kami
+            {t('projects.title')}
           </h1>
           <p className="text-[18px] md:text-[20px] font-jakarta max-w-[800px] mx-auto text-text-secondary leading-[32px]">
-            Bukti nyata dedikasi kami dalam memberikan solusi pengolahan air limbah terbaik untuk berbagai sektor di seluruh Bali.
+            {t('projects.subtitle')}
           </p>
         </div>
       </section>
@@ -97,16 +100,16 @@ const Projects = () => {
                   </div>
                   <div className="flex items-center gap-[8px]">
                     <Calendar className="w-[16px] h-[16px] text-brand-blue" />
-                    Tahun {project.year}
+                    {t('projects.year')} {project.year}
                   </div>
                 </div>
 
                 <h3 className="text-[24px] font-bold text-text-primary font-poppins mb-[16px] leading-[1.3] group-hover:text-brand-blue transition-colors">
-                  {project.title}
+                  {t(`projects.list.${i}.title`, project.title)}
                 </h3>
                 
                 <p className="text-[16px] text-text-secondary leading-[32px] font-jakarta flex-grow">
-                  {project.description}
+                  {t(`projects.list.${i}.description`, project.description)}
                 </p>
               </div>
 

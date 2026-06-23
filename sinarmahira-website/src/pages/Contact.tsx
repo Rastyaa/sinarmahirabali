@@ -1,5 +1,6 @@
 import { useState } from 'react';
 import { MapPin, Phone, Clock, Send, Star } from 'lucide-react';
+import { useTranslation } from 'react-i18next';
 
 interface Review {
   name: string;
@@ -10,6 +11,7 @@ interface Review {
 }
 
 const Contact = () => {
+  const { t } = useTranslation();
   const [rating, setRating] = useState(5);
   const [name, setName] = useState('');
   const [service, setService] = useState('Bio Septic Tank');
@@ -62,10 +64,10 @@ const Contact = () => {
       <section className="w-full bg-transparent pt-[160px] pb-[80px] px-[16px] md:px-[32px] border-b border-white/5">
         <div className="max-w-[1200px] mx-auto text-center">
           <h1 className="text-[40px] md:text-[56px] font-poppins font-bold mb-[24px] leading-[1.2] text-text-primary tracking-[-0.02em]">
-            Hubungi & Ulasan
+            {t('contact.title')}
           </h1>
           <p className="text-[18px] md:text-[20px] font-jakarta max-w-[800px] mx-auto text-text-secondary leading-[32px]">
-            Konsultasikan proyek Anda atau berikan ulasan mengenai pengalaman Anda menggunakan layanan dari PT Sinar Mahira Bali.
+            {t('contact.subtitle')}
           </p>
         </div>
       </section>
@@ -77,9 +79,9 @@ const Contact = () => {
           {/* Contact Info (Left) */}
           <div className="space-y-[40px]">
             <div>
-              <h2 className="text-[32px] font-bold text-text-primary font-poppins mb-[16px]">Informasi Kontak</h2>
+              <h2 className="text-[32px] font-bold text-text-primary font-poppins mb-[16px]">{t('contact.info_title')}</h2>
               <p className="text-[16px] text-text-secondary leading-[32px] font-jakarta mb-[32px]">
-                Silakan hubungi kami melalui salah satu kontak di bawah ini, atau kunjungi kantor kami langsung untuk berkonsultasi mengenai kebutuhan pengolahan air limbah Anda.
+                {t('contact.info_subtitle')}
               </p>
             </div>
 
@@ -90,7 +92,7 @@ const Contact = () => {
                   <MapPin className="w-[24px] h-[24px] text-brand-coral" />
                 </div>
                 <div>
-                  <h3 className="text-[18px] font-bold text-text-primary font-poppins mb-[8px]">Kantor Pusat</h3>
+                  <h3 className="text-[18px] font-bold text-text-primary font-poppins mb-[8px]">{t('contact.office')}</h3>
                   <p className="text-[16px] text-text-secondary leading-[24px] font-jakarta">
                     Jl. Astasura No.27, Peguyangan Kaja,<br/>
                     Kec. Denpasar Utara, Kota Denpasar, Bali 80115
@@ -104,7 +106,7 @@ const Contact = () => {
                   <Phone className="w-[24px] h-[24px] text-brand-coral" />
                 </div>
                 <div>
-                  <h3 className="text-[18px] font-bold text-text-primary font-poppins mb-[8px]">Telepon & WhatsApp</h3>
+                  <h3 className="text-[18px] font-bold text-text-primary font-poppins mb-[8px]">{t('contact.phone_title')}</h3>
                   <p className="text-[16px] text-text-secondary leading-[24px] font-jakarta">
                     +62 889-8728-8952 (Marketing)<br/>
                     +62 889-8728-8952 (Support)
@@ -118,10 +120,10 @@ const Contact = () => {
                   <Clock className="w-[24px] h-[24px] text-brand-coral" />
                 </div>
                 <div>
-                  <h3 className="text-[18px] font-bold text-text-primary font-poppins mb-[8px]">Jam Operasional</h3>
+                  <h3 className="text-[18px] font-bold text-text-primary font-poppins mb-[8px]">{t('contact.hours_title')}</h3>
                   <p className="text-[16px] text-text-secondary leading-[24px] font-jakarta">
-                    Senin - Jumat: 08:00 - 17:00 WITA<br/>
-                    Sabtu: 08:00 - 13:00 WITA
+                    {t('contact.hours_weekday')}<br/>
+                    {t('contact.hours_saturday')}
                   </p>
                 </div>
               </div>
@@ -132,15 +134,15 @@ const Contact = () => {
           <div className="space-y-[32px]">
             {/* Form Review */}
             <div className="bg-glass rounded-[24px] p-[32px] md:p-[40px] shadow-modal border border-white/10 border-t-[4px] border-t-brand-blue relative hover-glow transition-all duration-500">
-              <h2 className="text-[28px] font-bold text-text-primary font-poppins mb-[24px]">Berikan Ulasan Anda</h2>
+              <h2 className="text-[28px] font-bold text-text-primary font-poppins mb-[24px]">{t('contact.review_title')}</h2>
               
               <form className="space-y-[20px]" onSubmit={handleSubmit}>
                 <div className="space-y-[8px]">
-                  <label className="text-[14px] font-bold text-text-primary font-poppins">Nama Lengkap *</label>
+                  <label className="text-[14px] font-bold text-text-primary font-poppins">{t('contact.review_name')} *</label>
                   <input 
                     type="text" 
                     required
-                    placeholder="Masukkan nama Anda" 
+                    placeholder={t('contact.review_name_ph')}
                     value={name}
                     onChange={(e) => setName(e.target.value)}
                     className="w-full h-[48px] px-[16px] bg-white/5 border border-white/10 rounded-[12px] text-text-primary placeholder-text-muted focus:outline-none focus:bg-white/10 focus:border-brand-blue focus:ring-1 focus:ring-brand-blue transition-all text-[16px] font-jakarta"
@@ -149,7 +151,7 @@ const Contact = () => {
 
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-[20px]">
                   <div className="space-y-[8px]">
-                    <label className="text-[14px] font-bold text-text-primary font-poppins">Layanan Yang Digunakan</label>
+                    <label className="text-[14px] font-bold text-text-primary font-poppins">{t('contact.review_service')}</label>
                     <div className="relative">
                       <select 
                         value={service}
@@ -168,7 +170,7 @@ const Contact = () => {
                   </div>
 
                   <div className="space-y-[8px]">
-                    <label className="text-[14px] font-bold text-text-primary font-poppins">Rating</label>
+                    <label className="text-[14px] font-bold text-text-primary font-poppins">{t('contact.review_rating')}</label>
                     <div className="flex items-center gap-[6px] h-[48px]">
                       {[1, 2, 3, 4, 5].map((star) => (
                         <button
@@ -189,11 +191,11 @@ const Contact = () => {
                 </div>
 
                 <div className="space-y-[8px]">
-                  <label className="text-[14px] font-bold text-text-primary font-poppins">Ulasan/Komentar Anda *</label>
+                  <label className="text-[14px] font-bold text-text-primary font-poppins">{t('contact.review_comment')} *</label>
                   <textarea 
                     rows={3} 
                     required
-                    placeholder="Tuliskan pengalaman Anda menggunakan layanan kami..." 
+                    placeholder={t('contact.review_comment_ph')}
                     value={comment}
                     onChange={(e) => setComment(e.target.value)}
                     className="w-full p-[16px] bg-white/5 border border-white/10 rounded-[12px] text-text-primary placeholder-text-muted focus:outline-none focus:bg-white/10 focus:border-brand-blue focus:ring-1 focus:ring-brand-blue transition-all text-[16px] font-jakarta resize-none"
@@ -204,7 +206,7 @@ const Contact = () => {
                   type="submit" 
                   className="w-full h-[50px] flex items-center justify-center gap-[12px] bg-brand-coral text-white font-bold font-jakarta text-[16px] rounded-[16px] hover:bg-brand-coral-hover shadow-floating transition-colors cursor-pointer"
                 >
-                  Kirim Ulasan
+                  {t('contact.review_submit')}
                   <Send className="w-[18px] h-[18px]" />
                 </button>
               </form>
@@ -212,7 +214,7 @@ const Contact = () => {
 
             {/* List Review Terbaru */}
             <div className="space-y-[16px]">
-              <h3 className="text-[20px] font-bold text-text-primary font-poppins">Ulasan Pelanggan Terbaru</h3>
+              <h3 className="text-[20px] font-bold text-text-primary font-poppins">{t('contact.review_recent')}</h3>
               <div className="space-y-[16px] max-h-[350px] overflow-y-auto pr-[8px] scrollbar-thin">
                 {reviews.map((rev, index) => (
                   <div key={index} className="bg-glass rounded-[16px] p-[20px] border border-white/5 hover-glow transition-all duration-300">

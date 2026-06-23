@@ -1,8 +1,10 @@
 import { useState, useEffect } from 'react';
 import { MessageCircle, X } from 'lucide-react';
+import { useTranslation } from 'react-i18next';
 
 const WhatsAppButton = () => {
   const [showPill, setShowPill] = useState(false);
+  const { t } = useTranslation();
 
   useEffect(() => {
     // Show the floating text pill after 2.5 seconds
@@ -30,7 +32,7 @@ const WhatsAppButton = () => {
       {showPill && (
         <div className="mb-[12px] flex items-center gap-[8px] bg-slate-900/90 backdrop-blur-md border border-[#25D366]/30 text-white px-[14px] py-[8px] rounded-[12px] shadow-modal animate-in fade-in slide-in-from-bottom-3 duration-300 pointer-events-auto max-w-[260px] sm:max-w-xs">
           <span className="text-[12px] sm:text-[13px] font-jakarta font-semibold leading-snug">
-            Ada pertanyaan? Konsultasi gratis di WhatsApp!
+            {t('wa.pill_text')}
           </span>
           <button 
             onClick={(e) => {

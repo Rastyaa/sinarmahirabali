@@ -1,0 +1,188 @@
+{
+  "nav": {
+    "home": "Home",
+    "about": "About Us",
+    "services": "Services",
+    "projects": "Projects",
+    "clients": "Clients",
+    "faq": "FAQ",
+    "contact": "Contact Us"
+  },
+  "home": {
+    "badge": "Trusted Sanitation Solutions",
+    "title1": "Sanitation System &",
+    "title2": "Wastewater Treatment",
+    "title3": "Best in Class.",
+    "subtitle": "PT Sinar Mahira Bali (Biosmb) delivers premium fiberglass-based sanitation infrastructure solutions for residential, commercial, and industrial needs.",
+    "cta1": "Free Consultation",
+    "cta2": "View Services",
+    "badge_quality": "Premium Quality",
+    "about_label": "About Company",
+    "about_title": "Commitment to",
+    "about_title2": "Environmental Quality.",
+    "about_p1": "is your trusted partner in wastewater treatment and fiberglass-based water storage solutions in Bali.",
+    "about_p2": "We deliver IPAL, STP, Bio Septic Tank, and Water Treatment Plant installations with the highest engineering standards, ensuring long-term efficiency and compliance with environmental regulations.",
+    "features": ["Cutting-edge Technology", "Durable & Leak-proof", "Easy Maintenance", "Eco-friendly"],
+    "about_cta": "Company Profile",
+    "guarantee": "Warranty",
+    "guarantee_sub": "Premium Quality",
+    "services_label": "Products & Services",
+    "services_title": "Comprehensive",
+    "services_title2": "Sanitation System.",
+    "services_all": "View All",
+    "svc_ipal": "IPAL & STP",
+    "svc_ipal_desc": "Modern wastewater treatment plant installation with high efficiency.",
+    "svc_bio": "Bio Septic Tank",
+    "svc_bio_desc": "Eco-friendly sanitation made of leak-proof fiberglass.",
+    "svc_wtp": "Water Treatment",
+    "svc_wtp_desc": "Advanced water purification technology for commercial needs.",
+    "svc_gt": "Grease Trap",
+    "svc_gt_desc": "Grease trap to prevent clogging in drainage pipes.",
+    "sectors_title": "Supporting Various Sectors",
+    "sectors_subtitle": "Our production capacity and engineering design enable us to serve from private residences to large-scale industrial complexes.",
+    "sector_home": "Residential",
+    "sector_home_desc": "Modern Bio Septic Tank system that frees you from routine toilet pumping issues.",
+    "sector_commercial": "Commercial Facilities",
+    "sector_commercial_desc": "Efficient IPAL & Grease Trap for restaurants, hospitals, hotels, and shopping centers.",
+    "sector_industrial": "Industrial Zone",
+    "sector_industrial_desc": "Massive-capacity Sewage Treatment Plant meeting industrial wastewater discharge standards.",
+    "partners_label": "Our Network",
+    "partners_title": "Corporate Partners",
+    "cta_title": "Ready to Improve",
+    "cta_title2": "Your Project's Sanitation Standards?",
+    "cta_subtitle": "Discuss your specific needs with our expert consulting team. Get the best price quote today.",
+    "cta_btn1": "Contact Our Experts",
+    "cta_btn2": "Request a Quote"
+  },
+  "about": {
+    "title": "About Us",
+    "p1": "has been a trusted partner in wastewater management since",
+    "p1b": ". With experience serving various companies and communities, we deliver effective, efficient, and environmentally compliant solutions to support sanitation and operational needs.",
+    "p2": "continues to develop environmentally friendly and quality wastewater treatment systems. We are committed to helping create cleaner, healthier, and more sustainable environments for various industrial sectors and community needs.",
+    "p2_prefix": "Focusing on innovation and sustainability,",
+    "stats_clients": "Clients in Indonesia",
+    "stats_partners": "Corporate Partnerships",
+    "stats_employees": "Employees",
+    "stats_support": "Installation Support Team",
+    "vision_title": "Our Vision",
+    "vision_text": "To become Indonesia's leading wastewater treatment and sanitation solution provider that prioritizes environmental sustainability and customer satisfaction through innovative and high-quality products.",
+    "mission_title": "Our Mission",
+    "missions": [
+      "Provide premium-quality IPAL, STP, and Septic Tank products made from fiberglass.",
+      "Deliver professional consultation, planning, and installation services.",
+      "Innovate in water treatment technology for long-term efficiency.",
+      "Actively contribute to maintaining clean environments and groundwater."
+    ],
+    "cta_title": "Start Your Sanitation Project With Us",
+    "cta_subtitle": "Don't compromise on sanitation quality. Get the best solutions and full service warranty from the experts.",
+    "cta_btn": "Consult Now"
+  },
+  "services": {
+    "title": "Our Services",
+    "subtitle": "Comprehensive wastewater treatment and sanitation solutions for residential, commercial, and large-scale industrial needs.",
+    "learn_more": "Learn More",
+    "cta_title": "Need Consultation for Your Project?",
+    "cta_subtitle": "Our expert team is ready to survey and provide the best solution tailored to your environmental needs.",
+    "cta_btn": "Contact Our Consultant"
+  },
+  "projects": {
+    "title": "Our Projects",
+    "subtitle": "Real evidence of our dedication in providing the best wastewater treatment solutions for various sectors across Bali.",
+    "year": "Year",
+    "list": [
+      {
+        "title": "5-Star Hotel STP Installation",
+        "description": "Construction and installation of a large-capacity multi-chamber Sewage Treatment Plant (STP) system to filter and treat domestic liquid waste for a premium hotel area."
+      },
+      {
+        "title": "Restaurant & Commercial IPAL Provision",
+        "description": "Installation of fat trap units (Grease Trap) and integrated wastewater treatment to support commercial restaurant kitchen hygiene."
+      },
+      {
+        "title": "Residential Bio Septic Tank Installation",
+        "description": "Installation of an eco-friendly, leak-proof fiberglass horizontal Bio Septic Tank unit to maintain residential environmental sanitation quality."
+      },
+      {
+        "title": "Medical Wastewater Treatment System (IPAL)",
+        "description": "Installation of a custom round bio-filtration tank with an automatic chlorination piping system to process hospital medical wastewater."
+      },
+      {
+        "title": "Villa Area STP Development",
+        "description": "Construction of concrete storage basins with medium-capacity fiberglass STP tanks for centralized waste treatment in a villa area."
+      },
+      {
+        "title": "Vertical Bio Septic Tank & Pump Installation",
+        "description": "Installation of a 1500-liter vertical Bio Septic Tank (BIOSMB brand) complete with an automatic submersible pump."
+      }
+    ]
+  },
+  "clients": {
+    "title": "Our Clients",
+    "subtitle": "PT Sinar Mahira Bali (biosmb) Trusted by 100+ Businesses in Indonesia",
+    "search": "Search client name or location...",
+    "empty": "No clients match your search.",
+    "th_name": "Name",
+    "th_location": "Location"
+  },
+  "contact": {
+    "title": "Contact & Reviews",
+    "subtitle": "Consult your project or share your experience using our services at PT Sinar Mahira Bali.",
+    "info_title": "Contact Information",
+    "info_subtitle": "Please reach out through any of the contacts below, or visit our office directly to consult about your wastewater treatment needs.",
+    "office": "Head Office",
+    "phone_title": "Phone & WhatsApp",
+    "hours_title": "Operating Hours",
+    "hours_weekday": "Monday - Friday: 08:00 - 17:00 WITA",
+    "hours_saturday": "Saturday: 08:00 - 13:00 WITA",
+    "review_title": "Leave a Review",
+    "review_name": "Full Name",
+    "review_name_ph": "Enter your name",
+    "review_service": "Service Used",
+    "review_rating": "Rating",
+    "review_comment": "Your Review/Comment",
+    "review_comment_ph": "Write your experience using our services...",
+    "review_submit": "Submit Review",
+    "review_recent": "Recent Customer Reviews"
+  },
+  "faq": {
+    "title": "Frequently Asked Questions",
+    "subtitle": "Find answers to the most frequently asked questions about our wastewater treatment services, installations, and products.",
+    "help_title": "Still Have Questions?",
+    "help_text": "If you can't find the answer you're looking for, don't hesitate to contact our support team directly.",
+    "help_btn": "Contact Support",
+    "list": [
+      {
+        "question": "How long is the installation process for a Bio Septic Tank?",
+        "answer": "Our Bio Septic Tank installation is quick and convenient. It typically takes only 1 to 2 working days, depending on soil conditions and installation site."
+      },
+      {
+        "question": "Are the fiberglass tank products under warranty?",
+        "answer": "Yes. All our fiberglass tank products (IPAL, STP, Bio Septic Tank) come with a leak warranty of up to 10 years, securing your long-term sanitation investment."
+      },
+      {
+        "question": "Is the treated wastewater from IPAL safe to discharge into sewers?",
+        "answer": "Very safe. Our IPAL and STP systems use anaerobic & aerobic bio-filtration technology to break down waste, producing odorless treated water that meets government discharge standards."
+      },
+      {
+        "question": "Does the Bio Septic Tank require periodic pumping or emptying?",
+        "answer": "No. The biological system inside the tank breaks down waste into liquid automatically. You no longer need to call toilet pumping services like with conventional concrete septic tanks."
+      },
+      {
+        "question": "Can Sinar Mahira design custom STP systems for hotels?",
+        "answer": "Yes. We have an experienced engineering team to design and build custom capacity Sewage Treatment Plant (STP) systems tailored to your hotel's operational needs and site availability."
+      }
+    ]
+  },
+  "footer": {
+    "description": "Trusted wastewater treatment, environmental sanitation, and fiberglass-based water storage solutions company in Bali.",
+    "quick_links": "Quick Links",
+    "main_services": "Main Services",
+    "contact_us": "Contact Us",
+    "copyright": "All Rights Reserved.",
+    "privacy": "Privacy Policy",
+    "terms": "Terms & Conditions"
+  },
+  "wa": {
+    "pill_text": "Any questions? Free consultation on WhatsApp!"
+  }
+}

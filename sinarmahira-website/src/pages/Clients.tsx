@@ -1,5 +1,6 @@
 import { useState } from 'react';
 import { Search, Building2, MapPin } from 'lucide-react';
+import { useTranslation } from 'react-i18next';
 
 interface Client {
   name: string;
@@ -98,6 +99,7 @@ const clientsData: Client[] = [
 
 const Clients = () => {
   const [searchTerm, setSearchTerm] = useState('');
+  const { t } = useTranslation();
 
   const filteredClients = clientsData.filter(
     (client) =>
@@ -115,10 +117,10 @@ const Clients = () => {
       <section className="w-full bg-transparent pt-[160px] pb-[60px] px-[16px] md:px-[32px] border-b border-white/5">
         <div className="max-w-[1200px] mx-auto text-center">
           <h1 className="text-[40px] md:text-[56px] font-poppins font-bold mb-[24px] leading-[1.2] text-text-primary tracking-[-0.02em]">
-            Client Kami
+            {t('clients.title')}
           </h1>
           <p className="text-[18px] md:text-[20px] font-jakarta max-w-[800px] mx-auto text-text-secondary leading-[32px]">
-            PT Sinar Mahira Bali (biosmb) Telah Dipercaya 100+ Bisnis di Indonesia
+            {t('clients.subtitle')}
           </p>
         </div>
       </section>
@@ -129,7 +131,7 @@ const Clients = () => {
           <Search className="absolute left-[16px] top-[14px] w-[20px] h-[20px] text-text-muted" />
           <input
             type="text"
-            placeholder="Cari nama client atau lokasi..."
+            placeholder={t('clients.search')}
             value={searchTerm}
             onChange={(e) => setSearchTerm(e.target.value)}
             className="w-full h-[48px] pl-[48px] pr-[20px] rounded-[16px] bg-white/5 border border-white/10 text-text-primary font-jakarta placeholder-text-muted focus:outline-none focus:border-brand-blue focus:bg-white/10 focus:ring-1 focus:ring-brand-blue transition-all"
@@ -142,7 +144,7 @@ const Clients = () => {
         {filteredClients.length === 0 ? (
           <div className="text-center py-[60px] bg-glass rounded-[24px] border border-white/8 hover-glow transition-all duration-300">
             <Building2 className="w-[48px] h-[48px] text-text-muted mx-auto mb-[16px]" />
-            <p className="text-[16px] md:text-[18px] text-text-secondary">Tidak ada client yang cocok dengan pencarian Anda.</p>
+            <p className="text-[16px] md:text-[18px] text-text-secondary">{t('clients.empty')}</p>
           </div>
         ) : (
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-[24px] items-start">
@@ -151,8 +153,8 @@ const Clients = () => {
               <table className="w-full text-left border-collapse">
                 <thead>
                   <tr className="border-b border-white/10 bg-white/5">
-                    <th className="p-[12px] md:p-[16px] text-[13px] md:text-[14px] font-bold text-text-primary font-poppins uppercase tracking-wider w-[50%]">Nama</th>
-                    <th className="p-[12px] md:p-[16px] text-[13px] md:text-[14px] font-bold text-text-primary font-poppins uppercase tracking-wider w-[50%]">Lokasi</th>
+                    <th className="p-[12px] md:p-[16px] text-[13px] md:text-[14px] font-bold text-text-primary font-poppins uppercase tracking-wider w-[50%]">{t('clients.th_name')}</th>
+                    <th className="p-[12px] md:p-[16px] text-[13px] md:text-[14px] font-bold text-text-primary font-poppins uppercase tracking-wider w-[50%]">{t('clients.th_location')}</th>
                   </tr>
                 </thead>
                 <tbody>
@@ -182,8 +184,8 @@ const Clients = () => {
                 <table className="w-full text-left border-collapse">
                   <thead>
                     <tr className="border-b border-white/10 bg-white/5">
-                      <th className="p-[12px] md:p-[16px] text-[13px] md:text-[14px] font-bold text-text-primary font-poppins uppercase tracking-wider w-[50%]">Nama</th>
-                      <th className="p-[12px] md:p-[16px] text-[13px] md:text-[14px] font-bold text-text-primary font-poppins uppercase tracking-wider w-[50%]">Lokasi</th>
+                      <th className="p-[12px] md:p-[16px] text-[13px] md:text-[14px] font-bold text-text-primary font-poppins uppercase tracking-wider w-[50%]">{t('clients.th_name')}</th>
+                      <th className="p-[12px] md:p-[16px] text-[13px] md:text-[14px] font-bold text-text-primary font-poppins uppercase tracking-wider w-[50%]">{t('clients.th_location')}</th>
                     </tr>
                   </thead>
                   <tbody>

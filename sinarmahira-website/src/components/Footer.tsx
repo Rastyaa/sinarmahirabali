@@ -1,5 +1,6 @@
 import { Link } from 'react-router-dom';
 import { Droplets, MapPin, Phone } from 'lucide-react';
+import { useTranslation } from 'react-i18next';
 
 const FacebookIcon = ({ className }: { className?: string }) => (
   <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className={className}>
@@ -24,6 +25,8 @@ const LinkedinIcon = ({ className }: { className?: string }) => (
 );
 
 const Footer = () => {
+  const { t } = useTranslation();
+
   return (
     <footer className="bg-glass-subtle text-text-secondary border-t border-white/5 mt-[120px]">
       <div className="max-w-[1440px] mx-auto px-[16px] md:px-[32px] py-[56px]">
@@ -40,7 +43,7 @@ const Footer = () => {
               </span>
             </Link>
             <p className="text-[15px] leading-[28px] font-jakarta mb-[24px] text-text-secondary">
-              Perusahaan pengolahan air limbah, sanitasi lingkungan, dan solusi penyimpanan air berbasis fiberglass terpercaya di Bali.
+              {t('footer.description')}
             </p>
             <div className="flex gap-[12px]">
               <a href="#" className="w-[40px] h-[40px] rounded-[10px] bg-white/5 border border-white/8 flex items-center justify-center text-text-muted hover:text-brand-blue hover:bg-brand-blue/10 hover:border-brand-blue/20 transition-all duration-200">
@@ -57,19 +60,19 @@ const Footer = () => {
 
           {/* Quick Links */}
           <div>
-            <h4 className="text-[18px] text-text-primary font-bold font-poppins mb-[20px]">Tautan Cepat</h4>
+            <h4 className="text-[18px] text-text-primary font-bold font-poppins mb-[20px]">{t('footer.quick_links')}</h4>
             <ul className="space-y-[12px] font-jakarta text-[15px]">
-              <li><Link to="/about" className="text-text-secondary hover:text-brand-coral transition-colors">Tentang Kami</Link></li>
-              <li><Link to="/services" className="text-text-secondary hover:text-brand-coral transition-colors">Layanan</Link></li>
-              <li><Link to="/projects" className="text-text-secondary hover:text-brand-coral transition-colors">Proyek Kami</Link></li>
-              <li><Link to="/clients" className="text-text-secondary hover:text-brand-coral transition-colors">Client Kami</Link></li>
-              <li><Link to="/faq" className="text-text-secondary hover:text-brand-coral transition-colors">FAQ</Link></li>
+              <li><Link to="/about" className="text-text-secondary hover:text-brand-coral transition-colors">{t('nav.about')}</Link></li>
+              <li><Link to="/services" className="text-text-secondary hover:text-brand-coral transition-colors">{t('nav.services')}</Link></li>
+              <li><Link to="/projects" className="text-text-secondary hover:text-brand-coral transition-colors">{t('nav.projects')}</Link></li>
+              <li><Link to="/clients" className="text-text-secondary hover:text-brand-coral transition-colors">{t('nav.clients')}</Link></li>
+              <li><Link to="/faq" className="text-text-secondary hover:text-brand-coral transition-colors">{t('nav.faq')}</Link></li>
             </ul>
           </div>
 
           {/* Services */}
           <div>
-            <h4 className="text-[18px] text-text-primary font-bold font-poppins mb-[20px]">Layanan Utama</h4>
+            <h4 className="text-[18px] text-text-primary font-bold font-poppins mb-[20px]">{t('footer.main_services')}</h4>
             <ul className="space-y-[12px] font-jakarta text-[15px]">
               <li className="text-text-secondary hover:text-text-primary transition-colors cursor-default">IPAL & STP</li>
               <li className="text-text-secondary hover:text-text-primary transition-colors cursor-default">Bio Septic Tank</li>
@@ -80,7 +83,7 @@ const Footer = () => {
 
           {/* Contact Info */}
           <div>
-            <h4 className="text-[18px] text-text-primary font-bold font-poppins mb-[20px]">Hubungi Kami</h4>
+            <h4 className="text-[18px] text-text-primary font-bold font-poppins mb-[20px]">{t('footer.contact_us')}</h4>
             <ul className="space-y-[16px] font-jakarta text-[15px]">
               <li className="flex items-start gap-[12px]">
                 <MapPin className="w-[20px] h-[20px] text-brand-coral shrink-0 mt-[2px]" />
@@ -98,10 +101,10 @@ const Footer = () => {
       {/* Copyright */}
       <div className="border-t border-white/5">
         <div className="max-w-[1440px] mx-auto px-[16px] md:px-[32px] py-[24px] text-[13px] font-jakarta text-center flex flex-col md:flex-row justify-between items-center text-text-muted">
-          <p>&copy; {new Date().getFullYear()} PT Sinar Mahira Bali (Biosmb). Hak Cipta Dilindungi.</p>
+          <p>&copy; {new Date().getFullYear()} PT Sinar Mahira Bali (Biosmb). {t('footer.copyright')}</p>
           <div className="mt-4 md:mt-0 space-x-[20px]">
-            <Link to="#" className="text-text-secondary hover:text-brand-coral transition-colors">Kebijakan Privasi</Link>
-            <Link to="#" className="text-text-secondary hover:text-brand-coral transition-colors">Syarat & Ketentuan</Link>
+            <Link to="#" className="text-text-secondary hover:text-brand-coral transition-colors">{t('footer.privacy')}</Link>
+            <Link to="#" className="text-text-secondary hover:text-brand-coral transition-colors">{t('footer.terms')}</Link>
           </div>
         </div>
       </div>
