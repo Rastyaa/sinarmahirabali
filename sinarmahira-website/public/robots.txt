@@ -2,4 +2,4 @@ User-agent: *
 Allow: /
 Disallow: /sanity/
 
-Sitemap: https://sinarmahirabali.com/sitemap.xml
+Sitemap: https://www.biosmb.com/sitemap.xml
