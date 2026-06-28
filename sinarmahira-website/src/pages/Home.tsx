@@ -9,8 +9,8 @@ const Home = () => {
   const { t } = useTranslation();
 
   useSEO({
-    title: 'PT Sinar Mahira Bali - Spesialis IPAL, STP & Water Treatment Bali',
-    description: 'Jasa kontraktor instalasi IPAL, STP, Bio Septic Tank, dan Water Treatment Plant (WTP) di Bali. Solusi sanitasi ramah lingkungan terbaik.',
+    title: 'Biosmb | PT Sinar Mahira Bali - Spesialis IPAL, STP & Water Treatment Bali',
+    description: 'Biosmb dari PT Sinar Mahira Bali melayani instalasi IPAL, STP, Bio Septic Tank, dan Water Treatment Plant (WTP) di Bali.',
     keywords: 'jasa ipal bali, stp bali, water treatment plant bali, septic tank bali, biosmb, sinar mahira bali'
   });
 

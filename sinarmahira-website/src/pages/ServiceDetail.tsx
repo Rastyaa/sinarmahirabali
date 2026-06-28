@@ -75,7 +75,7 @@ const ServiceDetail = () => {
   const service = getServiceData(slug);
 
   useSEO({
-    title: `${service.title} Bali | PT Sinar Mahira Bali`,
+    title: `${service.title} Bali | Biosmb - PT Sinar Mahira Bali`,
     description: `${service.description} Dapatkan layanan instalasi ${service.title} terbaik, handal, dan berstandar baku mutu lingkungan di Bali.`,
     keywords: `${service.title.toLowerCase()} bali, jasa ${service.title.toLowerCase()} bali, kontraktor ${service.title.toLowerCase()} bali, biosmb`
   });
