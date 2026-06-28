@@ -7,39 +7,39 @@ const Services = () => {
 
   const servicesList = [
     {
-      title: 'IPAL (Instalasi Pengolahan Air Limbah)',
+      title: t('service_detail.ipal.title'),
       slug: 'ipal',
-      description: t('home.svc_ipal_desc'),
+      description: t('service_detail.ipal.description'),
       icon: <Factory className="w-[32px] h-[32px] text-brand-coral" />
     },
     {
-      title: 'STP (Sewage Treatment Plant)',
+      title: t('service_detail.stp.title'),
       slug: 'stp',
-      description: t('home.sector_industrial_desc'),
+      description: t('service_detail.stp.description'),
       icon: <Settings className="w-[32px] h-[32px] text-brand-coral" />
     },
     {
-      title: 'Bio Septic Tank',
+      title: t('service_detail.bio_septic_tank.title'),
       slug: 'bio-septic-tank',
-      description: t('home.svc_bio_desc'),
+      description: t('service_detail.bio_septic_tank.description'),
       icon: <Leaf className="w-[32px] h-[32px] text-brand-coral" />
     },
     {
-      title: 'Water Treatment Plant',
+      title: t('service_detail.water_treatment.title'),
       slug: 'water-treatment',
-      description: t('home.svc_wtp_desc'),
+      description: t('service_detail.water_treatment.description'),
       icon: <Droplets className="w-[32px] h-[32px] text-brand-coral" />
     },
     {
-      title: 'Grease Trap',
+      title: t('service_detail.grease_trap.title'),
       slug: 'grease-trap',
-      description: t('home.svc_gt_desc'),
+      description: t('service_detail.grease_trap.description'),
       icon: <ShieldCheck className="w-[32px] h-[32px] text-brand-coral" />
     },
     {
-      title: 'Custom & Maintenance Service',
+      title: t('service_detail.maintenance.title'),
       slug: 'maintenance',
-      description: 'Layanan kustomisasi tangki fiberglass dan perawatan rutin sistem sanitasi untuk memastikan operasional optimal.',
+      description: t('service_detail.maintenance.description'),
       icon: <Wrench className="w-[32px] h-[32px] text-brand-coral" />
     }
   ];

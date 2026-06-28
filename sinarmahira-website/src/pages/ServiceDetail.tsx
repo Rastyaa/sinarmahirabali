@@ -5,7 +5,7 @@ import imgStp from '../assets/IMG_0353.JPG.jpeg';
 import imgGreaseTrap from '../assets/IMG_0354.JPG.jpeg';
 import imgBioSeptic from '../assets/IMG_0355.JPG.jpeg';
 import imgIpalMedis from '../assets/IMG_0356.JPG.jpeg';
-import imgWtp from '../assets/IMG_0357.JPG.jpeg';
+import imgWtp from '../assets/IMG_0435.JPG.jpeg';
 import imgExtra from '../assets/IMG_0358.JPG.jpeg';
 
 const ServiceDetail = () => {
@@ -16,81 +16,56 @@ const ServiceDetail = () => {
     switch (slug) {
       case 'ipal':
         return {
-          title: 'IPAL (Instalasi Pengolahan Air Limbah)',
-          description: 'Sistem pengolahan air limbah domestik dan klinis skala kecil hingga menengah yang dirancang khusus untuk memenuhi standar baku mutu lingkungan.',
-          fullContent: 'Instalasi Pengolahan Air Limbah (IPAL) kami dirancang dengan tangki fiberglass praktis untuk memproses air sisa buangan secara higienis, menjamin air hasil olahan aman dibuang ke saluran umum atau meresap ke tanah tanpa mencemari lingkungan sekitar.',
-          benefits: [
-            'Mencegah pencemaran air tanah lingkungan sekitar',
-            'Memenuhi baku mutu standar dinas lingkungan hidup',
-            'Sistem praktis, hemat tempat, dan bebas bau',
-            'Material fiberglass tahan korosi dan tahan lama'
-          ],
-          suitableFor: ['Klinik & Puskesmas', 'Villa', 'Kost-Kosan', 'Restoran & Cafe'],
+          title: t('service_detail.ipal.title'),
+          description: t('service_detail.ipal.description'),
+          fullContent: t('service_detail.ipal.fullContent'),
+          benefits: t('service_detail.ipal.benefits', { returnObjects: true }) as string[],
+          suitableFor: t('service_detail.ipal.suitableFor', { returnObjects: true }) as string[],
           imageUrl: imgIpalMedis
         };
       case 'stp':
         return {
-          title: 'STP (Sewage Treatment Plant)',
-          description: 'Solusi pengolahan limbah cair domestik terpadu untuk hotel, komplek villa, apartemen, dan bangunan komersial.',
-          fullContent: 'Sewage Treatment Plant (STP) modular kami menggunakan sistem aerasi biologi dengan media filter untuk mengolah air limbah domestik (black water & grey water) menjadi air bersih layak buang yang bebas pencemaran.',
-          benefits: [
-            'Menggunakan tangki fiberglass modular berkekuatan tinggi',
-            'Proses biologis efektif menghilangkan bau tidak sedap',
-            'Perawatan sistem sederhana tanpa perlu staf khusus',
-            'Teknologi ramah lingkungan dengan konsumsi listrik rendah'
-          ],
-          suitableFor: ['Villa & Guest House', 'Hotel & Resort', 'Restoran', 'Gedung Kantor'],
+          title: t('service_detail.stp.title'),
+          description: t('service_detail.stp.description'),
+          fullContent: t('service_detail.stp.fullContent'),
+          benefits: t('service_detail.stp.benefits', { returnObjects: true }) as string[],
+          suitableFor: t('service_detail.stp.suitableFor', { returnObjects: true }) as string[],
           imageUrl: imgStp
         };
       case 'bio-septic-tank':
         return {
-          title: 'Bio Septic Tank',
-          description: 'Tangki septik ramah lingkungan berbahan fiberglass dengan sistem filtrasi biologis untuk rumah tinggal dan villa.',
-          fullContent: 'Bio Septic Tank BIOSMB dilengkapi media bio-filter sebagai rumah bakteri pengurai untuk memproses kotoran secara alami. Hasil buangan berupa cairan jernih ramah lingkungan yang aman langsung dialirkan ke selokan umum.',
-          benefits: [
-            'Bebas kuras selamanya karena penguraian optimal',
-            'Bahan fiberglass kuat, anti bocor, dan anti korosi',
-            'Pemasangan sangat cepat dan langsung bisa digunakan',
-            'Dilengkapi pipa disinfektan untuk sterilisasi bakteri'
-          ],
-          suitableFor: ['Rumah Tinggal', 'Villa Mandiri', 'Ruko', 'Kost-Kosan'],
+          title: t('service_detail.bio_septic_tank.title'),
+          description: t('service_detail.bio_septic_tank.description'),
+          fullContent: t('service_detail.bio_septic_tank.fullContent'),
+          benefits: t('service_detail.bio_septic_tank.benefits', { returnObjects: true }) as string[],
+          suitableFor: t('service_detail.bio_septic_tank.suitableFor', { returnObjects: true }) as string[],
           imageUrl: imgBioSeptic
         };
       case 'water-treatment':
         return {
-          title: 'Water Treatment Plant',
-          description: 'Sistem filtrasi dan penjernihan air tanah untuk mengatasi masalah air keruh, berbau, atau mengandung zat besi tinggi.',
-          fullContent: 'Sistem Water Treatment Plant kami menggunakan tabung filter praktis dengan media penyaring berkualitas tinggi untuk menyaring zat besi, kapur, lumpur, dan bau, sehingga menghasilkan air bersih higienis siap pakai.',
-          benefits: [
-            'Menghilangkan air kuning, keruh, dan berbau karat',
-            'Menggunakan media filter berkualitas tinggi tahan lama',
-            'Desain kompak tidak memakan banyak ruang halaman',
-            'Perawatan backwash sangat mudah dilakukan sendiri'
-          ],
-          suitableFor: ['Rumah Tinggal', 'Villa & Homestay', 'Laundry', 'Usaha Depot Air'],
+          title: t('service_detail.water_treatment.title'),
+          description: t('service_detail.water_treatment.description'),
+          fullContent: t('service_detail.water_treatment.fullContent'),
+          benefits: t('service_detail.water_treatment.benefits', { returnObjects: true }) as string[],
+          suitableFor: t('service_detail.water_treatment.suitableFor', { returnObjects: true }) as string[],
           imageUrl: imgWtp
         };
       case 'grease-trap':
         return {
-          title: 'Grease Trap (Penyaring Lemak)',
-          description: 'Perangkap lemak dan minyak praktis untuk dapur restoran, cafe, villa, dan rumah tangga guna menghindari pipa mampet.',
-          fullContent: 'Grease Trap fiberglass kami ditempatkan di bawah bak cuci piring untuk menangkap lemak, minyak, dan sisa makanan sebelum masuk ke saluran pipa utama, mencegah sumbatan lemak yang membeku di dalam pipa.',
-          benefits: [
-            'Mencegah pipa saluran pembuangan tersumbat lemak',
-            'Desain sekat efektif memisahkan air dan minyak',
-            'Mudah dibersihkan secara berkala',
-            'Material fiberglass higienis dan tahan air panas'
-          ],
-          suitableFor: ['Dapur Restoran & Cafe', 'Dapur Villa', 'Katering', 'Dapur Rumah Tangga'],
+          title: t('service_detail.grease_trap.title'),
+          description: t('service_detail.grease_trap.description'),
+          fullContent: t('service_detail.grease_trap.fullContent'),
+          benefits: t('service_detail.grease_trap.benefits', { returnObjects: true }) as string[],
+          suitableFor: t('service_detail.grease_trap.suitableFor', { returnObjects: true }) as string[],
           imageUrl: imgGreaseTrap
         };
       default:
         return {
-          title: 'Detail Layanan',
-          description: 'Detail informasi mengenai solusi pengolahan limbah dan sanitasi kami.',
-          fullContent: 'Silakan hubungi tim kami untuk konsultasi detail mengenai kebutuhan proyek sanitasi dan pengolahan limbah Anda.',
-          benefits: ['Solusi Profesional', 'Tenaga Ahli Berpengalaman'],
-          suitableFor: ['Rumah Tinggal', 'Villa', 'Usaha Komersial'],
+          title: t('service_detail.maintenance.title'),
+          description: t('service_detail.maintenance.description'),
+          fullContent: t('service_detail.maintenance.fullContent'),
+          benefits: t('service_detail.maintenance.benefits', { returnObjects: true }) as string[],
+          suitableFor: t('service_detail.maintenance.suitableFor', { returnObjects: true }) as string[],
           imageUrl: imgExtra
         };
     }
@@ -116,7 +91,7 @@ const ServiceDetail = () => {
       <div className="max-w-[1200px] mx-auto w-full px-[16px] md:px-[32px] mt-[40px]">
         <Link to="/services" className="inline-flex items-center gap-[8px] text-brand-blue font-bold hover:text-brand-coral transition-colors mb-[32px]">
           <ArrowLeft className="w-[20px] h-[20px]" />
-          Kembali ke Layanan
+          {t('service_detail.back')}
         </Link>
 
         <div className="bg-glass rounded-[24px] shadow-modal overflow-hidden border border-white/8 hover-glow transition-all duration-500">
@@ -136,7 +111,7 @@ const ServiceDetail = () => {
             {/* Left Content (2/3) */}
             <div className="lg:col-span-2 space-y-[40px]">
               <section>
-                <h2 className="text-[24px] font-bold text-text-primary font-poppins mb-[16px]">Ringkasan Layanan</h2>
+                <h2 className="text-[24px] font-bold text-text-primary font-poppins mb-[16px]">{t('service_detail.summary_title')}</h2>
                 <p className="text-[16px] text-text-secondary leading-[32px] font-jakarta">
                   {service.description}
                 </p>
@@ -146,7 +121,7 @@ const ServiceDetail = () => {
               </section>
 
               <section>
-                <h2 className="text-[24px] font-bold text-text-primary font-poppins mb-[16px]">Manfaat & Keunggulan</h2>
+                <h2 className="text-[24px] font-bold text-text-primary font-poppins mb-[16px]">{t('service_detail.benefits_title')}</h2>
                 <ul className="space-y-[16px]">
                   {service.benefits.map((benefit, i) => (
                     <li key={i} className="flex items-start gap-[12px] p-[16px] bg-white/5 rounded-[12px] border border-white/8 hover-glow transition-all duration-300">
@@ -162,7 +137,7 @@ const ServiceDetail = () => {
             <div className="space-y-[32px]">
               {/* Target Audience Box */}
               <div className="bg-brand-blue/5 border border-brand-blue/20 rounded-[16px] p-[32px]">
-                <h3 className="text-[20px] font-bold text-brand-blue font-poppins mb-[16px] drop-shadow-[0_0_10px_rgba(56,189,248,0.2)]">Sangat Cocok Untuk:</h3>
+                <h3 className="text-[20px] font-bold text-brand-blue font-poppins mb-[16px] drop-shadow-[0_0_10px_rgba(56,189,248,0.2)]">{t('service_detail.suitable_title')}</h3>
                 <ul className="space-y-[12px]">
                   {service.suitableFor.map((item, i) => (
                     <li key={i} className="flex items-center gap-[12px] text-text-secondary text-[16px] font-medium">
@@ -175,13 +150,13 @@ const ServiceDetail = () => {
 
               {/* Consultation CTA */}
               <div className="bg-brand-coral rounded-[16px] p-[32px] text-white text-center shadow-floating hover:shadow-[0_0_25px_rgba(240,112,87,0.3)] transition-all duration-300">
-                <h3 className="text-[20px] font-bold font-poppins mb-[16px]">Butuh Bantuan Lebih Lanjut?</h3>
+                <h3 className="text-[20px] font-bold font-poppins mb-[16px]">{t('service_detail.cta_title')}</h3>
                 <p className="text-[14px] text-white/90 mb-[24px] font-jakarta">
-                  Tim konsultan kami siap membantu menganalisis kebutuhan spesifik untuk proyek {service.title} Anda.
+                  {t('service_detail.cta_text', { service: service.title })}
                 </p>
                 <a href="https://wa.me/6288987288952" className="flex items-center justify-center gap-[8px] bg-white text-brand-coral h-[48px] rounded-[12px] font-bold shadow-floating hover:bg-slate-50 transition-colors">
                   <Phone className="w-[18px] h-[18px]" />
-                  Hubungi via WhatsApp
+                  {t('service_detail.cta_btn')}
                 </a>
               </div>
             </div>

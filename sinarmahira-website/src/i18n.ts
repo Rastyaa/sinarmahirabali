@@ -14,6 +14,13 @@ i18n
       en: { translation: translationEN },
     },
     fallbackLng: 'id',
+    supportedLngs: ['id', 'en'],
+    nonExplicitSupportedLngs: true,
+    load: 'languageOnly',
+    detection: {
+      order: ['localStorage', 'navigator'],
+      caches: ['localStorage'],
+    },
     interpolation: { escapeValue: false },
   });
 

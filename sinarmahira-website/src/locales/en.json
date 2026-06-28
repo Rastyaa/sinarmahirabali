@@ -85,6 +85,57 @@
     "cta_subtitle": "Our expert team is ready to survey and provide the best solution tailored to your environmental needs.",
     "cta_btn": "Contact Our Consultant"
   },
+  "service_detail": {
+    "back": "Back to Services",
+    "summary_title": "Service Summary",
+    "benefits_title": "Benefits & Advantages",
+    "suitable_title": "Best Suited For:",
+    "cta_title": "Need Further Assistance?",
+    "cta_text": "Our consultant team is ready to help analyze specific needs for your {{service}} project.",
+    "cta_btn": "Contact via WhatsApp",
+    "ipal": {
+      "title": "IPAL (Wastewater Treatment Plant)",
+      "description": "Domestic and clinical wastewater treatment system for small to medium scale needs, designed to meet environmental quality standards.",
+      "fullContent": "Our Wastewater Treatment Plant (IPAL) is designed with practical fiberglass tanks to hygienically process wastewater, ensuring treated water is safe to discharge into public drainage or absorb into the ground without polluting the surrounding environment.",
+      "benefits": ["Prevents groundwater pollution around the area", "Meets environmental agency quality standards", "Practical, space-saving, and odor-free system", "Corrosion-resistant and durable fiberglass material"],
+      "suitableFor": ["Clinics & Health Centers", "Villas", "Boarding Houses", "Restaurants & Cafes"]
+    },
+    "stp": {
+      "title": "STP (Sewage Treatment Plant)",
+      "description": "Integrated domestic wastewater treatment solution for hotels, villa complexes, apartments, and commercial buildings.",
+      "fullContent": "Our modular Sewage Treatment Plant (STP) uses a biological aeration system with filter media to process domestic wastewater (black water & grey water) into discharge-safe clean water free from pollution.",
+      "benefits": ["Uses high-strength modular fiberglass tanks", "Effective biological process eliminates unpleasant odors", "Simple system maintenance without dedicated staff", "Eco-friendly technology with low electricity consumption"],
+      "suitableFor": ["Villas & Guest Houses", "Hotels & Resorts", "Restaurants", "Office Buildings"]
+    },
+    "bio_septic_tank": {
+      "title": "Bio Septic Tank",
+      "description": "Eco-friendly fiberglass septic tank with a biological filtration system for homes and villas.",
+      "fullContent": "BIOSMB Bio Septic Tank is equipped with bio-filter media as a home for decomposing bacteria to naturally process waste. The output is clear, eco-friendly liquid that can safely flow directly into public drainage.",
+      "benefits": ["No pumping required due to optimal decomposition", "Strong, leak-proof, and anti-corrosion fiberglass material", "Very fast installation and ready to use immediately", "Equipped with disinfectant pipe for bacterial sterilization"],
+      "suitableFor": ["Homes", "Private Villas", "Shop Houses", "Boarding Houses"]
+    },
+    "water_treatment": {
+      "title": "Water Treatment Plant",
+      "description": "Groundwater filtration and purification system to solve cloudy, smelly, or high-iron water problems.",
+      "fullContent": "Our Water Treatment Plant system uses practical filter tubes with high-quality filter media to remove iron, lime, sludge, and odor, producing clean hygienic water ready for use.",
+      "benefits": ["Removes yellow, cloudy, and rusty-smelling water", "Uses durable high-quality filter media", "Compact design that saves yard space", "Easy backwash maintenance you can do yourself"],
+      "suitableFor": ["Homes", "Villas & Homestays", "Laundry Businesses", "Water Refill Businesses"]
+    },
+    "grease_trap": {
+      "title": "Grease Trap",
+      "description": "Practical grease and oil trap for restaurant, cafe, villa, and household kitchens to prevent clogged pipes.",
+      "fullContent": "Our fiberglass Grease Trap is placed under the sink to capture grease, oil, and food residue before entering the main pipeline, preventing frozen grease blockages inside pipes.",
+      "benefits": ["Prevents grease-clogged drainage pipes", "Effective partition design separates water and oil", "Easy to clean regularly", "Hygienic fiberglass material resistant to hot water"],
+      "suitableFor": ["Restaurant & Cafe Kitchens", "Villa Kitchens", "Catering", "Household Kitchens"]
+    },
+    "maintenance": {
+      "title": "Custom & Maintenance Service",
+      "description": "Custom fiberglass tank and routine sanitation system maintenance services to ensure optimal operation.",
+      "fullContent": "Please contact our team for detailed consultation regarding your sanitation and wastewater treatment project needs.",
+      "benefits": ["Professional Solutions", "Experienced Expert Team"],
+      "suitableFor": ["Homes", "Villas", "Commercial Businesses"]
+    }
+  },
   "projects": {
     "title": "Our Projects",
     "subtitle": "Real evidence of our dedication in providing the best wastewater treatment solutions for various sectors across Bali.",
