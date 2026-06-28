@@ -39,7 +39,7 @@ const Footer = () => {
                 <Droplets className="w-[28px] h-[28px]" />
               </div>
               <span className="text-[20px] font-bold text-text-primary font-poppins">
-                Sinar Mahira
+                Biosmb - Sinar Mahira
               </span>
             </Link>
             <p className="text-[15px] leading-[28px] font-jakarta mb-[24px] text-text-secondary">

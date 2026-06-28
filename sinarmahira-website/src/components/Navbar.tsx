@@ -41,7 +41,7 @@ const Navbar = () => {
                 <Droplets className="w-[28px] h-[28px] md:w-[32px] md:h-[32px]" />
               </div>
               <span className="text-[18px] md:text-[20px] font-bold text-text-primary tracking-tight font-poppins">
-                Sinar Mahira
+                Biosmb - Sinar Mahira
               </span>
             </Link>
 
@@ -106,7 +106,7 @@ const Navbar = () => {
               <Droplets className="w-[28px] h-[28px]" />
             </div>
             <span className="text-[18px] font-bold text-text-primary font-poppins">
-              Sinar Mahira
+              Biosmb - Sinar Mahira
             </span>
           </Link>
           <button 
