@@ -1,5 +1,6 @@
 import { BrowserRouter as Router, Routes, Route, useLocation } from 'react-router-dom';
 import { AnimatePresence } from 'framer-motion';
+import { useEffect } from 'react';
 import Home from '../pages/Home';
 import About from '../pages/About';
 import Services from '../pages/Services';
@@ -13,6 +14,40 @@ import Footer from '../components/Footer';
 import PageTransition from '../components/PageTransition';
 import WaterDropsBackground from '../components/WaterDropsBackground';
 import WhatsAppButton from '../components/WhatsAppButton';
+
+export interface SEOProps {
+  title: string;
+  description: string;
+  keywords?: string;
+}
+
+export const useSEO = ({ title, description, keywords }: SEOProps) => {
+  useEffect(() => {
+    document.title = title;
+    
+    let metaDesc = document.querySelector('meta[name="description"]');
+    if (metaDesc) {
+      metaDesc.setAttribute('content', description);
+    } else {
+      metaDesc = document.createElement('meta');
+      metaDesc.setAttribute('name', 'description');
+      metaDesc.setAttribute('content', description);
+      document.head.appendChild(metaDesc);
+    }
+
+    if (keywords) {
+      let metaKeywords = document.querySelector('meta[name="keywords"]');
+      if (metaKeywords) {
+        metaKeywords.setAttribute('content', keywords);
+      } else {
+        metaKeywords = document.createElement('meta');
+        metaKeywords.setAttribute('name', 'keywords');
+        metaKeywords.setAttribute('content', keywords);
+        document.head.appendChild(metaKeywords);
+      }
+    }
+  }, [title, description, keywords]);
+};
 
 const AnimatedRoutes = () => {
   const location = useLocation();

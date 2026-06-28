@@ -1,6 +1,7 @@
 import { useParams, Link } from 'react-router-dom';
 import { ArrowLeft, CheckCircle2, ChevronRight, Phone } from 'lucide-react';
 import { useTranslation } from 'react-i18next';
+import { useSEO } from '../routes/AppRoutes';
 import imgStp from '../assets/IMG_0353.JPG.jpeg';
 import imgGreaseTrap from '../assets/IMG_0354.JPG.jpeg';
 import imgBioSeptic from '../assets/IMG_0355.JPG.jpeg';
@@ -72,6 +73,12 @@ const ServiceDetail = () => {
   };
 
   const service = getServiceData(slug);
+
+  useSEO({
+    title: `${service.title} Bali | PT Sinar Mahira Bali`,
+    description: `${service.description} Dapatkan layanan instalasi ${service.title} terbaik, handal, dan berstandar baku mutu lingkungan di Bali.`,
+    keywords: `${service.title.toLowerCase()} bali, jasa ${service.title.toLowerCase()} bali, kontraktor ${service.title.toLowerCase()} bali, biosmb`
+  });
 
   return (
     <div className="flex flex-col w-full bg-transparent font-jakarta min-h-screen pb-[120px]">

@@ -1,0 +1,5 @@
+User-agent: *
+Allow: /
+Disallow: /sanity/
+
+Sitemap: https://sinarmahirabali.com/sitemap.xml

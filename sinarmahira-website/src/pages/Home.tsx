@@ -1,11 +1,18 @@
 import { ArrowRight, Droplets, Leaf, ShieldCheck, Factory, Home as HomeIcon, Building2, CheckCircle2 } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
+import { useSEO } from '../routes/AppRoutes';
 import imgSanitation from '../assets/modern_sanitation.png';
 import imgTreatment from '../assets/wtp_system.png';
 
 const Home = () => {
   const { t } = useTranslation();
+
+  useSEO({
+    title: 'PT Sinar Mahira Bali - Spesialis IPAL, STP & Water Treatment Bali',
+    description: 'Jasa kontraktor instalasi IPAL, STP, Bio Septic Tank, dan Water Treatment Plant (WTP) di Bali. Solusi sanitasi ramah lingkungan terbaik.',
+    keywords: 'jasa ipal bali, stp bali, water treatment plant bali, septic tank bali, biosmb, sinar mahira bali'
+  });
 
   const services = [
     {

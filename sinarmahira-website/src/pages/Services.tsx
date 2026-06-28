@@ -1,9 +1,16 @@
 import { Factory, Leaf, Droplets, ShieldCheck, Settings, Wrench, ArrowRight } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
+import { useSEO } from '../routes/AppRoutes';
 
 const Services = () => {
   const { t } = useTranslation();
+
+  useSEO({
+    title: 'Layanan Pengolahan Air Limbah & Sanitasi Bali | PT Sinar Mahira Bali',
+    description: 'Daftar layanan lengkap kami: IPAL, Sewage Treatment Plant (STP), Bio Septic Tank, Water Treatment Plant (WTP), dan Grease Trap di Bali.',
+    keywords: 'layanan ipal bali, jasa stp bali, water treatment bali, biosmb, tangki septik fiberglass bali'
+  });
 
   const servicesList = [
     {
