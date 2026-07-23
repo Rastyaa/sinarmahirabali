@@ -2,8 +2,9 @@ import { ArrowRight, Droplets, Leaf, ShieldCheck, Factory, Home as HomeIcon, Bui
 import { Link } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
 import { useSEO } from '../routes/AppRoutes';
-import imgSanitation from '../assets/modern_sanitation.png';
 import imgTreatment from '../assets/wtp_system.png';
+
+const heroImage = '/hero-sanitation.webp';
 
 const Home = () => {
   const { t } = useTranslation();
@@ -81,9 +82,14 @@ const Home = () => {
             <div className="lg:col-span-5 relative mt-[24px] lg:mt-0 w-full">
               <div className="absolute inset-0 bg-brand-blue/10 translate-x-[12px] translate-y-[12px] md:translate-x-[16px] md:translate-y-[16px] rounded-[24px] blur-[2px]"></div>
               <div className="relative rounded-[24px] overflow-hidden shadow-modal border border-white/10 bg-glass hover-glow transition-all duration-500">
-                <img 
-                  src={imgSanitation} 
-                  alt="Modern Sanitation Infrastructure" 
+                <img
+                  src={heroImage}
+                  alt="Modern Sanitation Infrastructure"
+                  width={960}
+                  height={960}
+                  fetchPriority="high"
+                  loading="eager"
+                  decoding="async"
                   className="w-full h-[280px] sm:h-[350px] lg:h-[420px] object-cover object-center hover:scale-105 transition-transform duration-700"
                 />
                 {/* Floating Badge */}

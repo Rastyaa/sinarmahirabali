@@ -1,19 +1,20 @@
 import { BrowserRouter as Router, Routes, Route, useLocation } from 'react-router-dom';
-import { AnimatePresence } from 'framer-motion';
-import { useEffect } from 'react';
+import { AnimatePresence, LazyMotion, domAnimation } from 'framer-motion';
+import { useEffect, Suspense, lazy } from 'react';
 import Home from '../pages/Home';
-import About from '../pages/About';
-import Services from '../pages/Services';
-import ServiceDetail from '../pages/ServiceDetail';
-import Projects from '../pages/Projects';
-import Contact from '../pages/Contact';
-import FAQ from '../pages/FAQ';
-import Clients from '../pages/Clients';
 import Navbar from '../components/Navbar';
 import Footer from '../components/Footer';
 import PageTransition from '../components/PageTransition';
 import WaterDropsBackground from '../components/WaterDropsBackground';
 import WhatsAppButton from '../components/WhatsAppButton';
+
+const About = lazy(() => import('../pages/About'));
+const Services = lazy(() => import('../pages/Services'));
+const ServiceDetail = lazy(() => import('../pages/ServiceDetail'));
+const Projects = lazy(() => import('../pages/Projects'));
+const Contact = lazy(() => import('../pages/Contact'));
+const FAQ = lazy(() => import('../pages/FAQ'));
+const Clients = lazy(() => import('../pages/Clients'));
 
 export interface SEOProps {
   title: string;
@@ -53,18 +54,22 @@ const AnimatedRoutes = () => {
   const location = useLocation();
   
   return (
-    <AnimatePresence mode="wait" onExitComplete={() => window.scrollTo(0, 0)}>
-      <Routes location={location} key={location.pathname}>
-        <Route path="/" element={<PageTransition><Home /></PageTransition>} />
-        <Route path="/about" element={<PageTransition><About /></PageTransition>} />
-        <Route path="/services" element={<PageTransition><Services /></PageTransition>} />
-        <Route path="/services/:slug" element={<PageTransition><ServiceDetail /></PageTransition>} />
-        <Route path="/projects" element={<PageTransition><Projects /></PageTransition>} />
-        <Route path="/contact" element={<PageTransition><Contact /></PageTransition>} />
-        <Route path="/faq" element={<PageTransition><FAQ /></PageTransition>} />
-        <Route path="/clients" element={<PageTransition><Clients /></PageTransition>} />
-      </Routes>
-    </AnimatePresence>
+    <LazyMotion features={domAnimation} strict>
+      <AnimatePresence mode="wait" onExitComplete={() => window.scrollTo(0, 0)}>
+        <Suspense fallback={null}>
+          <Routes location={location} key={location.pathname}>
+            <Route path="/" element={<PageTransition><Home /></PageTransition>} />
+            <Route path="/about" element={<PageTransition><About /></PageTransition>} />
+            <Route path="/services" element={<PageTransition><Services /></PageTransition>} />
+            <Route path="/services/:slug" element={<PageTransition><ServiceDetail /></PageTransition>} />
+            <Route path="/projects" element={<PageTransition><Projects /></PageTransition>} />
+            <Route path="/contact" element={<PageTransition><Contact /></PageTransition>} />
+            <Route path="/faq" element={<PageTransition><FAQ /></PageTransition>} />
+            <Route path="/clients" element={<PageTransition><Clients /></PageTransition>} />
+          </Routes>
+        </Suspense>
+      </AnimatePresence>
+    </LazyMotion>
   );
 };
 
