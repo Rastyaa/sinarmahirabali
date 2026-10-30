@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { company, clients, products, projects, sectors, faqs, profile, vision, missions } from './data.js';
+import { company, clients, partners, products, projects, sectors, faqs, profile, vision, missions } from './data.js';
 import { useSite, Icon, Image, Button, TextLink, Eyebrow, CTA, PageHeading, SectionHeading, ProductCard, ProjectCard, FAQList } from './components.jsx';
 
 export function SectorGrid({ linked = true }) {
@@ -8,6 +8,19 @@ export function SectorGrid({ linked = true }) {
     const Tag = linked ? 'a' : 'div';
     return <Tag key={icon} className="sector-item" {...(linked ? { href: href('/kontak/') } : {})}><Icon name={icon} /><h3>{t(title)}</h3><p>{t(desc)}</p>{linked && <span><Icon name="northeast" /></span>}</Tag>;
   })}</div>;
+}
+
+export function Partners() {
+  const { tr } = useSite();
+  return <section className="section partners-section"><div className="container">
+    <SectionHeading label={tr('JARINGAN KAMI', 'OUR NETWORK')}>
+      {tr('Mitra kerja sama', 'Our company')}<br /><em>{tr('perusahaan.', 'partners.')}</em>
+    </SectionHeading>
+    <ul className="partner-list">{partners.map(name => <li key={name} className="partner-card">
+      <span className="partner-icon"><Icon name="building" /></span>
+      <div><span className="overline">{tr('MITRA KERJA SAMA', 'COMPANY PARTNER')}</span><h3>{name}</h3></div>
+    </li>)}</ul>
+  </div></section>;
 }
 
 export function Home() {
@@ -20,7 +33,7 @@ export function Home() {
     <section className="section container"><SectionHeading label={tr('UNTUK BERBAGAI KEBUTUHAN', 'FOR EVERY KIND OF PROJECT')} description={tr('Sistem sanitasi yang mengikuti kebutuhan bangunan, bukan sebaliknya.', 'Sanitation systems that fit your building’s needs.')}>{tr('Dari hunian Anda,', 'From your home,')}<br />{tr('hingga ', 'to ')}<em>{tr('bisnis Anda.', 'your business.')}</em></SectionHeading><SectorGrid /></section>
     <section className="process-section"><div className="container process-inner"><div><Eyebrow light>{tr('BAGAIMANA KAMI MEMBANTU', 'HOW WE HELP')}</Eyebrow><h2>{tr('Dari percakapan,', 'From a conversation,')}<br />{tr('menjadi ', 'to a ')}<em>{tr('solusi nyata.', 'real solution.')}</em></h2><TextLink to="/kontak/" light>{tr('Mulai Konsultasi', 'Start a Conversation')}</TextLink></div><div className="steps">{[[tr('Kenali kebutuhan', 'Understand your needs'), tr('Ceritakan jenis bangunan, karakteristik limbah, dan kondisi lokasi Anda.', 'Share your building type, wastewater characteristics, and site conditions.')], [tr('Rencanakan sistem', 'Plan your system'), tr('Tentukan jenis unit, kapasitas, dan konfigurasi yang sesuai dengan proyek.', 'Choose the unit type, capacity, and configuration that suit your project.')], [tr('Wujudkan bersama', 'Make it happen'), tr('Koordinasikan pengadaan, pemasangan, dan kebutuhan perawatan sistem.', 'Coordinate supply, installation, and system maintenance requirements.')]].map(([title, desc], i) => <div className="step" key={i}><span>0{i + 1}</span><div><h3>{title}</h3><p>{desc}</p></div></div>)}</div></div></section>
     <section className="section container"><SectionHeading label={tr('GALERI PROYEK', 'PROJECT GALLERY')} to="/proyek/" link={tr('Jelajahi Galeri', 'Explore Gallery')}>{tr('Lebih dekat dengan', 'A closer look at')}<br /><em>{tr('proses di lapangan.', 'work on site.')}</em></SectionHeading><div className="project-grid">{[0, 4, 5].map(i => <ProjectCard key={i} project={projects[i]} index={i} />)}</div></section>
-    <section className="section faq-preview container"><div><Eyebrow>{tr('ADA PERTANYAAN?', 'HAVE A QUESTION?')}</Eyebrow><h2>{tr('Mari cari', 'Let’s find')}<br /><em>{tr('jawabannya.', 'the answers.')}</em></h2><TextLink to="/faq/">{tr('Semua Pertanyaan', 'All Questions')}</TextLink></div><div><FAQList items={faqs.slice(0, 4)} /></div></section><CTA />
+    <section className="section faq-preview container"><div><Eyebrow>{tr('ADA PERTANYAAN?', 'HAVE A QUESTION?')}</Eyebrow><h2>{tr('Mari cari', 'Let’s find')}<br /><em>{tr('jawabannya.', 'the answers.')}</em></h2><TextLink to="/faq/">{tr('Semua Pertanyaan', 'All Questions')}</TextLink></div><div><FAQList items={faqs.slice(0, 4)} /></div></section><Partners /><CTA />
   </>;
 }
 
@@ -46,11 +59,37 @@ export function Projects() {
   return <><PageHeading label={tr('Galeri Proyek', 'Project Gallery')} description={tr('Dokumentasi pemasangan unit fiberglass dan sistem pengolahan air limbah untuk berbagai kebutuhan di Bali.', 'Installation photographs of fiberglass units and wastewater treatment systems for a range of needs in Bali.')}>{tr('Dari rencana,', 'From the drawing board,')}<br />{tr('ke ', 'to ')}<em>{tr('lapangan.', 'the site.')}</em></PageHeading><section className="section container"><div className="filter-bar" aria-label={tr('Filter proyek', 'Project filters')}>{[['all', tr('Semua Proyek', 'All Projects')], ['stp', 'STP'], ['bio-septic-tank', 'BIO Septictank'], ['grease-trap', 'Grease Trap'], ['ipal', 'IPAL']].map(([value, label]) => <button type="button" key={value} className={`filter-button ${filter === value ? 'active' : ''}`} aria-pressed={filter === value} onClick={() => setFilter(value)}>{label}</button>)}<span className="result-count" aria-live="polite">{selected.length} {tr('proyek', 'projects')}</span></div><div className="project-grid gallery">{selected.map(p => <ProjectCard key={p.image} project={p} index={projects.indexOf(p)} />)}</div></section><CTA /></>;
 }
 
+function ClientTable({ entries }) {
+  const { tr } = useSite();
+  return <table className="client-table">
+    <caption className="sr-only">{tr('Daftar klien dan lokasi', 'Client names and locations')}</caption>
+    <thead><tr><th scope="col">{tr('Nama klien', 'Client name')}</th><th scope="col">{tr('Lokasi', 'Location')}</th></tr></thead>
+    <tbody>{entries.map(c => <tr key={`${c.name}-${c.location}`}><td>{c.name}</td><td><span className="client-location"><Icon name="pin" />{c.location}</span></td></tr>)}</tbody>
+  </table>;
+}
+
 export function Clients() {
   const { tr } = useSite();
   const [search, setSearch] = useState('');
   const selected = clients.filter(c => `${c.name} ${c.location}`.toLocaleLowerCase().includes(search.toLocaleLowerCase().trim()));
-  return <><PageHeading label={tr('Klien & Sektor', 'Clients & Sectors')} description={tr('Mendukung kebutuhan sanitasi dan pengelolaan air limbah di berbagai sektor hunian, komersial, dan industri.', 'Supporting sanitation and wastewater management across residential, commercial, and industrial sectors.')}>{tr('Kebutuhan beragam.', 'Diverse needs.')}<br /><em>{tr('Kepedulian yang sama.', 'The same care.')}</em></PageHeading><section className="section container"><Eyebrow>{tr('SEKTOR YANG KAMI LAYANI', 'SECTORS WE SERVE')}</Eyebrow><div className="client-sectors"><SectorGrid linked={false} /></div><div className="client-directory"><div className="section-heading"><div><Eyebrow>{tr('JARINGAN KAMI', 'OUR NETWORK')}</Eyebrow><h2>{tr('Direktori ', 'Client ')}<em>{tr('klien.', 'directory.')}</em></h2></div><label className="search-box"><Icon name="search" /><input type="search" value={search} onChange={e => setSearch(e.target.value)} placeholder={tr('Cari nama klien atau lokasi…', 'Search client name or location…')} aria-label={tr('Cari klien', 'Search clients')} /></label></div><div aria-live="polite">{selected.length ? <table className="client-table"><caption className="sr-only">{tr('Daftar klien', 'Client directory')}</caption><thead><tr><th scope="col">{tr('Nama', 'Name')}</th><th scope="col">{tr('Lokasi', 'Location')}</th></tr></thead><tbody>{selected.map(c => <tr key={`${c.name}-${c.location}`}><td>{c.name}</td><td>{c.location}</td></tr>)}</tbody></table> : <div className="empty-state"><Icon name="building" /><h3>{clients.length ? tr('Belum ada hasil yang cocok.', 'No matching results.') : tr('Daftar klien akan segera tersedia.', 'Our client directory is coming soon.')}</h3><p>{clients.length ? tr('Coba nama atau lokasi lainnya.', 'Try another name or location.') : tr('Sementara itu, jelajahi sektor yang kami layani dan diskusikan kebutuhan proyek Anda bersama kami.', 'In the meantime, explore the sectors we serve and discuss your project needs with us.')}</p></div>}</div></div></section><CTA /></>;
+  const midpoint = Math.ceil(selected.length / 2);
+  return <>
+    <PageHeading label={tr('Klien & Mitra', 'Clients & Partners')} description={tr('Jaringan klien dan mitra kerja sama untuk kebutuhan sanitasi dan pengolahan air limbah di berbagai sektor.', 'Our network of clients and company partners for sanitation and wastewater treatment across sectors.')}>
+      {tr('Kebutuhan beragam.', 'Diverse needs.')}<br /><em>{tr('Kepedulian yang sama.', 'The same care.')}</em>
+    </PageHeading>
+    <section className="section container">
+      <Eyebrow>{tr('SEKTOR YANG KAMI LAYANI', 'SECTORS WE SERVE')}</Eyebrow>
+      <div className="client-sectors"><SectorGrid linked={false} /></div>
+      <div className="client-directory">
+        <div className="section-heading"><div><Eyebrow>{tr('JARINGAN KAMI', 'OUR NETWORK')}</Eyebrow><h2>{tr('Direktori ', 'Client ')}<em>{tr('klien.', 'directory.')}</em></h2></div>
+          <label className="search-box"><Icon name="search" /><input type="search" value={search} onChange={e => setSearch(e.target.value)} placeholder={tr('Cari nama klien atau lokasi…', 'Search client name or location…')} aria-label={tr('Cari klien', 'Search clients')} aria-controls="client-results" /></label>
+        </div>
+        <p className="client-count" role="status">{selected.length} {tr('dari', 'of')} {clients.length} {tr('klien', 'clients')}</p>
+        <div id="client-results">{selected.length ? <div className="client-tables"><ClientTable entries={selected.slice(0, midpoint)} />{selected.length > midpoint && <ClientTable entries={selected.slice(midpoint)} />}</div> : <div className="empty-state"><Icon name="building" /><h3>{tr('Belum ada hasil yang cocok.', 'No matching results.')}</h3><p>{tr('Coba nama klien atau lokasi lainnya.', 'Try another client name or location.')}</p></div>}</div>
+      </div>
+    </section>
+    <Partners /><CTA />
+  </>;
 }
 
 export function FAQ() {

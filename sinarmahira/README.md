@@ -47,7 +47,7 @@ export const company = {
 
 Saat `phone` terisi, formulir konsultasi secara otomatis membuka pesan yang sudah disiapkan di WhatsApp. Saat masih kosong, pengunjung dapat menyiapkan dan menyalin rincian proyek; formulir tidak mengklaim mengirim pesan. Perbarui tautan peta pada `src/Contact.jsx` ketika alamat lengkap tersedia. Tidak ada alamat email atau jam operasional yang direka.
 
-Isi `clients` di `src/data.js` dengan klien perusahaan yang sudah dikonfirmasi. Nama pelanggan dan testimoni perusahaan acuan tidak dipindahkan sebagai klaim perusahaan baru. Galeri menggunakan foto dan label lokasi dari website acuan sesuai permintaan; pastikan konteks dokumentasinya sesuai sebelum publikasi.
+Daftar `clients` dan `partners` di `src/data.js` disamakan dengan website BIOSMB sesuai permintaan pemilik. Direktori mempertahankan nama dan lokasi asli, termasuk klien dengan beberapa lokasi. Dua partner perusahaan adalah CV. AGAM HARMONI ALAM dan CV. MAJU JAYA. Bagian partner tampil di beranda dan halaman klien, dalam versi Indonesia dan Inggris. Galeri juga menggunakan foto dan label lokasi dari website acuan sesuai permintaan.
 
 ## SEO
 
@@ -93,4 +93,4 @@ Konfigurasi menggunakan URL dengan trailing slash agar sesuai canonical dan site
 
 Setelah deployment berhasil, tambahkan `biotankfiberglassbali.com` pada Settings → Domains dan ikuti DNS yang ditampilkan Vercel. Kredensial Vercel tidak disimpan dalam source; folder `.vercel/` diabaikan Git.
 
-Website belum dipublikasikan dan domain belum dikonfigurasi. Konfigurasi website Sinar Mahira serta workflow CI/CD yang sudah ada tidak diubah.
+Website dipublikasikan di https://biotank-fiberglass-bali.vercel.app melalui project Vercel `biotank-fiberglass-bali`, root `sinarmahira`, dan branch produksi `feat/biotank-vercel`. Domain khusus belum dikonfigurasi. Konfigurasi project produksi BIOSMB dan workflow CI/CD yang sudah ada tidak diubah.
