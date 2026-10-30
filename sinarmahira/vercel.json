@@ -1,0 +1,32 @@
+{
+  "$schema": "https://openapi.vercel.sh/vercel.json",
+  "framework": "vite",
+  "installCommand": "npm ci",
+  "buildCommand": "npm run build",
+  "outputDirectory": "dist",
+  "trailingSlash": true,
+  "redirects": [
+    { "source": "/about/", "destination": "/tentang/", "permanent": true },
+    { "source": "/services/", "destination": "/produk/", "permanent": true },
+    { "source": "/projects/", "destination": "/proyek/", "permanent": true },
+    { "source": "/clients/", "destination": "/klien/", "permanent": true },
+    { "source": "/contact/", "destination": "/kontak/", "permanent": true },
+    { "source": "/services/bio-septic-tank/", "destination": "/produk/bio-septic-tank/", "permanent": true },
+    { "source": "/services/grease-trap/", "destination": "/produk/grease-trap/", "permanent": true },
+    { "source": "/services/stp/", "destination": "/produk/stp/", "permanent": true },
+    { "source": "/services/ipal/", "destination": "/produk/ipal/", "permanent": true },
+    { "source": "/services/water-treatment/", "destination": "/produk/water-treatment/", "permanent": true },
+    { "source": "/services/maintenance/", "destination": "/produk/custom-maintenance/", "permanent": true },
+    { "source": "/en/about/", "destination": "/en/tentang/", "permanent": true },
+    { "source": "/en/services/", "destination": "/en/produk/", "permanent": true },
+    { "source": "/en/projects/", "destination": "/en/proyek/", "permanent": true },
+    { "source": "/en/clients/", "destination": "/en/klien/", "permanent": true },
+    { "source": "/en/contact/", "destination": "/en/kontak/", "permanent": true },
+    { "source": "/en/services/bio-septic-tank/", "destination": "/en/produk/bio-septic-tank/", "permanent": true },
+    { "source": "/en/services/grease-trap/", "destination": "/en/produk/grease-trap/", "permanent": true },
+    { "source": "/en/services/stp/", "destination": "/en/produk/stp/", "permanent": true },
+    { "source": "/en/services/ipal/", "destination": "/en/produk/ipal/", "permanent": true },
+    { "source": "/en/services/water-treatment/", "destination": "/en/produk/water-treatment/", "permanent": true },
+    { "source": "/en/services/maintenance/", "destination": "/en/produk/custom-maintenance/", "permanent": true }
+  ]
+}

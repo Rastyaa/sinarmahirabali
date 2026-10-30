@@ -1,0 +1,12 @@
+dist/
+node_modules/
+.build-ssr/
+.vercel/
+/.aws
+/.agents
+/.codex
+.env
+.env.*
+!.env.example
+.DS_Store
+*.log
